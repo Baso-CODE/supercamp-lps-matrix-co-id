@@ -1,0 +1,69 @@
+.parent-box-alumni-fk-lps {
+  padding: 60px 10%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.title-alumni-kedokteran-lps {
+  text-align: center;
+  font-weight: 800;
+  font-size: 32px;
+  color: #004f77;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.title-alumni-kedokteran-lps span {
+  color: #f06f06;
+}
+
+/* Mengatur jarak antar item slider */
+.slider-fk-wrapper .slick-list {
+  margin: 0 -10px;
+}
+
+.item-slider-fk {
+  padding: 10px;
+}
+
+.card-alumni {
+  background: #fff;
+
+  overflow: hidden;
+
+  transition: transform 0.3s ease;
+}
+
+.card-alumni:hover {
+  transform: translateY(-5px);
+}
+
+.alumni-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Mempercantik Navigasi Panah (React Slick) */
+.slider-fk-wrapper .slick-prev:before,
+.slider-fk-wrapper .slick-next:before {
+  color: #004f77;
+  font-size: 25px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 896px) {
+  .parent-box-alumni-fk-lps {
+    padding: 40px 5%;
+  }
+
+  .title-alumni-kedokteran-lps {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .card-alumni {
+    border-radius: 10px;
+  }
+}

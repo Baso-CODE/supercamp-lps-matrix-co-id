@@ -1,0 +1,193 @@
+/* Kontainer utama tombol dan modal */
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Posisi relatif untuk tombol dan modal agar mengikuti satu sama lain */
+.whatsapp-float {
+  position: relative;
+}
+
+/* Gaya tombol WhatsApp */
+.whatsapp-btn {
+  background-color: #00b33c;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Posisi relatif untuk badge */
+}
+
+/* Gambar icon WhatsApp */
+.icon-wa {
+  width: 37px;
+  height: 35px;
+  color: white;
+}
+
+/* Badge di atas tombol WhatsApp */
+.whatsapp-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal yang akan muncul di atas tombol */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 70px; /* Jarak modal di atas tombol */
+  right: 0;
+  z-index: 1000; /* Agar modal muncul di atas tombol */
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  opacity: 0; /* Mulai dengan opacity 0 */
+  transform: translateY(20px); /* Mulai lebih rendah */
+  animation: fadeUp 0.5s forwards; /* Animasi saat modal muncul */
+}
+
+/* Animasi untuk modal muncul dari bawah (fade-up) */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi untuk modal ditutup (fade-down) */
+@keyframes fadeDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* Posisi normal */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px); /* Posisi lebih rendah */
+  }
+}
+
+/* Jika modal dalam proses penutupan */
+.modal.fade-down {
+  animation: fadeDown 0.5s forwards;
+}
+
+/* Konten modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* Tombol untuk menutup modal */
+.close {
+  color: #aaaaaa;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+.text-pilih-cs {
+  color: white;
+  font-size: 10px;
+}
+
+/* Daftar customer service */
+.service-list {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 6px;
+  background-color: #e6e6e693;
+  border-radius: 3px;
+  border-left: 2px solid #00b33c;
+}
+
+/* Tautan untuk customer service */
+.service-link {
+  text-decoration: none;
+  color: rgb(54, 54, 54);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.service-link:hover {
+  color: #128c7e;
+}
+
+.text-cs-edm {
+  font-size: 10px;
+  font-weight: 500;
+  color: #838383;
+}
+
+.main-parent-float-wa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.label-cta {
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #ddddddde;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.img-float-wa {
+  width: 17%;
+}
+
+.parent-title-modal {
+  display: flex;
+  align-items: center;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+  .modal {
+    width: 350px;
+  }
+}

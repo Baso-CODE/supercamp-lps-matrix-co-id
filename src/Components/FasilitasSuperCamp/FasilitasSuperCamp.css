@@ -1,0 +1,168 @@
+/* Container Utama */
+.supercamp-fasilitas-container {
+  padding: 80px 13%;
+}
+
+/* Bagian Judul */
+.header-section {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.supercamp-fasilitas-title {
+  color: #004f77;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.supercamp-fasilitas-subtitle {
+  color: #666;
+  font-size: 18px;
+}
+
+/* Grid Layout */
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+/* Style Kartu (Card) */
+.fasilitas-group-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 79, 119, 0.05); /* Bayangan halus biru */
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.fasilitas-group-card:hover {
+  transform: translateY(-10px); /* Efek kartu naik saat hover */
+  box-shadow: 0 20px 40px rgba(0, 79, 119, 0.15);
+}
+
+/* Header dalam Kartu (Icon + Judul) */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Ikon Badge Bulat */
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: #e0f2fe; /* Biru muda pucat */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #004f77;
+}
+
+.fasilitas-kategori {
+  color: #004f77;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Garis Pembatas Tipis */
+.divider {
+  height: 2px;
+  background: #f0f0f0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* List Item */
+.fasilitas-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.fasilitas-item {
+  display: flex;
+  align-items: flex-start; /* Agar ikon centang tetap di atas jika teks panjang */
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Custom Check Icon */
+.check-icon {
+  color: #00b894; /* Warna hijau mint yang fresh */
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 12px;
+  margin-top: 1px; /* Penyesuaian agar sejajar baris pertama teks */
+  flex-shrink: 0; /* Mencegah ikon mengecil */
+}
+
+.item-text {
+  flex: 1;
+}
+
+/* --- RESPONSIVE --- */
+
+/* Tablet (Layar Menengah) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .fasilitas-grid {
+    grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
+  }
+  .supercamp-fasilitas-title {
+    font-size: 30px;
+  }
+}
+
+/* Mobile (HP) */
+@media only screen and (max-width: 768px) {
+  .supercamp-fasilitas-container {
+    padding: 50px 3%;
+  }
+
+  .fasilitas-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom ke bawah */
+    gap: 20px;
+  }
+
+  .supercamp-fasilitas-title {
+    font-size: 26px;
+  }
+
+  .supercamp-fasilitas-subtitle {
+    font-size: 15px;
+  }
+
+  .fasilitas-group-card {
+    padding: 25px;
+  }
+
+  /* Ubah layout header kartu di HP menjadi kiri-kanan (opsional, agar hemat tempat) */
+  .card-header {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,242 @@
+.parent-paket-snbt-new {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.img-paket-snbt-new {
+  width: 33%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.img-paket-snbt-new:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+.super-parent-paket-snbt-new {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px; */
+  padding: 20px;
+}
+.title-paket-snbt-new {
+  text-align: center;
+  font-size: 28px;
+}
+.top-parent-paket-snbt-new {
+  background-color: #263c80;
+  padding: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+.title-paket-snbt-new {
+  text-align: center;
+  font-weight: 800;
+  color: white;
+}
+
+/* NEW */
+.garis-paket-snbt-new {
+  margin-top: 20px;
+  height: 1px;
+  background-color: #ff6500;
+  border: none; 
+}
+.rincian-paket {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.color-check {
+  color: rgb(0, 128, 0);
+}
+.child-paket-snbt-new {
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 25%;
+}
+.child-paket-snbt-new-maxima {
+  background-color: white;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.parent-rincian-paket {
+  margin-top: 20px;
+  line-height: 33px;
+}
+.rincian-paket {
+  font-weight: 400;
+}
+.child-title-paket-snbt-new {
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+.child-subtitle-paket-snbt-new {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #a3a3a3;
+  padding: 5px;
+  border-radius: 5px;
+}
+.child-subtitle-paket-snbt-new-gold {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #f39200;
+  padding: 5px;
+  border-radius: 5px;
+}
+.child-subtitle-paket-snbt-new-platinum {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #9200f3;
+  padding: 5px;
+  border-radius: 5px;
+}
+.btn-parent-paket-snbt-new {
+  background-color: #ff6500;
+  padding: 12px;
+  width: 100%;
+  margin-top: 25px;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.btn-parent-paket-snbt-new-2 {
+  background-color: #ff6500;
+  padding: 12px;
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s;
+  border: 1px solid transparent;
+  color: white;
+}
+.special-label-paket-snbt-maxima {
+  text-align: center;
+  background-color: #1e3e62;
+  color: white;
+  padding: 10px 0;
+  border-radius: 15px 15px 0 0;
+  border: 1px solid white;
+  font-weight: 500;
+  font-size: 15px;
+}
+.text-paket-privat-lps {
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+.parent-special-label-paket-snbt-maxima {
+  width: 25%;
+}
+.desk-main-paket-snbt-new {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+  .parent-paket-snbt-new {
+    display: flex;
+    flex-direction: column;  /* Membuat elemen anak menjadi vertikal */
+    width: 100%;  /* Memastikan lebar 100% pada mobile */
+    gap: 20px;  /* Menambahkan jarak antar elemen */
+    padding: 10px;  /* Menambahkan padding */
+  }
+
+  .child-paket-snbt-new {
+    width: 100%;  /* Memastikan elemen ini juga 100% lebar */
+  }
+
+  .super-parent-paket-snbt-new {
+    padding: 0;  /* Mengurangi padding */
+  }
+
+  .top-parent-paket-snbt-new {
+    padding: 10px;  /* Padding lebih kecil pada mobile */
+  }
+
+  .rincian-paket {
+    font-size: 14px;  /* Memperkecil ukuran font rincian untuk mobile */
+  }
+
+  .title-paket-snbt-new {
+    font-size: 20px;  /* Ukuran font judul lebih kecil */
+    margin: 10px 0 10px 0;
+  }
+
+  .child-title-paket-snbt-new {
+    font-size: 28px;  /* Ukuran font judul anak lebih kecil */
+  }
+
+  .child-subtitle-paket-snbt-new {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .btn-parent-paket-snbt-new, .btn-parent-paket-snbt-new-2 {
+    width: 100%;  /* Memastikan tombol penuh di layar mobile */
+  }
+
+  .parent-special-label-paket-snbt-maxima {
+    width: 100%;  /* Memastikan elemen ini menggunakan lebar 100% pada mobile */
+    /* padding: 10px; */
+  }
+
+  .special-label-paket-snbt-maxima {
+    font-size: 18px;  /* Menyesuaikan ukuran font untuk mobile */
+    padding: 10px;
+  }
+
+  .child-paket-snbt-new-maxima {
+    width: 100%;  /* Memastikan elemen ini menggunakan lebar 100% pada mobile */
+    padding: 15px;  /* Menambahkan padding */
+    box-sizing: border-box;  /* Agar padding tidak mempengaruhi lebar */
+  }
+
+  .child-title-paket-snbt-new {
+    font-size: 24px;  /* Ukuran font lebih kecil untuk judul di mobile */
+  }
+
+  .child-subtitle-paket-snbt-new {
+    font-size: 14px;  /* Menyesuaikan ukuran font */
+    font-weight: 600;
+  }
+
+  .btn-parent-paket-snbt-new {
+    width: 100%;  /* Tombol mengambil lebar penuh */
+  }
+  .desk-main-paket-snbt-new {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+}
+

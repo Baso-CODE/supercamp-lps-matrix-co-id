@@ -1,0 +1,68 @@
+/* Gaya Dasar (Default - Desktop/Layar Besar) */
+.parent-jadwal-kegiatan-sc-lps {
+  margin-top: 200px;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.title-jadwal-kegiatan-sc-lps {
+  color: #004f77;
+  font-weight: 700;
+  font-size: 40px; /* Atur ukuran font default untuk desktop */
+}
+
+.desk-jadwal-kegiatan {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; /* Batasi lebar deskripsi agar mudah dibaca di desktop */
+}
+
+.box-img-jadwal-kegiatan {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Menggunakan flex-start untuk align-items */
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px; /* Tambahkan jarak antar gambar */
+}
+
+.img-jadwal-kegiatan-sc-lps {
+  width: 48%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+  .parent-jadwal-kegiatan-sc-lps {
+    margin-top: 100px;
+    padding: 0 3%;
+  }
+
+  .title-jadwal-kegiatan-sc-lps {
+    font-size: 28px; /* Lebih kecil dari desktop */
+    font-weight: 700;
+  }
+
+  .desk-jadwal-kegiatan {
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 15px;
+  }
+
+  .box-img-jadwal-kegiatan {
+    /* Gambar akan tersusun vertikal */
+    flex-direction: column;
+    align-items: center; /* Pusatkan gambar saat tersusun vertikal */
+    gap: 15px;
+  }
+
+  .img-jadwal-kegiatan-sc-lps {
+    /* Di Ponsel, 1 gambar per baris */
+    width: 100%; /* Menggunakan 90% agar ada ruang di tepi layar */
+    max-width: none; /* Hilangkan batasan max-width desktop */
+  }
+}

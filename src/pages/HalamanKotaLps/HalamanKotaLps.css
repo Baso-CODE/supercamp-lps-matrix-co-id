@@ -1,0 +1,62 @@
+.parent-text-seo-lps {
+  padding: 60px 13%;
+  background-color: #fcfcfc; /* Memberi sedikit perbedaan background agar menonjol */
+}
+
+.container-seo-content {
+  margin: 0 auto;
+}
+
+.header-seo-lps {
+  margin-bottom: 30px;
+}
+
+.text-seo-lps {
+  border-left: 6px solid #f06f06; /* Menggunakan hex agar konsisten dengan brand */
+  padding-left: 20px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #004f77;
+  line-height: 1.3;
+}
+
+.highlight-city {
+  color: #f06f06;
+}
+
+.desk-seo-lps {
+  color: #444;
+  font-size: 17px;
+  line-height: 1.8; /* Line height yang lebih lega untuk kenyamanan baca */
+  text-align: justify;
+}
+
+.desk-seo-lps p {
+  margin-bottom: 20px;
+}
+
+.closing-statement {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  color: #004f77;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 896px) {
+  .parent-text-seo-lps {
+    padding: 40px 3%;
+  }
+
+  .text-seo-lps {
+    font-size: 22px;
+    padding-left: 15px;
+    border-left-width: 4px;
+  }
+
+  .desk-seo-lps {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left; /* Mobile lebih baik rata kiri agar tidak banyak gap */
+  }
+}

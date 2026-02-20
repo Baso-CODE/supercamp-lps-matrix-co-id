@@ -1,0 +1,110 @@
+.title-paket-snbt {
+  text-align: center;
+}
+.parent-container-paket-snbt {
+  /* background-color: #ff6500; */
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main-title-paket-snbt {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 20px;
+}
+.container-paket-snbt {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 30px;
+  margin-top: 20px;
+  /* background-color: #ff6500; */
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+.card-paket-snbt {
+  background-image: url("/src/assets/wave_program_tni.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  padding-top: 25px;
+  transition: 0.5s;
+
+  width: 100%;
+}
+.card-paket-snbt:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.garis-pembatas-paket-snbt {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #05459942;
+  border-radius: 50px;
+}
+.icon-paket-snbt {
+  color: rgb(0, 170, 57);
+}
+.btn-paket-snbt {
+  background-color: #ff6500;
+  border: 1px solid transparent;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 6px;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.title-paket-snbt {
+  margin-bottom: 10px;
+}
+.isi-paket-snbt {
+  display: flex;
+  justify-content: baseline;
+  align-items: flex-start;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  gap: 10px;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+  .container-paket-snbt {
+    display: grid;
+    place-items: center;
+  }
+  .main-title-paket-snbt {
+    font-size: 28px;
+  }
+  .isi-paket-snbt {
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .text-subtitle-prog-unggulan {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .main-title-paket-snbt {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .container-paket-snbt {
+    margin-top: 0;
+  }
+  .btn-paket-snbt {
+    padding: 10px;
+  }
+  .garis-pembatas-paket-snbt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

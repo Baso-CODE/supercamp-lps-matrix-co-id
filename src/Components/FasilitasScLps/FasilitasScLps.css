@@ -1,0 +1,75 @@
+.parent-fasilitas-supercamp-lps {
+  background-image: url("/src/assets/Supercamp/fasilitas_sc/bg_Fasilitas.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.img-fasilitas-sc-lps {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.child-box-fasilitas-sc-lps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-fasilitas-sc-lps {
+  text-align: center;
+  color: #004f77;;
+}
+.parent-img-dave {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* padding-left: 13%;
+  padding-right: 13%; */
+  /* margin-top: 10px; */
+}
+.img-dave {
+  width: 24%;
+  border: 4px solid white;
+}
+.box-fasilitas-sc-lps {
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+  .parent-fasilitas-supercamp-lps {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .img-fasilitas-sc-lps {
+    width: 100%;
+    padding: 3px;
+    border-radius: 3px;
+  }
+  .title-fasilitas-sc-lps {
+    font-size: 20px;
+  }
+  .img-dave {
+    width: 48%;
+    border: 0px solid white;
+    border-radius: 0;
+  }
+  .parent-img-dave {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 7px;
+  }
+  .box-fasilitas-sc-lps {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}

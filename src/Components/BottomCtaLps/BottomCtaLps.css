@@ -1,0 +1,110 @@
+.box-cta-bottom {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 80px 13%;
+  margin-top: 50px;
+}
+
+.title-cta-bottom-lps {
+  font-weight: 800;
+  font-size: 36px;
+  color: #f76300;
+  margin-bottom: 10px;
+}
+
+.desk-cta-bottom-lps {
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.parent-button-cta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.child-cta-bottom-lps {
+  background-color: #263c80;
+  padding: 30px;
+  flex: 1; /* Biar lebar admin 1 dan 2 sama rata */
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.title-cs-lps {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.no-cs-lps {
+  color: #cbd5e0;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.parent-btn-call-chat {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-cta-link {
+  flex: 1; /* Memberikan lebar yang sama untuk kedua tombol */
+  padding: 12px 5px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-cta-link.chat {
+  background-color: #25d366;
+} /* Warna Hijau WA */
+.btn-cta-link.call {
+  background-color: #005ac9;
+}
+
+.btn-cta-link:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 896px) {
+  .box-cta-bottom {
+    padding: 60px 5%;
+    margin-top: 30px;
+  }
+
+  .parent-button-cta {
+    flex-direction: column; /* Admin 1 di atas, Admin 2 di bawah */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .child-cta-bottom-lps {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .title-cta-bottom-lps {
+    font-size: 26px;
+  }
+  .desk-cta-bottom-lps {
+    font-size: 15px;
+  }
+
+  .btn-cta-link {
+    font-size: 13px;
+    padding: 10px 5px;
+  }
+}

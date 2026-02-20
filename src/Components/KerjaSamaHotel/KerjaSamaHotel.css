@@ -1,0 +1,97 @@
+/* Container Utama (Latar Belakang) */
+.partnership-section-lps {
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
+
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Kartu Putih */
+.partnership-card {
+  background-color: white;
+  width: 100%;
+  max-width: 900px; /* Batasi lebar maksimal agar tidak terlalu lebar di layar besar */
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan lembut modern */
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+/* Judul */
+.partnership-title {
+  font-weight: 800;
+  font-size: 24px;
+  color: #444; /* Abu tua lebih elegan daripada hitam pekat */
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+/* Container Logo */
+.partnership-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px; /* Jarak antar logo */
+  flex-wrap: wrap; /* Agar aman jika logo bertambah banyak */
+}
+
+/* Wrapper Logo (Agar ukuran konsisten) */
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover {
+  transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+/* Gambar Logo */
+.partner-logo {
+  height: 124px;
+  width: auto;
+  object-fit: contain;
+
+  /* Efek Modern (Opsional): */
+  filter: grayscale(100%); /* Hitam putih */
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Saat Hover pada Logo, warna muncul */
+.logo-wrapper:hover .partner-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* --- RESPONSIVE --- */
+
+@media only screen and (max-width: 768px) {
+  .partnership-section-lps {
+    padding: 0 3%;
+    margin-bottom: 40px;
+  }
+
+  .partnership-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .partnership-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .partnership-logos {
+    gap: 30px;
+  }
+
+  .partner-logo {
+    height: 50px; /* Perkecil tinggi logo di HP */
+  }
+}

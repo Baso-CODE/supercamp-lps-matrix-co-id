@@ -1,0 +1,78 @@
+.navbar-lps {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; /* Pastikan menempel ke kiri */
+  padding: 10px 15%;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 8%; /* Untuk desktop */
+}
+
+.logo-nav-lps {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.parent-btn-w-quot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.button-daftar-sekarang-lps {
+  background-color: #f06f06;
+  color: #ffffff; /* Pastikan teks putih */
+  padding: 10px 25px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none; /* Hilangkan garis bawah link */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  text-align: center;
+}
+
+.button-daftar-sekarang-lps:hover {
+  background-color: #d66205;
+  transform: translateY(-2px); /* Efek melayang sedikit */
+}
+
+.text-kuota-sc-lps {
+  font-size: 11px;
+  color: #d32f2f; /* Warna merah agar lebih kontras sebagai peringatan */
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 896px) {
+  .navbar-lps {
+    padding: 12px 5%;
+  }
+
+  .logo-container {
+    width: 30%; /* Lebih besar di mobile agar terlihat */
+  }
+
+  .button-daftar-sekarang-lps {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .text-kuota-sc-lps {
+    font-size: 10px;
+  }
+}

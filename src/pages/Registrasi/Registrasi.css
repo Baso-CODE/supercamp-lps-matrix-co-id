@@ -1,0 +1,82 @@
+.container-form {
+  padding-left: 25%;
+  padding-right: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.supertitle-registrasi {
+  margin-top: 70px;
+  background-color: rgb(240, 111, 6);
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.parent-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.superparent-form-1 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+.title-form-email {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.form-input-resgitrasi {
+  padding: 10px;
+  border: 1px solid rgb(201, 201, 201);
+  outline: none;
+  border-radius: 5px;
+  font-family: "Poppins", serif;
+}
+.input-textarea {
+  height: 20vh;
+  padding: 10px;
+  font-family: "Poppins", serif;
+  outline: none;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 5px;
+}
+.btn-input-resgitrasi {
+  padding: 8px;
+  background-color: rgb(240, 111, 6);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.label-form {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+  .container-form {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 10px;
+  }
+  .superparent-form-1 {
+    padding: 10px;
+  }
+  .supertitle-registrasi {
+    font-size: 20px;
+    text-align: center;
+  }
+}

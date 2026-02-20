@@ -1,0 +1,164 @@
+/* src/LPS/ComponentLps/FaqScLps.css */
+.accordion-container-lps {
+  /* border: 1px solid #ddd; */
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header-lps {
+  padding: 15px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.accordion-body-lps {
+  overflow: hidden;
+  background-color: #f9f9f9;
+  max-height: 0; /* Menyembunyikan konten pada awalnya */
+  opacity: 0; /* Membuat konten tidak terlihat */
+  padding: 0 10px; /* Menambah sedikit padding samping */
+  margin-bottom: 0; /* Menjaga jarak bawah saat tertutup */
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out,
+    padding 0.5s ease-out, margin-bottom 0.5s ease-out;
+}
+
+.accordion-body-lps.open {
+  max-height: 500px; /* Menyesuaikan dengan tinggi konten */
+  opacity: 1; /* Membuat konten terlihat */
+  padding: 10px; /* Menambah padding saat terbuka */
+  margin-bottom: 20px; /* Memberikan jarak bawah saat terbuka */
+}
+
+.accordion-header-lps:hover {
+  background-color: #e9e9e9;
+}
+
+.parent-faq-2 {
+  display: flex;
+  align-items: self-start;
+}
+
+.parent-faq-sc-lps {
+  padding-left: 13%;
+  padding-right: 13%;
+  margin-top: 100px;
+}
+
+.subtitle-faq-lps {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.desk-faq-lps {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.title-faq-sc-lps {
+  color: #004f77;
+  font-weight: 800;
+  text-align: center;
+}
+
+.child-desk-lps {
+  display: flex;
+  align-items: self-start;
+}
+
+/* Responsivitas */
+
+/* Untuk perangkat dengan lebar layar lebih besar dari 1024px (laptop/desktop besar) */
+@media (max-width: 1024px) {
+  .accordion-header-lps {
+    font-size: 16px;
+  }
+
+  .parent-faq-sc-lps {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .subtitle-faq-lps {
+    font-size: 15px;
+  }
+
+  .desk-faq-lps {
+    font-size: 14px;
+  }
+
+  .title-faq-sc-lps {
+    font-size: 24px;
+  }
+}
+
+/* Untuk perangkat dengan lebar layar lebih kecil dari 768px (tablet) */
+@media (max-width: 768px) {
+  .accordion-header-lps {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .parent-faq-sc-lps {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .subtitle-faq-lps {
+    font-size: 14px;
+  }
+
+  .desk-faq-lps {
+    font-size: 13px;
+  }
+
+  .title-faq-sc-lps {
+    font-size: 22px;
+  }
+}
+
+/* Untuk perangkat dengan lebar layar lebih kecil dari 480px (ponsel) */
+@media (max-width: 480px) {
+  .accordion-header-lps {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .parent-faq-sc-lps {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 50px; /* Mengurangi margin atas pada ponsel */
+  }
+
+  .subtitle-faq-lps {
+    font-size: 12px;
+  }
+
+  .desk-faq-lps {
+    font-size: 12px;
+  }
+
+  .title-faq-sc-lps {
+    font-size: 20px;
+  }
+
+  /* Mengatur margin dan padding untuk accordion */
+  .accordion-container-lps {
+    margin: 10px 0;
+  }
+
+  .accordion-header-lps {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .parent-faq-2 {
+    align-items: self-start;
+    line-height: 23px;
+    margin-top: 10px;
+  }
+}

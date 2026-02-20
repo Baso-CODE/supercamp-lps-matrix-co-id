@@ -1,0 +1,50 @@
+.box-bg-slide-cta {
+  margin-top: 80px; /* Dikurangi agar tidak terlalu jauh di desktop */
+  padding: 40px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-link {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease; /* Efek hover halus */
+}
+
+.cta-link:hover {
+  transform: scale(1.02);
+}
+
+.cta-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Tambah shadow agar modern */
+}
+
+/* Logic Tampilan */
+.mobile-only {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 896px) {
+  .box-bg-slide-cta {
+    margin-top: 40px;
+    padding: 20px 5%;
+  }
+
+  .cta-img {
+    border-radius: 12px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}

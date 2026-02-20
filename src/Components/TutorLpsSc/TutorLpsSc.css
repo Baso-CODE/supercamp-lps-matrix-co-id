@@ -1,0 +1,56 @@
+.parent-all-tutor-lps {
+  background-image: url("../../assets/Supercamp/fasilitas_sc/bg_Fasilitas.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 120px;
+  padding: 80px 0;
+}
+
+.text-all-tutor-lps {
+  text-align: center;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.slider-top-lps {
+  margin: 0 auto;
+  padding: 0 13%;
+}
+
+.top-slider-lps {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slider {
+  width: 100%;
+}
+
+.cta-lps {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .parent-all-tutor-lps {
+    margin-top: 60px;
+    padding: 50px 0;
+  }
+  .slider-top-lps {
+    margin: 0 auto;
+    padding: 0 6%;
+  }
+
+  .text-all-tutor-lps {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .cta-lps {
+    height: 250px;
+  }
+}

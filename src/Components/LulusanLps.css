@@ -1,0 +1,22 @@
+.img-lulusan-lps {
+    width: 70%;
+    margin-top: 100px;
+}
+.box-lulusan-lps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #263c80;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 320px) and (max-width: 896px) {
+    .img-lulusan-lps {
+        width: 100%;
+        margin-top: 0;
+    }
+    .box-lulusan-lps {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}

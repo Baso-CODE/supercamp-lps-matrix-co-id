@@ -1,0 +1,84 @@
+/* Styling the table */
+.student-table {
+  width: 100%;
+
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Header Row */
+.student-table thead {
+  background-color: #f76300;
+  color: white;
+}
+
+.student-table th {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/* Table Body */
+.student-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.student-table tbody tr:nth-child(even) {
+  background-color: #f7eee6;
+}
+
+.student-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+.parent-table-student {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.main-title-list-student {
+  text-align: center;
+  color: #004f77;
+  margin-top: 30px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .parent-table-student {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .student-table th,
+  .student-table td {
+    padding: 8px 10px;
+  }
+
+  .student-table {
+    border: 0;
+  }
+
+  .student-table th,
+  .student-table td {
+    font-size: 14px;
+  }
+  .main-title-list-student {
+    font-size: 23px;
+    font-weight: 800;
+  }
+  .child-title-list-student {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .student-table th,
+  .student-table td {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
