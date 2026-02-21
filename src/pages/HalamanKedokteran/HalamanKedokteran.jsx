@@ -45,7 +45,7 @@ const HalamanKedokteran = () => {
 
         <link
           rel="canonical"
-          href="https://supercampmatrix.com/bimbel-masuk-kedokteran"
+          href="https://supercampmatrix.co.id/bimbel-masuk-kedokteran"
         />
 
         {/* Open Graph (Sangat penting karena niche kedokteran sering dibagikan antar orang tua di WA) */}
@@ -60,11 +60,11 @@ const HalamanKedokteran = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampmatrix.com/bimbel-masuk-kedokteran"
+          content="https://supercampmatrix.co.id/bimbel-masuk-kedokteran"
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Menampilkan program sebagai layanan profesional di Google */}

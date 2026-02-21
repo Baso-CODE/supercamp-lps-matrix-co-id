@@ -46,7 +46,7 @@ const HalamanPtn = () => {
 
         <link
           rel="canonical"
-          href="https://supercampmatrix.com/bimbel-masuk-ptn"
+          href="https://supercampmatrix.co.id/bimbel-masuk-ptn"
         />
 
         {/* Open Graph (Optimal untuk Share ke Orang Tua Siswa via WA) */}
@@ -61,11 +61,11 @@ const HalamanPtn = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampmatrix.com/bimbel-masuk-ptn"
+          content="https://supercampmatrix.co.id/bimbel-masuk-ptn"
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD - Membuat Google memberikan 'Bintang' atau 'FAQ' di hasil pencarian */}

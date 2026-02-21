@@ -73,7 +73,7 @@ const HalamanKelPtn = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
+          href={`https://supercampmatrix.co.id/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
         />
 
         {/* Open Graph (WhatsApp & Social Media) */}
@@ -88,11 +88,11 @@ const HalamanKelPtn = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
+          content={`https://supercampmatrix.co.id/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat krusial untuk SEO Lokal tingkat Kelurahan */}
@@ -101,8 +101,8 @@ const HalamanKelPtn = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat Edumatrix ${kelurahan.kelurahan}`,
-            image: "https://supercampmatrix.com/images/banner.webp",
-            url: `https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`,
+            image: "https://supercampmatrix.co.id/images/banner.webp",
+            url: `https://supercampmatrix.co.id/guru-bimbel-masuk-ptn/${kelurahan.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kelurahan.kelurahan,

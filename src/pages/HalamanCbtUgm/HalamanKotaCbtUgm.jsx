@@ -74,7 +74,7 @@ const HalamanKotaCbtUgm = () => {
         {/* Canonical Link yang Bersih */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/les-privat-cbt-ugm/${kota.slug}`}
+          href={`https://supercampmatrix.co.id/les-privat-cbt-ugm/${kota.slug}`}
         />
 
         {/* Open Graph (WhatsApp Preview) */}
@@ -89,11 +89,11 @@ const HalamanKotaCbtUgm = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/les-privat-cbt-ugm/${kota.slug}`}
+          content={`https://supercampmatrix.co.id/les-privat-cbt-ugm/${kota.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal Kota */}
@@ -102,8 +102,8 @@ const HalamanKotaCbtUgm = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat CBT UGM Edumatrix ${kota.kota}`,
-            image: "https://supercampmatrix.com/images/banner.webp",
-            url: `https://supercampmatrix.com/les-privat-cbt-ugm/${kota.slug}`,
+            image: "https://supercampmatrix.co.id/images/banner.webp",
+            url: `https://supercampmatrix.co.id/les-privat-cbt-ugm/${kota.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kota.kota,

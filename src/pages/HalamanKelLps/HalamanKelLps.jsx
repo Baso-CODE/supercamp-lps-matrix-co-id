@@ -54,7 +54,7 @@ const HalamanKelLps = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
+          href={`https://supercampmatrix.co.id/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
         />
 
         {/* Open Graph (Social Media & WhatsApp) */}
@@ -69,11 +69,11 @@ const HalamanKelLps = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
+          content={`https://supercampmatrix.co.id/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD - Sangat Kuat untuk SEO Lokal */}
@@ -82,8 +82,8 @@ const HalamanKelLps = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat Edumatrix ${kelurahan.kelurahan}`,
-            image: "https://supercampmatrix.com/images/banner.webp",
-            url: `https://supercampmatrix.com/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`,
+            image: "https://supercampmatrix.co.id/images/banner.webp",
+            url: `https://supercampmatrix.co.id/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`,
             telephone: "+6282258689993",
             address: {
               "@type": "PostalAddress",

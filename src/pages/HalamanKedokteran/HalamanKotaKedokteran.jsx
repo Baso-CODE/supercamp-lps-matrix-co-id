@@ -74,7 +74,7 @@ const HalamanKotaKedokteran = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`}
+          href={`https://supercampmatrix.co.id/les-privat-masuk-kedokteran/${kota.slug}`}
         />
 
         {/* Open Graph (WhatsApp & Social Media) */}
@@ -89,11 +89,11 @@ const HalamanKotaKedokteran = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`}
+          content={`https://supercampmatrix.co.id/les-privat-masuk-kedokteran/${kota.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Memberikan identitas 'Local Business' agar Google memprioritaskan ranking lokal */}
@@ -102,8 +102,8 @@ const HalamanKotaKedokteran = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat Kedokteran Edumatrix ${kota.kota}`,
-            image: "https://supercampmatrix.com/images/banner.webp",
-            url: `https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`,
+            image: "https://supercampmatrix.co.id/images/banner.webp",
+            url: `https://supercampmatrix.co.id/les-privat-masuk-kedokteran/${kota.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kota.kota,

@@ -77,7 +77,7 @@ const HalamanKecLps = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/guru-privat-supercamp-utbk-snbt/${kecamatan.slug}`}
+          href={`https://supercampmatrix.co.id/guru-privat-supercamp-utbk-snbt/${kecamatan.slug}`}
         />
 
         {/* Open Graph (WhatsApp/FB Sharing) */}
@@ -92,11 +92,11 @@ const HalamanKecLps = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/guru-privat-supercamp-utbk-snbt/${kecamatan.slug}`}
+          content={`https://supercampmatrix.co.id/guru-privat-supercamp-utbk-snbt/${kecamatan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD (Updated for Hybrid Keywords) */}
@@ -105,8 +105,8 @@ const HalamanKecLps = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: `Bimbel & Les Privat Edumatrix ${kecamatan.kecamatan}`,
-            image: "https://supercampmatrix.com/images/banner.webp",
-            url: `https://supercampmatrix.com/guru-privat-supercamp-utbk-snbt/${kecamatan.slug}`,
+            image: "https://supercampmatrix.co.id/images/banner.webp",
+            url: `https://supercampmatrix.co.id/guru-privat-supercamp-utbk-snbt/${kecamatan.slug}`,
             telephone: "+6282258689993",
             address: {
               "@type": "PostalAddress",

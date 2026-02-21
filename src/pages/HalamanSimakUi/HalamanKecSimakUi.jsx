@@ -74,7 +74,7 @@ const HalamanKecSimakUi = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`}
+          href={`https://supercampmatrix.co.id/bimbingan-simak-ui/${kecamatan.slug}`}
         />
 
         {/* Open Graph (WhatsApp Preview) */}
@@ -89,11 +89,11 @@ const HalamanKecSimakUi = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`}
+          content={`https://supercampmatrix.co.id/bimbingan-simak-ui/${kecamatan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat kuat untuk SEO Lokal tingkat Kecamatan */}
@@ -102,8 +102,8 @@ const HalamanKecSimakUi = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kecamatan.kecamatan}`,
-            image: "https://supercampmatrix.com/images/banner.webp",
-            url: `https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`,
+            image: "https://supercampmatrix.co.id/images/banner.webp",
+            url: `https://supercampmatrix.co.id/bimbingan-simak-ui/${kecamatan.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kecamatan.kecamatan,

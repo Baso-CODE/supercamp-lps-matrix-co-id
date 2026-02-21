@@ -45,7 +45,7 @@ const HalamanSimakUi = () => {
 
         <link
           rel="canonical"
-          href="https://supercampmatrix.com/bimbel-simak-ui"
+          href="https://supercampmatrix.co.id/bimbel-simak-ui"
         />
 
         {/* Open Graph (Optimal untuk WhatsApp Preview) */}
@@ -60,11 +60,11 @@ const HalamanSimakUi = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampmatrix.com/bimbel-simak-ui"
+          content="https://supercampmatrix.co.id/bimbel-simak-ui"
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Untuk Rich Snippets di Google */}
