@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://supercampmatrix.co.id/sitemap.xml
+Sitemap: https://supercampui.com/sitemap.xml

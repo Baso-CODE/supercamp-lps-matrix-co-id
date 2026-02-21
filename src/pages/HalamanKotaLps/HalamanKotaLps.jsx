@@ -97,7 +97,7 @@ const HalamanKotaLps = () => {
         />
         <link
           rel="canonical"
-          href={`https://supercampmatrix.co.id/bimbel-privat-supercamp-utbk-snbt/${kota.slug}`}
+          href={`https://supercampui.com/bimbel-privat-supercamp-utbk-snbt/${kota.slug}`}
         />
 
         {/* Open Graph / Facebook / WhatsApp */}
@@ -112,11 +112,11 @@ const HalamanKotaLps = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.co.id/bimbel-privat-supercamp-utbk-snbt/${kota.slug}`}
+          content={`https://supercampui.com/bimbel-privat-supercamp-utbk-snbt/${kota.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          content="https://supercampui.com/images/banner.webp"
         />
 
         {/* Twitter Tags */}
@@ -133,7 +133,7 @@ const HalamanKotaLps = () => {
             "@type": "EducationalOrganization",
             name: `Bimbel Supercamp Matrix ${kota.kota}`,
             description: `Lembaga bimbingan belajar persiapan masuk PTN dan Kedokteran di ${kota.kota}.`,
-            url: `https://supercampmatrix.co.id/bimbel-privat-supercamp-utbk-snbt/${kota.slug}`,
+            url: `https://supercampui.com/bimbel-privat-supercamp-utbk-snbt/${kota.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kota.kota,

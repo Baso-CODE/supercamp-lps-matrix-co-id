@@ -73,7 +73,7 @@ const HalamanKelCbtUgm = () => {
 
         <link
           rel="canonical"
-          href={`https://supercampmatrix.co.id/guru-les-privat-cbt-ugm/${kelurahan.slug}`}
+          href={`https://supercampui.com/guru-les-privat-cbt-ugm/${kelurahan.slug}`}
         />
 
         {/* Open Graph (WhatsApp Preview) */}
@@ -88,11 +88,11 @@ const HalamanKelCbtUgm = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.co.id/guru-les-privat-cbt-ugm/${kelurahan.slug}`}
+          content={`https://supercampui.com/guru-les-privat-cbt-ugm/${kelurahan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          content="https://supercampui.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Spek Tinggi untuk mendominasi Google Maps & Search Lokal */}
@@ -101,8 +101,8 @@ const HalamanKelCbtUgm = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat CBT UGM Edumatrix ${kelurahan.kelurahan}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/guru-les-privat-cbt-ugm/${kelurahan.slug}`,
+            image: "https://supercampui.com/images/banner.webp",
+            url: `https://supercampui.com/guru-les-privat-cbt-ugm/${kelurahan.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kelurahan.kelurahan,

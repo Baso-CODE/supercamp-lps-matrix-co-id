@@ -1,7 +1,30 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet";
 
 import { useLocation, useParams } from "react-router-dom";
+import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
+import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
+import BenefitScLps from "../../Components/BenefitScLPS/BenefitScLPS";
+import BottomCtaLps from "../../Components/BottomCtaLps/BottomCtaLps";
+import FaqScLps from "../../Components/FaqScLps/FaqScLps";
+import FasilitasScLps from "../../Components/FasilitasScLps/FasilitasScLps";
+import JadwalKegiatanScLps from "../../Components/JadwalKegiatanScLps/JadwalKegiatanScLps";
+import JumbotronLps from "../../Components/Jumbotron/Jumbotron";
+import KegiatanScLps from "../../Components/KegiatanScLps/KegiatanScLps";
+import KerjasamaHotel from "../../Components/KerjaSamaHotel/KerjaSamaHotel";
+import ListAlumni from "../../Components/ListAlumni/ListAlumni";
+import LulusanLps from "../../Components/LulusanLPS/LulusanLPS";
+import PaketBelajarSnbtNew from "../../Components/PaketBelajarSnbt/PaketBelajarSnbtNew";
+import PaketSupercampLps from "../../Components/PaketSupercamp/PaketSupercampLps";
+import SlideCtaLps from "../../Components/SlideCtaLps/SlideCtaLps";
+import TargetBelajarLps from "../../Components/TargetBelajarLps/TargetBelajarLps";
+import TestimoniLps from "../../Components/TestimoniLps/TestimoniLps";
+import TestimoniLps2 from "../../Components/TestimoniLps2/TestimoniLps2";
+import TutorLpsSc from "../../Components/TutorLpsSc/TutorLpsSc";
+import VenueScLps from "../../Components/VenueScLps/VenueScLps";
+import VideoScLps from "../../Components/VideoScLps/VideoScLps";
+import WaktuPelaksanaanSc from "../../Components/WaktuPelaksanaanSc/WaktuPelaksanaanSc";
 
 const HalamanKelLps = () => {
   const { kelSlug } = useParams();
@@ -31,7 +54,7 @@ const HalamanKelLps = () => {
   }, [kelSlug, query]);
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         {/* Basic SEO - Menggabungkan Bimbel & Les Privat di Level Kelurahan */}
         <title>
@@ -54,7 +77,7 @@ const HalamanKelLps = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.co.id/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
+          href={`https://supercampui.com/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
         />
 
         {/* Open Graph (Social Media & WhatsApp) */}
@@ -69,11 +92,11 @@ const HalamanKelLps = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.co.id/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
+          content={`https://supercampui.com/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          content="https://supercampui.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD - Sangat Kuat untuk SEO Lokal */}
@@ -82,8 +105,8 @@ const HalamanKelLps = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat Edumatrix ${kelurahan.kelurahan}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`,
+            image: "https://supercampui.com/images/banner.webp",
+            url: `https://supercampui.com/bimbingan-privat-supercamp-utbk-snbt/${kelurahan.slug}`,
             telephone: "+6282258689993",
             address: {
               "@type": "PostalAddress",
@@ -141,7 +164,7 @@ const HalamanKelLps = () => {
       {/* <ListKabLps /> */}
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

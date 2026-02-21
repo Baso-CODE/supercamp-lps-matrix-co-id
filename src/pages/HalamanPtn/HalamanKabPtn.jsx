@@ -73,7 +73,7 @@ const HalamanKabPtn = () => {
 
         <link
           rel="canonical"
-          href={`https://supercampmatrix.co.id/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
+          href={`https://supercampui.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
         />
 
         {/* Open Graph untuk Preview WhatsApp yang menarik */}
@@ -88,11 +88,11 @@ const HalamanKabPtn = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.co.id/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
+          content={`https://supercampui.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          content="https://supercampui.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD untuk mempermudah Google indexing lokasi */}
@@ -101,8 +101,8 @@ const HalamanKabPtn = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat Edumatrix ${kabupaten.kota_kabupaten}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`,
+            image: "https://supercampui.com/images/banner.webp",
+            url: `https://supercampui.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`,
             telephone: "+6282258689993",
             address: {
               "@type": "PostalAddress",

@@ -75,7 +75,7 @@ const HalamanKecPtn = () => {
         {/* Link Canonical yang Rapi */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.co.id/bimbingan-masuk-ptn/${kecamatan.slug}`}
+          href={`https://supercampui.com/bimbingan-masuk-ptn/${kecamatan.slug}`}
         />
 
         {/* Open Graph (WhatsApp Preview) */}
@@ -90,11 +90,11 @@ const HalamanKecPtn = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.co.id/bimbingan-masuk-ptn/${kecamatan.slug}`}
+          content={`https://supercampui.com/bimbingan-masuk-ptn/${kecamatan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          content="https://supercampui.com/images/banner.webp"
         />
 
         {/* Schema Markup untuk SEO Lokal Tingkat Kecamatan */}
@@ -103,8 +103,8 @@ const HalamanKecPtn = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: `Bimbel & Les Privat Edumatrix ${kecamatan.kecamatan}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/bimbingan-masuk-ptn/${kecamatan.slug}`,
+            image: "https://supercampui.com/images/banner.webp",
+            url: `https://supercampui.com/bimbingan-masuk-ptn/${kecamatan.slug}`,
             telephone: "+6282258689993",
             address: {
               "@type": "PostalAddress",

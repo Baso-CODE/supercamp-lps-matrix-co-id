@@ -74,7 +74,7 @@ const HalamanKabSimakUi = () => {
         {/* Canonical Link yang Bersih */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.co.id/bimbel-privat-simak-ui/${kabupaten.slug}`}
+          href={`https://supercampui.com/bimbel-privat-simak-ui/${kabupaten.slug}`}
         />
 
         {/* Open Graph (WhatsApp Preview) */}
@@ -89,11 +89,11 @@ const HalamanKabSimakUi = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.co.id/bimbel-privat-simak-ui/${kabupaten.slug}`}
+          content={`https://supercampui.com/bimbel-privat-simak-ui/${kabupaten.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          content="https://supercampui.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal Kabupaten */}
@@ -102,8 +102,8 @@ const HalamanKabSimakUi = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kabupaten.kota_kabupaten}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/bimbel-privat-simak-ui/${kabupaten.slug}`,
+            image: "https://supercampui.com/images/banner.webp",
+            url: `https://supercampui.com/bimbel-privat-simak-ui/${kabupaten.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kabupaten.kota_kabupaten,
