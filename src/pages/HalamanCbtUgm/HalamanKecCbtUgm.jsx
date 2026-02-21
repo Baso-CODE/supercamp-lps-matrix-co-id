@@ -53,25 +53,65 @@ const HalamanKecCbtUgm = () => {
     getKecamatan(id);
   }, [id, query, axiosJWT, kecSlug]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Perbaikan Title: Menggunakan string tunggal agar aman dari error Helmet */}
+        <title>{`Bimbel & Les Privat CBT UGM ${kecamatan.kecamatan} 2026 - Lolos UTUL UGM #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Hybrid Keyword + Target CBT UGM + Lokasi Kecamatan Spesifik */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Tempat Bimbingan CBT UGM ${kecamatan.kecamatan} Terbaik. Les Privat UTUL
-          UGM Saintek Soshum IPC, Master Teacher Berpengalaman, Drilling Soal
-          UTUL, Privat Offline Online, Jadwal Fleksibel, Konsultasi Progress
-          Belajar`}
+          content={`Bimbel & Les Privat CBT UGM terbaik di ${kecamatan.kecamatan}. Persiapan intensif UTUL UGM 2026 Saintek & Soshum. Master Teacher datang ke rumah wilayah ${kecamatan.kecamatan}, drilling soal prediksi, & jadwal fleksibel. Daftar sekarang!`}
         />
-        <title>
-          Bimbingan CBT UGM {`${kecamatan.kecamatan}`} Bimbel Privat Intensif
-          Masuk UGM
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel cbt ugm ${kecamatan.kecamatan}, les privat cbt ugm ${kecamatan.kecamatan}, persiapan utul ugm ${kecamatan.kecamatan}, guru privat ugm ke rumah, bimbingan belajar ugm, Bimbel LPS`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbingan-privat-cbt-ugm/${kecamatan.slug}`}
+          href={`https://supercampmatrix.com/bimbingan-privat-cbt-ugm/${kecamatan.slug}`}
         />
+
+        {/* Open Graph (WhatsApp Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat CBT UGM di ${kecamatan.kecamatan} - Bimbel LPS`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi Gadjah Mada melalui program spesialis Bimbel & Les Privat CBT UGM di wilayah ${kecamatan.kecamatan}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbingan-privat-cbt-ugm/${kecamatan.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Spek Tinggi untuk mendominasi Google Maps & Search Lokal */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: `Bimbel & Les Privat CBT UGM Edumatrix ${kecamatan.kecamatan}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbingan-privat-cbt-ugm/${kecamatan.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kecamatan.kecamatan,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan ujian mandiri CBT UGM (UTUL UGM) untuk wilayah ${kecamatan.kecamatan}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -108,7 +148,7 @@ https://supercampmatrix.com/bimbingan-privat-cbt-ugm/${kecamatan.slug}`}
       <ListKelHalamanCbtUgm />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

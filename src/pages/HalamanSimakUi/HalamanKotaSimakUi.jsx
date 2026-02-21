@@ -68,7 +68,7 @@ const HalamanKotaSimakUi = () => {
         />
         <meta
           name="keywords"
-          content={`bimbel simak ui ${kota.kota}, les privat simak ui ${kota.kota}, persiapan simak kki ${kota.kota}, bimbel kki ui, tutor privat ui, karantina simak ui, edumatrix indonesia ${kota.kota}`}
+          content={`bimbel simak ui ${kota.kota}, les privat simak ui ${kota.kota}, persiapan simak kki ${kota.kota}, bimbel kki ui, tutor privat ui, karantina simak ui, Bimbel LPS ${kota.kota}`}
         />
 
         {/* Canonical Link */}
@@ -81,7 +81,7 @@ const HalamanKotaSimakUi = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`Bimbel & Les Privat SIMAK UI di ${kota.kota} - Edumatrix Indonesia`}
+          content={`Bimbel & Les Privat SIMAK UI di ${kota.kota} - Bimbel LPS`}
         />
         <meta
           property="og:description"

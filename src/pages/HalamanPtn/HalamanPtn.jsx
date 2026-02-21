@@ -41,7 +41,7 @@ const HalamanPtn = () => {
         />
         <meta
           name="keywords"
-          content="bimbel masuk ptn, les privat utbk snbt, bimbel kedokteran terbaik, persiapan simak ui, cbt ugm 2026, karantina ptn, edumatrix indonesia, guru privat ptn"
+          content="bimbel masuk ptn, les privat utbk snbt, bimbel kedokteran terbaik, persiapan simak ui, cbt ugm 2026, karantina ptn, Bimbel LPS, guru privat ptn"
         />
 
         <link
@@ -53,7 +53,7 @@ const HalamanPtn = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Bimbel & Les Privat Masuk PTN 2026 - Edumatrix Indonesia"
+          content="Bimbel & Les Privat Masuk PTN 2026 - Bimbel LPS"
         />
         <meta
           property="og:description"
@@ -78,7 +78,7 @@ const HalamanPtn = () => {
               serviceType: "Education",
               provider: {
                 "@type": "EducationalOrganization",
-                name: "Edumatrix Indonesia",
+                name: "Bimbel LPS",
                 url: "https://supercampmatrix.com",
               },
               description:

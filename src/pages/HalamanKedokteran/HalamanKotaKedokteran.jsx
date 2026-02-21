@@ -81,7 +81,7 @@ const HalamanKotaKedokteran = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`Bimbel & Les Privat Kedokteran di ${kota.kota} - Edumatrix Indonesia`}
+          content={`Bimbel & Les Privat Kedokteran di ${kota.kota} - Bimbel LPS`}
         />
         <meta
           property="og:description"

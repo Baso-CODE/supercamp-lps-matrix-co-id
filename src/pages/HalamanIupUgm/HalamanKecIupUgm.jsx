@@ -1,5 +1,6 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
 import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
@@ -52,24 +53,65 @@ const HalamanKecIupUgm = () => {
     getKecamatan(id);
   }, [id, query, axiosJWT, kecSlug]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Perbaikan Title: Menggunakan satu string utuh agar aman dari error Helmet */}
+        <title>{`Bimbel & Les Privat IUP UGM ${kecamatan.kecamatan} 2026 - Lolos Intake #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Hybrid Keyword + Target Teknis (GMST/AcEPT) + Lokasi Kecamatan */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel & Les Privat IUP UGM ${kecamatan.kecamatan} Terbaik. Fokus Les Intensif IUP UGM Kedokteran dan
-          Non FK, Belajar All Subtest, Master Teacher Berpengalaman, Jadwal
-          Fleksibel, CS Responsif, Konsultasi Progress Belajar`}
+          content={`Bimbel & Les Privat IUP UGM terbaik di ${kecamatan.kecamatan}. Persiapan intensif GMST, AcEPT, & Interview spesialis lulus FK & Non-FK. Master Teacher datang ke rumah wilayah ${kecamatan.kecamatan}. Program Intake 1, 2, & 3. Daftar Sekarang!`}
         />
-        <title>
-          Tempat Bimbel & Les Privat IUP UGM {`${kecamatan.kecamatan}`} Terbaik
-          - Intensif Privat IUP UGM FK dan Non FK
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel iup ugm ${kecamatan.kecamatan}, les privat iup ugm ${kecamatan.kecamatan}, persiapan gmst ${kecamatan.kecamatan}, pelatihan acept ugm, bimbel iup kedokteran, guru privat iup ugm, Bimbel LPS`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbel-les-privat-iup-ugm/${kecamatan.slug}`}
+          href={`https://supercampmatrix.com/bimbel-les-privat-iup-ugm/${kecamatan.slug}`}
         />
+
+        {/* Open Graph (WhatsApp Preview Premium) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat IUP UGM di ${kecamatan.kecamatan} - Bimbel LPS`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi International Undergraduate Program (IUP) UGM melalui bimbingan spesialis di ${kecamatan.kecamatan}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbel-les-privat-iup-ugm/${kecamatan.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Spek Tinggi untuk dominasi Google Maps & Search Lokal */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: `Bimbel & Les Privat IUP UGM Edumatrix ${kecamatan.kecamatan}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-les-privat-iup-ugm/${kecamatan.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kecamatan.kecamatan,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan International Undergraduate Program (IUP) UGM untuk wilayah ${kecamatan.kecamatan}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -106,7 +148,7 @@ https://supercampmatrix.com/bimbel-les-privat-iup-ugm/${kecamatan.slug}`}
       <ListKelHalamanIupUgm />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

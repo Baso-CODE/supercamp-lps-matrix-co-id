@@ -93,7 +93,7 @@ const HalamanKotaLps = () => {
         />
         <meta
           name="keywords"
-          content={`bimbel utbk snbt ${kota.kota}, les privat ptn ${kota.kota}, supercamp kedokteran 2026, karantina simak ui, cbt ugm, edumatrix indonesia`}
+          content={`bimbel utbk snbt ${kota.kota}, les privat ptn ${kota.kota}, supercamp kedokteran 2026, karantina simak ui, cbt ugm, Bimbel LPS`}
         />
         <link
           rel="canonical"
@@ -123,7 +123,7 @@ const HalamanKotaLps = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content={`Bimbel UTBK SNBT ${kota.kota} - Edumatrix Indonesia`}
+          content={`Bimbel UTBK SNBT ${kota.kota} - Bimbel LPS`}
         />
 
         {/* Schema Markup JSON-LD (Sangat Penting untuk SEO Lokal) */}

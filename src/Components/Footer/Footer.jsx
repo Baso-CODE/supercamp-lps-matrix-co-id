@@ -8,20 +8,8 @@ const Footer = () => {
   return (
     <div className="pg-bawah">
       <footer className="bawah">
-        <div className="parent-line">
-          {/* <hr className="garis-end-2" /> */}
-        </div>
-        {/* <svg
-          className="bawah-wave-svg"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            className="bawah-wave-path"
-            d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
-          />
-        </svg> */}
+        <div className="parent-line"></div>
+
         <div className="bawah-content">
           <div className="bawah-content-column">
             <div className="bawah-logo">
@@ -43,38 +31,6 @@ const Footer = () => {
                     Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat
                     (Lingkungan Pendidikan UI)
                   </p>
-                  {/* <div className="all-sosmed">
-                    <a
-                      className="sosmed-bawah"
-                      href="https://www.instagram.com/edumatrixindonesia/"
-                    >
-                      <img
-                        className="img-sosmed"
-                        src="https://cdn-web-2.ruangguru.com/landing-pages/assets/hs/1%20Homepage%20RG/Optimize%20V2/ic-ig.svg?convert=webp"
-                        alt="Les Privat SBMPTN - Bimbel Terbaik Yogyakarta"
-                      />
-                    </a>
-                    <a
-                      className="sosmed-bawah"
-                      href="https://www.youtube.com/channel/UCK6hN90FKuBsYS2_-sCQaFw"
-                    >
-                      <img
-                        className="img-sosmed"
-                        src="https://cdn-web-2.ruangguru.com/landing-pages/assets/hs/1%20Homepage%20RG/Optimize%20V2/ic-youtube.svg?convert=webp"
-                        alt="Les Privat SBMPTN - Bimbel Terbaik Yogyakarta"
-                      />
-                    </a>
-                    <a
-                      className="sosmed-bawah"
-                      href="https://www.tiktok.com/@edumatrixindonesia?is_from_webapp=1&sender_device=pc"
-                    >
-                      <img
-                        className="img-sosmed"
-                        src="https://cdn-web-2.ruangguru.com/landing-pages/assets/hs/1%20Homepage%20RG/Optimize%20V2/tiktok-ic-white-40.svg?convert=webp"
-                        alt="Les Privat SBMPTN - Bimbel Terbaik Yogyakarta"
-                      />
-                    </a>
-                  </div> */}
                 </li>
               </ul>
             </div>
@@ -83,15 +39,6 @@ const Footer = () => {
             <div className="bawah-menu">
               <h2 className="bawah-menu-name"> Konsultasi Program</h2>
               <ul id="menu-company" className="bawah-menu-list">
-                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a className="link-footer">0857-1221-7876 (Kak Una)</a>
-                </li>
-                <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a className="link-footer">0856-0042-2188 (Kak Silvi)</a>
-                </li> */}
-                {/* <li className="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a className="link-footer">0857-7402-3474 (Kak Ayu)</a>
-                </li> */}
                 <li className="menu-item menu-item-type-taxonomy menu-item-object-category">
                   <a className="link-footer">0813-1177-8441 (Kak Fina)</a>
                 </li>

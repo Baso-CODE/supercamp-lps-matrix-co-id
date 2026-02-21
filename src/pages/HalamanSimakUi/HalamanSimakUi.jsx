@@ -40,7 +40,7 @@ const HalamanSimakUi = () => {
         />
         <meta
           name="keywords"
-          content="bimbel simak ui, les privat simak ui, persiapan simak kki, bimbel kki ui, drilling soal simak ui, tutor privat simak ui, karantina simak ui, edumatrix indonesia"
+          content="bimbel simak ui, les privat simak ui, persiapan simak kki, bimbel kki ui, drilling soal simak ui, tutor privat simak ui, karantina simak ui, Bimbel LPS"
         />
 
         <link
@@ -52,7 +52,7 @@ const HalamanSimakUi = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Bimbel & Les Privat SIMAK UI & KKI 2026 - Edumatrix Indonesia"
+          content="Bimbel & Les Privat SIMAK UI & KKI 2026 - Bimbel LPS"
         />
         <meta
           property="og:description"
@@ -77,7 +77,7 @@ const HalamanSimakUi = () => {
               serviceType: "University Entrance Prep",
               provider: {
                 "@type": "EducationalOrganization",
-                name: "Edumatrix Indonesia",
+                name: "Bimbel LPS",
                 url: "https://supercampmatrix.com",
               },
               description:

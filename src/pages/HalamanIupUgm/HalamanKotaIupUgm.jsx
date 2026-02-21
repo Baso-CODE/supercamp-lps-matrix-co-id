@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -54,25 +54,65 @@ const HalamanKotaIupUgm = () => {
   }, [id, query]);
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan template literal di dalam kurung kurawal agar terbaca sebagai string tunggal */}
+        <title>{`Bimbel & Les Privat IUP UGM ${kota.kota} 2026 - Lolos Intake #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Fokus pada GMST, AcEPT, dan target FK/Non-FK dengan lokasi Kota */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel Privat IUP UGM ${kota.kota} Terbaik. Fokus Les Intensif IUP UGM
-          Kedokteran dan Non FK, Belajar All Subtest, Master Teacher
-          Berpengalaman, Jadwal Fleksibel, CS Responsif, Konsultasi Progress
-          Belajar`}
+          content={`Bimbel & Les Privat IUP UGM terbaik di ${kota.kota}. Persiapan intensif GMST, AcEPT, & Interview spesialis lulus FK & Non-FK. Guru datang ke rumah wilayah ${kota.kota} atau Online. Master Teacher Expert & drilling soal terbaru. Daftar Sekarang!`}
         />
-        <title>
-          Bimbel Privat IUP UGM {`${kota.kota}`} Terbaik Intensif Privat IUP UGM
-          FK dan Non FK Online & Guru Datang ke Rumah
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel iup ugm ${kota.kota}, les privat iup ugm ${kota.kota}, persiapan gmst ${kota.kota}, pelatihan acept ugm, bimbel iup kedokteran, guru privat iup ugm, Bimbel LPS`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbel-privat-iup-ugm/${kota.slug}`}
+          href={`https://supercampmatrix.com/bimbel-privat-iup-ugm/${kota.slug}`}
         />
+
+        {/* Open Graph (WhatsApp Preview Premium) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat IUP UGM di ${kota.kota} - Bimbel LPS`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi International Undergraduate Program (IUP) UGM melalui bimbingan spesialis di ${kota.kota}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbel-privat-iup-ugm/${kota.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Memberikan identitas 'EducationalOrganization' lokal agar Google memprioritaskan ranking kota */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat IUP UGM Edumatrix ${kota.kota}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-privat-iup-ugm/${kota.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kota.kota,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan International Undergraduate Program (IUP) UGM untuk wilayah ${kota.kota}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -109,7 +149,7 @@ https://supercampmatrix.com/bimbel-privat-iup-ugm/${kota.slug}`}
       <ListKabHalamanIupUgm />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

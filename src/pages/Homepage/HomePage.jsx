@@ -29,7 +29,7 @@ const HomePage = () => {
       <Helmet>
         {/* Basic SEO */}
         <title>
-          Bimbel Supercamp UTBK SNBT 2026 & Les Privat PTN - Edumatrix Indonesia
+          Bimbel Supercamp UTBK SNBT 2026 & Les Privat PTN - Bimbel LPS
         </title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +39,7 @@ const HomePage = () => {
         />
         <meta
           name="keywords"
-          content="Bimbel Supercamp, Les Privat UTBK SNBT, Simak UI, CBT UGM, Karantina Kedokteran, Edumatrix Indonesia, Guru ke Rumah"
+          content="Bimbel Supercamp, Les Privat UTBK SNBT, Simak UI, CBT UGM, Karantina Kedokteran, Bimbel LPS, Guru ke Rumah"
         />
         <link rel="canonical" href="https://supercampmatrix.com/" />
         {/* Open Graph / Facebook / WhatsApp */}
@@ -63,14 +63,14 @@ const HomePage = () => {
         <meta name="twitter:title" content="Bimbel Supercamp UTBK SNBT 2026" />
         <meta
           name="twitter:description"
-          content="Persiapan intensif masuk Kedokteran dan PTN Favorit bersama Edumatrix Indonesia."
+          content="Persiapan intensif masuk Kedokteran dan PTN Favorit bersama Bimbel LPS."
         />
         {/* Schema Markup (JSON-LD) - Sangat Penting untuk Peringkat 1 */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            name: "Edumatrix Indonesia - Supercamp Matrix",
+            name: "Bimbel LPS - Supercamp Matrix",
             url: "https://supercampmatrix.com/",
             logo: "https://apps.lesprivatmasukptn.com/images/LOGO2.webp",
             description:

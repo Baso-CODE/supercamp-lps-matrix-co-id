@@ -80,7 +80,7 @@ const HalamanKelPtn = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`Bimbel & Les Privat di ${kelurahan.kelurahan} - Edumatrix Indonesia`}
+          content={`Bimbel & Les Privat di ${kelurahan.kelurahan} - Bimbel LPS`}
         />
         <meta
           property="og:description"

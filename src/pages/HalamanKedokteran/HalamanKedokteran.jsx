@@ -52,7 +52,7 @@ const HalamanKedokteran = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Bimbel & Les Privat Spesialis Kedokteran 2026 - Edumatrix Indonesia"
+          content="Bimbel & Les Privat Spesialis Kedokteran 2026 - Bimbel LPS"
         />
         <meta
           property="og:description"
@@ -77,7 +77,7 @@ const HalamanKedokteran = () => {
               serviceType: "Medical Entrance Prep",
               provider: {
                 "@type": "EducationalOrganization",
-                name: "Edumatrix Indonesia",
+                name: "Bimbel LPS",
                 url: "https://supercampmatrix.com",
               },
               description:

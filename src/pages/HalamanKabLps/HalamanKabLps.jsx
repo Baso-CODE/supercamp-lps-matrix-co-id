@@ -109,7 +109,7 @@ const HalamanKabLps = () => {
               serviceType: "Les Privat UTBK SNBT",
               provider: {
                 "@type": "EducationalOrganization",
-                name: "Edumatrix Indonesia",
+                name: "Bimbel LPS",
                 url: "https://supercampmatrix.com",
               },
               areaServed: {

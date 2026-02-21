@@ -72,7 +72,7 @@ const HalamanKotaPtn = () => {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content={`Bimbel & Les Privat Masuk PTN di ${kota.kota} - Edumatrix Indonesia`}
+          content={`Bimbel & Les Privat Masuk PTN di ${kota.kota} - Bimbel LPS`}
         />
         <meta
           property="og:image"

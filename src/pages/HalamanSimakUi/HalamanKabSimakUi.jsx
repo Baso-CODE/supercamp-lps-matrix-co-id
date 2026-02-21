@@ -68,7 +68,7 @@ const HalamanKabSimakUi = () => {
         />
         <meta
           name="keywords"
-          content={`bimbel simak ui ${kabupaten.kota_kabupaten}, les privat simak ui ${kabupaten.kota_kabupaten}, persiapan simak kki ${kabupaten.kota_kabupaten}, bimbel kki ui, guru privat ui ke rumah, karantina simak ui, edumatrix indonesia`}
+          content={`bimbel simak ui ${kabupaten.kota_kabupaten}, les privat simak ui ${kabupaten.kota_kabupaten}, persiapan simak kki ${kabupaten.kota_kabupaten}, bimbel kki ui, guru privat ui ke rumah, karantina simak ui, Bimbel LPS`}
         />
 
         {/* Canonical Link yang Bersih */}
@@ -81,7 +81,7 @@ const HalamanKabSimakUi = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content={`Bimbel & Les Privat SIMAK UI di ${kabupaten.kota_kabupaten} - Edumatrix Indonesia`}
+          content={`Bimbel & Les Privat SIMAK UI di ${kabupaten.kota_kabupaten} - Bimbel LPS`}
         />
         <meta
           property="og:description"

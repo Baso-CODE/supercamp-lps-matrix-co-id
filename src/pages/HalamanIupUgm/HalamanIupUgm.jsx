@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
 import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
@@ -26,21 +25,80 @@ import WaktuPelaksanaanSc from "../../Components/WaktuPelaksanaanSc/WaktuPelaksa
 
 const HalamanIupUgm = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Anti-Error Title: String tunggal di dalam kurung kurawal */}
+        <title>{`Bimbel & Les Privat IUP UGM 2026 - Spesialis Intake 1, 2, & 3`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Fokus pada urgensi, persiapan subtest (GMST/AcEPT), dan target FK/Non-FK */}
         <meta
-          charSet="utf-8"
           name="description"
-          content="Bimbel IUP UGM Terbaik. Fokus Les Intensif IUP UGM Kedokteran dan Non FK, Belajar All Subtest, Master Teacher Berpengalaman, Jadwal Fleksibel, CS Responsif, Konsultasi Progress Belajar"
+          content="Bimbel & Les Privat IUP UGM terbaik 2026. Persiapan intensif GMST, AcEPT, Interview, & Microteaching. Spesialis lulus IUP Kedokteran (FK) & Non-FK. Master Teacher Expert & drilling soal terbaru. Daftar Sekarang!"
         />
-        <title>
-          Bimbel IUP UGM Terbaik Intensif Privat IUP UGM FK dan Non FK
-        </title>
+        <meta
+          name="keywords"
+          content="bimbel iup ugm, les privat iup ugm, persiapan gmst ugm, pelatihan acept ugm, bimbel iup kedokteran, tutor privat iup ugm, intake iup ugm, Bimbel LPS"
+        />
+
         <link
           rel="canonical"
-          href="
-https://supercampmatrix.com/bimbel-iup-ugm"
+          href="https://supercampmatrix.com/bimbel-iup-ugm"
         />
+
+        {/* Open Graph (WhatsApp Preview Premium) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Bimbel & Les Privat IUP UGM 2026 - Spesialis Lolos Intake UGM"
+        />
+        <meta
+          property="og:description"
+          content="Program bimbingan intensif spesialis lulus International Undergraduate Program (IUP) UGM dengan metode belajar terukur."
+        />
+        <meta
+          property="og:url"
+          content="https://supercampmatrix.com/bimbel-iup-ugm"
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Menampilkan program sebagai layanan profesional untuk Rich Snippets */}
+        <script type="application/ld+json">
+          {JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: "Bimbel & Les Privat IUP UGM",
+              serviceType: "International Program Entrance Prep",
+              provider: {
+                "@type": "EducationalOrganization",
+                name: "Bimbel LPS",
+                url: "https://supercampmatrix.com",
+              },
+              description:
+                "Bimbingan belajar khusus persiapan masuk IUP UGM mencakup GMST, AcEPT, dan Interview.",
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Apakah Edumatrix menyediakan persiapan GMST dan AcEPT?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Ya, kami fokus pada materi GMST (Gadjah Mada Scholastic Test) dan AcEPT untuk memastikan siswa siap menghadapi seleksi IUP UGM.",
+                  },
+                },
+              ],
+            },
+          ])}
+        </script>
       </Helmet>
 
       <JumbotronLps />
@@ -66,7 +124,7 @@ https://supercampmatrix.com/bimbel-iup-ugm"
       <ListKotaHalamanIupUgm />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

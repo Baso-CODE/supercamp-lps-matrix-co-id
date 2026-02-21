@@ -100,7 +100,7 @@ const AlumniKedokteranLps = () => {
                 <img
                   className="alumni-img"
                   src={img}
-                  alt="Alumni Kedokteran Edumatrix Indonesia"
+                  alt="Alumni Kedokteran Bimbel LPS"
                   loading="lazy"
                 />
               </div>
