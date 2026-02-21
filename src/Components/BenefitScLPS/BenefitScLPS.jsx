@@ -60,7 +60,7 @@ const BenefitScLps = () => {
           </li>
         </ul>
         <img
-          src="https://edumatrix-indonesia.com/wp-content/uploads/2024/12/model_untungnya-600x714.webp"
+          src="/images/model-benefit-supercamp.webp"
           alt="Bimbingan Masuk Kedokteran"
           className="img-benefit-supercamp-lps"
         />

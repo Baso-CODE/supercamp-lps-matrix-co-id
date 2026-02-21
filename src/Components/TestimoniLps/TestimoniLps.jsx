@@ -10,12 +10,12 @@ const TestimoniLps = () => {
         </h1>
         <div className="box-testimoni-sc-lps">
           <img
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/Frame-573-600x934.png"
+            src="/images/testimoni-supercamp/testimoni-muhammad-muthia-anatasya.png"
             alt="Bimbel Privat dan Supercamp Persiapan Masuk PTN dan Kedokteran"
             className="img-testimoni-lps"
           />
           <img
-            src="https://edumatrix-indonesia.com/wp-content/uploads/2022/12/Frame-573-1-600x832.png"
+            src="/images/testimoni-supercamp/testimoni-rasagama-irena-amodya.png"
             alt="Bimbel Privat dan Supercamp Persiapan Masuk PTN dan Kedokteran"
             className="img-testimoni-lps"
           />

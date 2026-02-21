@@ -4,46 +4,47 @@ const paketData = [
   {
     id: 1,
     name: "Mini Silver",
-    img: "/images/paket/supercamp-mini-silver.jpeg",
+    img: "/images/paket/supercamp-mini-silver.webp",
     phone: "6282258689993",
     admin: "Nia",
   },
   {
     id: 2,
     name: "Silver",
-    img: "/images/paket/supercamp-silver.jpeg",
+    img: "/images/paket/supercamp-silver.webp",
     phone: "6281311778441",
     admin: "Fina",
   },
   {
     id: 3,
     name: "Gold",
-    img: "/images/paket/supercamp-gold.jpeg",
+    img: "/images/paket/supercamp-gold.webp",
     phone: "6282134093567",
     admin: "Lia",
   },
   {
     id: 4,
     name: "Platinum",
-    img: "/images/paket/supercamp-platinum.jpeg",
+    img: "/images/paket/supercamp-platinum.webp",
     phone: "6282258689993",
     admin: "Nia",
   },
   {
     id: 5,
     name: "Priority",
-    img: "/images/paket/supercamp-priority.jpeg",
+    img: "/images/paket/supercamp-priority.webp",
     phone: "6281311778441",
     admin: "Fina",
   },
 ];
 
 const PaketSupercampLps = () => {
-  const bgImage = "/images/supercamp/bg_PL_supercamp.webp";
+  // const bgImage = "/images/supercamp/bg_PL_supercamp.webp";
   return (
     <section
       className="super-parent-paket-belajar-supercamp-lps"
-      style={{ backgroundImage: `url(${bgImage})` }}>
+      // style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <h2 className="title-paket-belajar-supercamp-lps">
         PAKET BELAJAR SUPERCAMP
       </h2>

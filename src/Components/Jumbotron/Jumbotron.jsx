@@ -1,7 +1,7 @@
 // Impor aset
 import bgProfile from "../../assets/Supercamp/Background_supercamp_profile.webp";
-import jumbotron from "../../assets/Supercamp/Jumbotron.webp";
-import mobJumbotron from "../../assets/Supercamp/MOB_JUMBOTRON.webp";
+import jumbotron from "../../assets/Supercamp/Jumbotron.jpg";
+import mobJumbotron from "../../assets/Supercamp/MOB_JUMBOTRON.jpg";
 import titleJumbotron from "../../assets/new/bimbel_utbk_snbt_2025.webp";
 import "./Jumbotron.css";
 
@@ -15,7 +15,7 @@ const JumbotronLps = () => {
           src={jumbotron}
           alt="Bimbel Masuk Kedokteran dan PTN Favorit"
           className="jumbotron-main"
-          loading="eager" // Jumbotron harus paling cepat dimuat
+          loading="eager"
         />
       </picture>
 
