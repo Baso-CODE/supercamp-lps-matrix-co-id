@@ -52,22 +52,65 @@ const HalamanKelPtn = () => {
     getKelurahan(kelSlug);
   }, [kelSlug, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan template literal di dalam kurung kurawal agar terbaca sebagai string tunggal oleh Helmet */}
+        <title>{`Bimbel & Les Privat Masuk PTN ${kelurahan.kelurahan} 2026 - Lolos PTN #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Kombinasi Hybrid (Bimbel + Les Privat) + Lokasi Kelurahan */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbingan Masuk PTN ${kelurahan.kelurahan} Undip Unair Unpad UB Udayana Simak UI CBT UGM & UM PTN Online & Guru Datang ke Rumah`}
+          content={`Bimbel & Les Privat Masuk PTN terbaik di ${kelurahan.kelurahan}. Program intensif UTBK SNBT, SIMAK UI, & CBT UGM 2026. Spesialis Kedokteran & PTN Favorit. Guru datang ke rumah wilayah ${kelurahan.kelurahan}. Daftar sekarang!`}
         />
-        <title>
-          Bimbingan Masuk PTN {`${kelurahan.kelurahan}`} Program Intensif Privat
-          UTBK SNBT Spesialis Masuk PTN
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel les privat ${kelurahan.kelurahan}, bimbel ptn ${kelurahan.kelurahan}, les privat kedokteran ${kelurahan.kelurahan}, guru privat ke rumah ${kelurahan.kelurahan}, bimbingan belajar ${kelurahan.kelurahan}, karantina ptn ${kelurahan.kelurahan}`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
+          href={`https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
         />
+
+        {/* Open Graph (WhatsApp & Social Media) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat di ${kelurahan.kelurahan} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi PTN Impian bersama spesialis Bimbel & Les Privat di wilayah ${kelurahan.kelurahan}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Sangat krusial untuk SEO Lokal tingkat Kelurahan */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat Edumatrix ${kelurahan.kelurahan}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kelurahan.kelurahan,
+              addressCountry: "ID",
+            },
+            description: `Layanan Bimbel dan Les Privat persiapan masuk PTN favorit untuk wilayah kelurahan ${kelurahan.kelurahan}.`,
+          })}
+        </script>
       </Helmet>
 
       <JumbotronLps />
@@ -105,7 +148,7 @@ https://supercampmatrix.com/guru-bimbel-masuk-ptn/${kelurahan.slug}`}
       {/* <ListKabLps /> */}
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

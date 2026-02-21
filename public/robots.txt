@@ -1,7 +1,4 @@
-# https://www.robotstxt.org/robots.txt
 User-agent: *
-Disallow: 
-allow: [/*]
+Disallow:
 
-Sitemap: 
-https://supercampmatrix.com/sitemap.xml
+Sitemap: https://supercampmatrix.com/sitemap.xml

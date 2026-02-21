@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -9,6 +9,7 @@ import BottomCtaLps from "../../Components/BottomCtaLps/BottomCtaLps";
 import FaqScLps from "../../Components/FaqScLps/FaqScLps";
 import FasilitasScLps from "../../Components/FasilitasScLps/FasilitasScLps";
 import JadwalKegiatanScLps from "../../Components/JadwalKegiatanScLps/JadwalKegiatanScLps";
+import JumbotronLps from "../../Components/Jumbotron/Jumbotron";
 import KegiatanScLps from "../../Components/KegiatanScLps/KegiatanScLps";
 import KerjasamaHotel from "../../Components/KerjaSamaHotel/KerjaSamaHotel";
 import ListAlumni from "../../Components/ListAlumni/ListAlumni";
@@ -51,24 +52,64 @@ const HalamanKelKedokteran = () => {
     getKelurahan(kelSlug);
   }, [kelSlug, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan template literal di dalam {} agar terbaca sebagai string tunggal oleh Helmet */}
+        <title>{`Bimbel & Les Privat Kedokteran ${kelurahan.kelurahan} 2026 - Lolos FK #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Hybrid Keyword + Target Kedokteran + Lokasi Kelurahan Spesifik */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel Masuk Kedokteran ${kelurahan.kelurahan} Terbaik Sesi Belajar Super Intensif,
-          Konsultasi Progress, Master Teacher Expert Berpengalaman, Modul
-          Belajar, Karantina Spesialis FK PTN UI UGM Unpad IPB`}
+          content={`Bimbel & Les Privat Kedokteran terbaik di ${kelurahan.kelurahan}. Program intensif lulus FK UI, UGM, & UNAIR. Guru privat datang ke rumah di wilayah ${kelurahan.kelurahan}. Master Teacher Expert & Modul Akurat. Daftar Sekarang!`}
         />
-        <title>
-          Bimbel Privat Masuk Kedokteran {`${kelurahan.kelurahan}`} Terbaik
-          Program Belajar Fokus Kedokteran UI dan PTN Favorit
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel kedokteran ${kelurahan.kelurahan}, les privat kedokteran ${kelurahan.kelurahan}, bimbingan belajar kedokteran ${kelurahan.kelurahan}, guru privat ke rumah ${kelurahan.kelurahan}, karantina ptn ${kelurahan.kelurahan}`}
+        />
+
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/guru-les-privat-masuk-kedokteran/${kelurahan.slug}`}
+          href={`https://supercampmatrix.com/guru-les-privat-masuk-kedokteran/${kelurahan.slug}`}
         />
+
+        {/* Open Graph (WhatsApp Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat Kedokteran di ${kelurahan.kelurahan} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Persiapan intensif masuk Fakultas Kedokteran bersama spesialis Bimbel & Les Privat di kelurahan ${kelurahan.kelurahan}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/guru-les-privat-masuk-kedokteran/${kelurahan.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Kunci utama SEO Lokal tingkat Kelurahan */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat Kedokteran Edumatrix ${kelurahan.kelurahan}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/guru-les-privat-masuk-kedokteran/${kelurahan.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kelurahan.kelurahan,
+              addressCountry: "ID",
+            },
+            description: `Layanan Bimbel dan Les Privat spesialis persiapan masuk Fakultas Kedokteran PTN Favorit untuk wilayah kelurahan ${kelurahan.kelurahan}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -104,7 +145,7 @@ https://supercampmatrix.com/guru-les-privat-masuk-kedokteran/${kelurahan.slug}`}
       {/* <ListKabLps /> */}
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

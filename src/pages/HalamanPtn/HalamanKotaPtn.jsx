@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -53,24 +53,45 @@ const HalamanKotaPtn = () => {
     getKota(id);
   }, [id, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Perbaikan Title: Masukkan variabel ke dalam template literal di dalam kurung kurawal */}
+        <title>{`Bimbel & Les Privat Masuk PTN ${kota.kota} 2026 - Lolos Kedokteran #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel Masuk PTN ${kota.kota} Program Intensif Privat UTBK
-          SNBT Spesialis Masuk PTN Undip Unair Unpad UB Udayana Simak UI CBT UGM & UM PTN Online & Guru Datang ke Rumah`}
+          content={`Bimbel & Les Privat Masuk PTN terbaik di ${kota.kota}. Program intensif UTBK SNBT, SIMAK UI, & CBT UGM 2026. Spesialis tembus Kedokteran & PTN Favorit.`}
         />
-        <title>
-          Bimbel Masuk PTN {`${kota.kota}`} Program Intensif Privat UTBK SNBT
-          Spesialis Masuk PTN Undip Unair Unpad UB Udayana Simak UI CBT UGM & UM
-          PTN Online & Guru Datang ke Rumah
-        </title>
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbel-masuk-ptn/${kota.slug}`}
+          href={`https://supercampmatrix.com/bimbel-masuk-ptn/${kota.slug}`}
         />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat Masuk PTN di ${kota.kota} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Script JSON-LD juga harus dibungkus aman */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat Edumatrix ${kota.kota}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kota.kota,
+              addressCountry: "ID",
+            },
+          })}
+        </script>
       </Helmet>
 
       <JumbotronLps />
@@ -107,7 +128,7 @@ https://supercampmatrix.com/bimbel-masuk-ptn/${kota.slug}`}
       <ListKabHalamanPtn />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

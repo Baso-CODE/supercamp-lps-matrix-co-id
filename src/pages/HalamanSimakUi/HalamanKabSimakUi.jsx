@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -53,24 +53,65 @@ const HalamanKabSimakUi = () => {
     getKabupaten(id);
   }, [id, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan kurung kurawal agar terbaca sebagai string tunggal (Anti-Error) */}
+        <title>{`Bimbel & Les Privat SIMAK UI ${kabupaten.kota_kabupaten} 2026 - Lolos UI #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Menggabungkan Bimbel & Les Privat + Target SIMAK UI & KKI + Lokasi Kabupaten */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel Simak UI ${kabupaten.kota_kabupaten} Program Belajar Les Privat Simak UI dan Simak KKI,
-          Modul Simak UI, Drilling Soal, Konsultasi Jurusan, Try Out Simak UI,
-          Belajar All Subtes Simak UI dan KKI, Offline dan Online`}
+          content={`Bimbel & Les Privat SIMAK UI terbaik di ${kabupaten.kota_kabupaten}. Program intensif SIMAK UI Reguler & KKI (International Class). Modul prediksi, Master Teacher ke rumah, & Tryout khusus UI di ${kabupaten.kota_kabupaten}. Daftar Sekarang!`}
         />
-        <title>
-          Les Privat Simak UI {`${kabupaten.kota_kabupaten}`} Intensif Privat
-          Program Simak UI dan Kelas Internasional
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel simak ui ${kabupaten.kota_kabupaten}, les privat simak ui ${kabupaten.kota_kabupaten}, persiapan simak kki ${kabupaten.kota_kabupaten}, bimbel kki ui, guru privat ui ke rumah, karantina simak ui, edumatrix indonesia`}
+        />
+
+        {/* Canonical Link yang Bersih */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbel-privat-simak-ui/${kabupaten.slug}`}
+          href={`https://supercampmatrix.com/bimbel-privat-simak-ui/${kabupaten.slug}`}
         />
+
+        {/* Open Graph (WhatsApp Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat SIMAK UI di ${kabupaten.kota_kabupaten} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi Universitas Indonesia (Reguler & KKI) melalui program spesialis Bimbel & Les Privat di ${kabupaten.kota_kabupaten}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbel-privat-simak-ui/${kabupaten.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal Kabupaten */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kabupaten.kota_kabupaten}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-privat-simak-ui/${kabupaten.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kabupaten.kota_kabupaten,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan SIMAK UI dan Kelas Internasional (KKI) untuk wilayah ${kabupaten.kota_kabupaten}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -107,7 +148,7 @@ https://supercampmatrix.com/bimbel-privat-simak-ui/${kabupaten.slug}`}
       <ListKecHalamanSimakUi />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

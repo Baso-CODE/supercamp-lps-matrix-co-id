@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
 import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
@@ -26,22 +25,80 @@ import WaktuPelaksanaanSc from "../../Components/WaktuPelaksanaanSc/WaktuPelaksa
 
 const HalamanSimakUi = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Anti-Error Title: Menggunakan satu string utuh agar aman di React Helmet */}
+        <title>{`Bimbel & Les Privat SIMAK UI 2026 - Spesialis Kelas Reguler & KKI`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Fokus pada spesialisasi, modul, dan hasil lulusan */}
         <meta
-          charSet="utf-8"
           name="description"
-          content="Bimbel Simak UI Program Belajar Les Privat Simak UI dan Simak KKI, Modul Simak UI, Drilling Soal, Konsultasi Jurusan, Try Out Simak UI, Belajar All Subtes Simak UI dan KKI, Offline dan Online"
+          content="Bimbel & Les Privat SIMAK UI terbaik. Program intensif SIMAK UI Reguler & KKI (International Class). Modul prediksi akurat, Master Teacher berpengalaman, & Tryout khusus UI. Guru ke rumah atau Online. Daftar sekarang!"
         />
-        <title>
-          Bimbel Simak UI Intensif Privat Program Simak UI dan Kelas
-          Internasional
-        </title>
+        <meta
+          name="keywords"
+          content="bimbel simak ui, les privat simak ui, persiapan simak kki, bimbel kki ui, drilling soal simak ui, tutor privat simak ui, karantina simak ui, edumatrix indonesia"
+        />
+
         <link
           rel="canonical"
-          href="
-https://supercampmatrix.com/bimbel-simak-ui"
+          href="https://supercampmatrix.com/bimbel-simak-ui"
         />
+
+        {/* Open Graph (Optimal untuk WhatsApp Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Bimbel & Les Privat SIMAK UI & KKI 2026 - Edumatrix Indonesia"
+        />
+        <meta
+          property="og:description"
+          content="Program bimbingan intensif spesialis lulus SIMAK UI dan Kelas Internasional (KKI) dengan metode belajar terukur."
+        />
+        <meta
+          property="og:url"
+          content="https://supercampmatrix.com/bimbel-simak-ui"
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Untuk Rich Snippets di Google */}
+        <script type="application/ld+json">
+          {JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: "Bimbel & Les Privat SIMAK UI",
+              serviceType: "University Entrance Prep",
+              provider: {
+                "@type": "EducationalOrganization",
+                name: "Edumatrix Indonesia",
+                url: "https://supercampmatrix.com",
+              },
+              description:
+                "Bimbingan belajar khusus persiapan SIMAK UI Reguler, Paralel, dan Kelas Internasional (KKI).",
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Apakah tersedia persiapan untuk SIMAK KKI UI?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Ya, kami menyediakan program khusus SIMAK KKI dengan pengantar bahasa Inggris dan drilling soal sesuai standar Kelas Internasional UI.",
+                  },
+                },
+              ],
+            },
+          ])}
+        </script>
       </Helmet>
       <JumbotronLps />
       <LulusanLps />
@@ -66,7 +123,7 @@ https://supercampmatrix.com/bimbel-simak-ui"
       <ListKotaHalamanSimakUi />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

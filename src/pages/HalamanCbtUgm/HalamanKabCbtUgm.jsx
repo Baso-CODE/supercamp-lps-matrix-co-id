@@ -53,7 +53,7 @@ const HalamanKabCbtUgm = () => {
     getKabupaten(id);
   }, [id, query, axiosJWT]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <meta
           charSet="utf-8"
@@ -108,7 +108,7 @@ https://supercampmatrix.com/bimbel-privat-cbt-ugm/${kabupaten.slug}`}
       <ListKecHalamanCbtUgm />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

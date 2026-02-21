@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -53,24 +53,65 @@ const HalamanKotaKedokteran = () => {
     getKota(id);
   }, [id, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan template literal di dalam {} agar terbaca sebagai string tunggal */}
+        <title>{`Bimbel & Les Privat Kedokteran ${kota.kota} 2026 - Lolos PTN #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Padat kata kunci utama & lokasi untuk menggaet traffic lokal */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Tempat Bimbel Masuk Kedokteran ${kota.kota} Terbaik Sesi Belajar Super
-          Intensif, Konsultasi Progress, Master Teacher Expert Berpengalaman,
-          Modul Belajar, Karantina Spesialis FK PTN UI UGM Unpad IPB`}
+          content={`Bimbel & Les Privat khusus masuk Kedokteran di ${kota.kota}. Program Supercamp Karantina lulus FK UI, UGM, UNAIR, UNPAD. Master Teacher expert, modul akurat, & sesi intensif. Daftar sekarang di Edumatrix!`}
         />
-        <title>
-          Bimbel Masuk Kedokteran {`${kota.kota}`} Terbaik Program Belajar Fokus
-          Kedokteran UI dan PTN Favorit
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel kedokteran ${kota.kota}, les privat kedokteran ${kota.kota}, karantina fk ugm, karantina fk ui, bimbel masuk ptn ${kota.kota}, bimbingan belajar kedokteran`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`}
+          href={`https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`}
         />
+
+        {/* Open Graph (WhatsApp & Social Media) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat Kedokteran di ${kota.kota} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi Fakultas Kedokteran impian dengan program spesialis Bimbel & Les Privat di ${kota.kota}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Memberikan identitas 'Local Business' agar Google memprioritaskan ranking lokal */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat Kedokteran Edumatrix ${kota.kota}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kota.kota,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan masuk Fakultas Kedokteran PTN Favorit untuk wilayah ${kota.kota}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -106,7 +147,7 @@ https://supercampmatrix.com/les-privat-masuk-kedokteran/${kota.slug}`}
       <ListKabHalamanKedokteran />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

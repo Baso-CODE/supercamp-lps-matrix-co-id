@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -53,22 +53,65 @@ const HalamanKabPtn = () => {
     getKabupaten(id);
   }, [id, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Perbaikan Title: Menggunakan satu string utuh di dalam kurung kurawal agar tidak error */}
+        <title>{`Bimbel & Les Privat UTBK SNBT ${kabupaten.kota_kabupaten} 2026 - Lolos PTN #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Menggabungkan Bimbel & Les Privat + Lokasi Spesifik */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Les Privat UTBK SNBT ${kabupaten.kota_kabupaten} Spesialis Masuk PTN Undip Unair Unpad UB Udayana Simak UI CBT UGM & UM PTN • Online & Guru Datang ke Rumah`}
+          content={`Bimbel & Les Privat UTBK SNBT di ${kabupaten.kota_kabupaten} terbaik. Spesialis persiapan masuk Kedokteran, UI, UGM, ITB, & UNDIP. Guru datang ke rumah atau Online. Master Teacher berpengalaman & Modul Akurat. Daftar sekarang!`}
         />
-        <title>
-          Les Privat UTBK SNBT {`${kabupaten.kota_kabupaten}`} Spesialis Masuk
-          PTN Undip Unair Unpad UB Udayana Simak UI CBT UGM & UM PTN
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel les privat ${kabupaten.kota_kabupaten}, bimbel ptn ${kabupaten.kota_kabupaten}, les privat kedokteran ${kabupaten.kota_kabupaten}, bimbingan belajar ${kabupaten.kota_kabupaten}, guru privat ke rumah ${kabupaten.kota_kabupaten}, karantina ui ugm`}
+        />
+
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
+          href={`https://supercampmatrix.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
         />
+
+        {/* Open Graph untuk Preview WhatsApp yang menarik */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat di ${kabupaten.kota_kabupaten} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi PTN Impian bersama spesialis Bimbel & Les Privat di ${kabupaten.kota_kabupaten}. Program intensif Kedokteran 2026.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD untuk mempermudah Google indexing lokasi */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat Edumatrix ${kabupaten.kota_kabupaten}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`,
+            telephone: "+6282258689993",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kabupaten.kota_kabupaten,
+              addressCountry: "ID",
+            },
+            description: `Lembaga bimbingan belajar dan les privat persiapan masuk PTN dan Kedokteran unggulan di ${kabupaten.kota_kabupaten}.`,
+          })}
+        </script>
       </Helmet>
 
       <JumbotronLps />
@@ -106,7 +149,7 @@ https://supercampmatrix.com/bimbel-les-privat-masuk-ptn/${kabupaten.slug}`}
       <ListKecHalamanPtn />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

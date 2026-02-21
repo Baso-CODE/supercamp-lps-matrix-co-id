@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -52,24 +52,64 @@ const HalamanKelSimakUi = () => {
     getKelurahan(kelSlug);
   }, [kelSlug, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan satu string utuh agar aman dari error Helmet */}
+        <title>{`Bimbel & Les Privat SIMAK UI ${kelurahan.kelurahan} 2026 - Lolos UI #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Hybrid Keyword + Target SIMAK UI & KKI + Lokasi Kelurahan Spesifik */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel & Les Privat Simak UI ${kelurahan.kelurahan} Program Belajar Les Privat Simak UI dan Simak KKI,
-          Modul Simak UI, Drilling Soal, Konsultasi Jurusan, Try Out Simak UI,
-          Belajar All Subtes Simak UI dan KKI, Offline dan Online`}
+          content={`Bimbel & Les Privat SIMAK UI terbaik di ${kelurahan.kelurahan}. Program intensif lulus SIMAK UI Reguler & KKI (International Class). Master Teacher ke rumah wilayah ${kelurahan.kelurahan}. Daftar sekarang di Edumatrix!`}
         />
-        <title>
-          Bimbel & Les Privat Simak UI {`${kelurahan.kelurahan}`} Intensif
-          Privat Program Simak UI dan Kelas Internasional
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel simak ui ${kelurahan.kelurahan}, les privat simak ui ${kelurahan.kelurahan}, persiapan simak kki ${kelurahan.kelurahan}, guru privat ui ke rumah, bimbingan belajar simak ui, edumatrix indonesia`}
+        />
+
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/guru-les-privat-simak-ui/${kelurahan.slug}`}
+          href={`https://supercampmatrix.com/guru-les-privat-simak-ui/${kelurahan.slug}`}
         />
+
+        {/* Open Graph (Optimal untuk WhatsApp Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat SIMAK UI di ${kelurahan.kelurahan} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi Universitas Indonesia (Reguler & KKI) bersama spesialis Bimbel & Les Privat di kelurahan ${kelurahan.kelurahan}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/guru-les-privat-simak-ui/${kelurahan.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Sangat kuat untuk SEO Lokal tingkat Kelurahan */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kelurahan.kelurahan}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/guru-les-privat-simak-ui/${kelurahan.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kelurahan.kelurahan,
+              addressCountry: "ID",
+            },
+            description: `Layanan Bimbel dan Les Privat spesialis persiapan SIMAK UI dan Kelas Internasional (KKI) untuk wilayah kelurahan ${kelurahan.kelurahan}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -106,7 +146,7 @@ https://supercampmatrix.com/guru-les-privat-simak-ui/${kelurahan.slug}`}
 
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

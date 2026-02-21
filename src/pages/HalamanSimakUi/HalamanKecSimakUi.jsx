@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -9,6 +9,7 @@ import BottomCtaLps from "../../Components/BottomCtaLps/BottomCtaLps";
 import FaqScLps from "../../Components/FaqScLps/FaqScLps";
 import FasilitasScLps from "../../Components/FasilitasScLps/FasilitasScLps";
 import JadwalKegiatanScLps from "../../Components/JadwalKegiatanScLps/JadwalKegiatanScLps";
+import JumbotronLps from "../../Components/Jumbotron/Jumbotron";
 import KegiatanScLps from "../../Components/KegiatanScLps/KegiatanScLps";
 import KerjasamaHotel from "../../Components/KerjaSamaHotel/KerjaSamaHotel";
 import ListAlumni from "../../Components/ListAlumni/ListAlumni";
@@ -52,24 +53,65 @@ const HalamanKecSimakUi = () => {
     getKecamatan(id);
   }, [id, query, axiosJWT, kecSlug]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan template literal di dalam {} agar terbaca sebagai string tunggal (Anti-Error) */}
+        <title>{`Bimbel & Les Privat SIMAK UI ${kecamatan.kecamatan} 2026 - Lolos UI #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Hybrid Keyword + Target SIMAK UI & KKI + Lokasi Kecamatan */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Guru Bimbingan Simak UI ${kecamatan.kecamatan} Program Belajar Les Privat Simak UI dan Simak KKI,
-          Modul Simak UI, Drilling Soal, Konsultasi Jurusan, Try Out Simak UI,
-          Belajar All Subtes Simak UI dan KKI, Offline dan Online`}
+          content={`Bimbel & Les Privat SIMAK UI terbaik di ${kecamatan.kecamatan}. Program intensif SIMAK UI Reguler & KKI (International Class). Modul prediksi, Master Teacher ke rumah wilayah ${kecamatan.kecamatan}, & Tryout khusus UI. Daftar Sekarang!`}
         />
-        <title>
-          Bimbingan Simak UI {`${kecamatan.kecamatan}`} Intensif Privat Program
-          Simak UI dan Kelas Internasional
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel simak ui ${kecamatan.kecamatan}, les privat simak ui ${kecamatan.kecamatan}, persiapan simak kki ${kecamatan.kecamatan}, guru privat ui ke rumah, bimbingan belajar simak ui, edumatrix indonesia`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`}
+          href={`https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`}
         />
+
+        {/* Open Graph (WhatsApp Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat SIMAK UI di ${kecamatan.kecamatan} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi Universitas Indonesia (Reguler & KKI) melalui program spesialis Bimbel & Les Privat di ${kecamatan.kecamatan}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Sangat kuat untuk SEO Lokal tingkat Kecamatan */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kecamatan.kecamatan}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kecamatan.kecamatan,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan SIMAK UI dan Kelas Internasional (KKI) untuk wilayah ${kecamatan.kecamatan}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -105,7 +147,7 @@ https://supercampmatrix.com/bimbingan-simak-ui/${kecamatan.slug}`}
       <ListKelHalamanSimakUi />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

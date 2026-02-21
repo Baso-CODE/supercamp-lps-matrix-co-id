@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -53,23 +53,65 @@ const HalamanKabKedokteran = () => {
     getKabupaten(id);
   }, [id, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Anti-Error Title: String tunggal di dalam kurung kurawal */}
+        <title>{`Bimbel & Les Privat Kedokteran ${kabupaten.kota_kabupaten} 2026 - Lolos FK #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Menggabungkan Bimbel & Les Privat + Target Kampus Kedokteran Top */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Les Privat Masuk Kedokteran ${kabupaten.kota_kabupaten} Spesialis Masuk Kedokteran • Undip Unair Unpad UB Udayana Simak UI CBT UGM & UM PTN Online & Guru Datang ke Rumah`}
+          content={`Bimbel & Les Privat khusus masuk Kedokteran di ${kabupaten.kota_kabupaten} terbaik. Program intensif lulus FK UI, UGM, UNAIR, & UNDIP. Guru datang ke rumah atau Online. Master Teacher Expert & Modul Akurat. Daftar Sekarang!`}
         />
-        <title>
-          Les Privat Masuk Kedokteran {`${kabupaten.kota_kabupaten}`} Terbaik
-          Program Belajar Fokus Kedokteran UI dan PTN Favorit Spesialis Masuk
-          Kedokteran
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel kedokteran ${kabupaten.kota_kabupaten}, les privat kedokteran ${kabupaten.kota_kabupaten}, bimbingan belajar kedokteran ${kabupaten.kota_kabupaten}, karantina fk ui, karantina fk ugm, guru privat ke rumah`}
+        />
+
+        {/* Canonical Link yang Bersih */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbingan-masuk-kedokteran/${kabupaten.slug}`}
+          href={`https://supercampmatrix.com/bimbingan-masuk-kedokteran/${kabupaten.slug}`}
         />
+
+        {/* Open Graph (WhatsApp & Social Media) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat Kedokteran di ${kabupaten.kota_kabupaten} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Persiapan intensif masuk Fakultas Kedokteran bersama spesialis Bimbel & Les Privat di ${kabupaten.kota_kabupaten}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbingan-masuk-kedokteran/${kabupaten.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat Kedokteran Edumatrix ${kabupaten.kota_kabupaten}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbingan-masuk-kedokteran/${kabupaten.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kabupaten.kota_kabupaten,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan masuk Fakultas Kedokteran PTN Favorit untuk wilayah ${kabupaten.kota_kabupaten}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -107,7 +149,7 @@ https://supercampmatrix.com/bimbingan-masuk-kedokteran/${kabupaten.slug}`}
       <ListKecHalamanKedokteran />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 

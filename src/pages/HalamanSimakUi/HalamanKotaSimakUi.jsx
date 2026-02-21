@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLocation, useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
@@ -53,24 +53,65 @@ const HalamanKotaSimakUi = () => {
     getKota(id);
   }, [id, query]);
   return (
-    <React.Fragment>
+    <>
       <Helmet>
+        {/* Fix Title: Menggunakan satu string utuh agar tidak error di React Helmet */}
+        <title>{`Bimbel & Les Privat SIMAK UI ${kota.kota} 2026 - Lolos UI #1`}</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {/* Meta Description: Hybrid Keyword + Target SIMAK UI & KKI + Lokasi Kota */}
         <meta
-          charSet="utf-8"
           name="description"
-          content={`Bimbel Simak UI ${kota.kota} Program Belajar Les Privat Simak UI
-          dan Simak KKI, Modul Simak UI, Drilling Soal, Konsultasi Jurusan, Try
-          Out Simak UI, Belajar All Subtes Simak UI dan KKI, Offline dan Online`}
+          content={`Bimbel & Les Privat SIMAK UI terbaik di ${kota.kota}. Program intensif SIMAK UI Reguler & KKI (International Class). Modul prediksi, Master Teacher berpengalaman, & Tryout khusus UI di ${kota.kota}. Daftar Sekarang!`}
         />
-        <title>
-          Bimbel Simak UI {`${kota.kota}`} Intensif Privat Program Simak UI dan
-          Kelas Internasional
-        </title>
+        <meta
+          name="keywords"
+          content={`bimbel simak ui ${kota.kota}, les privat simak ui ${kota.kota}, persiapan simak kki ${kota.kota}, bimbel kki ui, tutor privat ui, karantina simak ui, edumatrix indonesia ${kota.kota}`}
+        />
+
+        {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`
-https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`}
+          href={`https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`}
         />
+
+        {/* Open Graph (WhatsApp & Social Media Preview) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`Bimbel & Les Privat SIMAK UI di ${kota.kota} - Edumatrix Indonesia`}
+        />
+        <meta
+          property="og:description"
+          content={`Raih kursi Universitas Indonesia (Reguler & KKI) melalui program spesialis Bimbel & Les Privat di ${kota.kota}.`}
+        />
+        <meta
+          property="og:url"
+          content={`https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`}
+        />
+        <meta
+          property="og:image"
+          content="https://supercampmatrix.com/images/banner.webp"
+        />
+
+        {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal Kota */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kota.kota}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: kota.kota,
+              addressCountry: "ID",
+            },
+            description: `Lembaga Bimbel dan Les Privat spesialis persiapan SIMAK UI dan Kelas Internasional (KKI) untuk wilayah ${kota.kota}.`,
+          })}
+        </script>
       </Helmet>
       <JumbotronLps />
       <div className="parent-text-seo-lps">
@@ -106,7 +147,7 @@ https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`}
       <ListKabHalamanSimakUi />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 
