@@ -11,28 +11,30 @@ const AlumniPtnLps = () => {
   ];
 
   return (
-    <div className="parent-box-alumni-ptn-lps">
-      <h1 className="title-alumni-ptn-lps">
-        Jurusan Impian di PTN Favorit Lainnya
-      </h1>
+    <section className="parent-box-alumni-ptn-lps">
+      <h2 className="title-alumni-ptn-lps">
+        Alumni Supercamp Lolos Jurusan Impian di PTN Favorit
+      </h2>
 
       <div className="box-img-alumni-stack">
         {alumniImages.map((image, index) => (
           <img
             key={index}
             src={image}
-            alt={`Daftar Alumni Sukses Bagian ${index + 1}`}
+            alt={`Alumni Supercamp diterima di PTN favorit dan jurusan kedokteran - dokumentasi kelulusan bagian ${index + 1}`}
             className="img-alumni-full-row"
             loading="lazy"
+            decoding="async"
           />
         ))}
       </div>
 
       <p className="bottom-teks-alumni-ptn">
-        dan masih banyak lagi siswa lainnya yang telah Sukses Masuk Kedokteran &
-        PTN Favorit ...
+        dan masih banyak lagi siswa lainnya yang telah sukses masuk Kedokteran
+        dan berbagai Perguruan Tinggi Negeri favorit melalui program Supercamp
+        dan bimbel intensif UTBK SNBT.
       </p>
-    </div>
+    </section>
   );
 };
 

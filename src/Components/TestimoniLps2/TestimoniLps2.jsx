@@ -1,4 +1,3 @@
-import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -49,326 +48,93 @@ import testimoni8 from "../../assets/Supercamp/testimoni/8.webp";
 import testimoni9 from "../../assets/Supercamp/testimoni/9.webp";
 import "./TestimoniLps2.css";
 
+const images = [
+  testimoni1,
+  testimoni2,
+  testimoni3,
+  testimoni4,
+  testimoni5,
+  testimoni6,
+  testimoni7,
+  testimoni8,
+  testimoni9,
+  testimoni10,
+  testimoni11,
+  testimoni12,
+  testimoni13,
+  testimoni14,
+  testimoni15,
+  testimoni16,
+  testimoni17,
+  testimoni18,
+  testimoni19,
+  testimoni20,
+  testimoni21,
+  testimoni22,
+  testimoni23,
+  testimoni24,
+  testimoni25,
+  testimoni26,
+  testimoni27,
+  testimoni28,
+  testimoni29,
+  testimoni30,
+  testimoni31,
+  testimoni32,
+  testimoni33,
+  testimoni34,
+  testimoni35,
+  testimoni36,
+  testimoni37,
+  testimoni38,
+  testimoni39,
+  testimoni40,
+  testimoni41,
+];
+
 const TestimoniLps2 = () => {
   return (
-    <React.Fragment>
-      <div className="box-testimoni-lps-2">
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          // pagination={{
-          //   clickable: true,
-          // }}
-          autoplay={{
-            delay: 2000, // Delay in ms between slides
-            disableOnInteraction: false, // Keeps autoplay even after user interaction
-          }}
-          breakpoints={{
-            // When the window width is >= 640px, show 2 slides
-            640: {
-              slidesPerView: 1,
-            },
-            // When the window width is >= 768px, show 3 slides
-            768: {
-              slidesPerView: 1,
-            },
-            // When the window width is >= 1024px, show 4 slides
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          modules={[Autoplay]}
-          className="mySwiper">
-          <SwiperSlide>
+    <section className="box-testimoni-lps-2">
+      <h2 className="title-testimoni-lps2">
+        Testimoni Lolos UTBK SNBT & PTN Favorit
+      </h2>
+
+      <p className="desc-testimoni-lps2">
+        Puluhan siswa Supercamp berhasil masuk UI, UGM, ITB, Undip, Unpad, dan
+        berbagai PTN favorit melalui program karantina intensif UTBK SNBT.
+      </p>
+
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 3 },
+        }}
+        modules={[Autoplay]}
+        className="mySwiper">
+        {images.map((img, index) => (
+          <SwiperSlide key={index}>
             <img
-              src={testimoni1}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
+              src={img}
+              alt={`Testimoni siswa Supercamp lolos UTBK SNBT dan masuk PTN favorit - slide ${
+                index + 1
+              }`}
               className="img-testimoni-lps2"
+              loading="lazy"
+              decoding="async"
+              width="400"
+              height="400"
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni2}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni3}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni4}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni5}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni6}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni7}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni8}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni9}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni10}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni11}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni12}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni13}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni14}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni15}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni16}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni17}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni18}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni19}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni20}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni21}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni22}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni23}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni24}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni25}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni26}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni27}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni28}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni29}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni30}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni31}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni32}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni33}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni34}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni35}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni36}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni37}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni38}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni39}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni40}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={testimoni41}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
-              className="img-testimoni-lps2"
-            />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </React.Fragment>
+        ))}
+      </Swiper>
+    </section>
   );
 };
 

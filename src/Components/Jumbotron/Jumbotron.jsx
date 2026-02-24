@@ -13,9 +13,10 @@ const JumbotronLps = () => {
         <source media="(max-width: 896px)" srcSet={mobJumbotron} />
         <img
           src={jumbotron}
-          alt="Bimbel Masuk Kedokteran dan PTN Favorit"
+          alt="Program bimbel masuk PTN 2026 untuk persiapan UTBK SNBT dan Kedokteran melalui Supercamp Matrix"
           className="jumbotron-main"
           loading="eager"
+          fetchpriority="high"
         />
       </picture>
 
@@ -25,9 +26,11 @@ const JumbotronLps = () => {
         <div className="parent-main-title-jumbotron">
           <img
             src={titleJumbotron}
-            alt="Bimbel Masuk Kedokteran"
+            alt="Bimbel UTBK SNBT 2026 program intensif masuk Kedokteran dan PTN favorit"
             className="main-title-jumbotron"
+            loading="eager"
           />
+
           <div className="parent-teks-top-jumbotron">
             <p className="teks-top-jumbotron">
               <strong>Bimbel Masuk PTN 2026</strong> — Persiapan Intensif Lolos
@@ -58,16 +61,13 @@ const JumbotronLps = () => {
           </div>
         </div>
 
-        {/* Gunakan ID atau Class unik, hindari pengulangan div kosong */}
         <div className="feature-card supercamp">
           <div className="card-content">
             <h2 className="title-fill-jumbotron">SUPERCAMP MATRIX 2026</h2>
-            {/* Teks Ringkas - Muncul di Mobile */}
             <p className="desk-fill-jumbotron desk-short">
               Program belajar berbasis karantina khusus kedokteran dan PTN
               Favorit.
             </p>
-            {/* Teks Lengkap - Muncul di Desktop */}
             <p className="desk-fill-jumbotron desk-long">
               Supercamp Matrix 2026 adalah program belajar berbasis karantina
               yang dirancang khusus untuk mempercepat kemampuan siswa dalam
@@ -81,11 +81,9 @@ const JumbotronLps = () => {
         <div className="feature-card intensive">
           <div className="card-content">
             <h2 className="title-fill-jumbotron">PRIVAT ONLINE & OFFLINE</h2>
-            {/* Teks Ringkas - Muncul di Mobile */}
             <p className="desk-fill-jumbotron desk-short">
               Program intensif dengan tutor berpengalaman dan waktu fleksibel.
             </p>
-            {/* Teks Lengkap - Muncul di Desktop */}
             <p className="desk-fill-jumbotron desk-long">
               Program Intensive Class adalah program bimbel privat untuk masuk
               Perguruan Tinggi Negeri (PTN) yang menawarkan pembelajaran

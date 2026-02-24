@@ -43,7 +43,10 @@ const HalamanSimakUi = () => {
           content="bimbel simak ui, les privat simak ui, persiapan simak kki, bimbel kki ui, drilling soal simak ui, tutor privat simak ui, karantina simak ui, Bimbel LPS"
         />
 
-        <link rel="canonical" href="https://supercampui.com/bimbel-simak-ui" />
+        <link
+          rel="canonical"
+          href="https://supercampmatrix.com/bimbel-simak-ui"
+        />
 
         {/* Open Graph (Optimal untuk WhatsApp Preview) */}
         <meta property="og:type" content="website" />
@@ -57,11 +60,11 @@ const HalamanSimakUi = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampui.com/bimbel-simak-ui"
+          content="https://supercampmatrix.com/bimbel-simak-ui"
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Untuk Rich Snippets di Google */}

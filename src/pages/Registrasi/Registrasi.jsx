@@ -74,7 +74,7 @@ export const Registrasi = () => {
         <link
           rel="canonical"
           href="
-https://supercampui.com/registrasi"
+https://supercampmatrix.com/registrasi"
         />
       </Helmet>
 

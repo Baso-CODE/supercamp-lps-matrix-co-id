@@ -1,71 +1,87 @@
-import React from "react";
 import iconBenefitSc from "../../assets/Supercamp/untungnya supercamp/icon_check.webp";
 import "./BenefitScLPS.css";
 
 const BenefitScLps = () => {
   return (
-    <React.Fragment>
-      <h1 className="title-untungnya-supercamp">Untungnya Ikut Supercamp</h1>
+    <section className="benefit-supercamp-section">
+      <h2 className="title-untungnya-supercamp">
+        Keunggulan Program Supercamp untuk Persiapan UTBK SNBT & Kedokteran
+      </h2>
+
       <div className="text-img-benefit-supercamp-lp">
         <ul className="parent-list-benefit-sc-lps">
           <li className="list-benefit-sc-lps">
             <img
               src={iconBenefitSc}
-              alt="Bimbel UTBK SNBT, SIMAK UI, SIMAK KKI UI, UM UGM CBT, IUP UGM, UM UNDIP, IUP UNDIP, & Ujian Mandiri PTN"
+              alt=""
               className="icon-untungnya-sc-lps"
+              loading="lazy"
             />
             Pendampingan akademik dan non akademik setiap hari (24 jam)
           </li>
+
           <li className="list-benefit-sc-lps">
             <img
               src={iconBenefitSc}
-              alt="Bimbel UTBK SNBT, SIMAK UI, SIMAK KKI UI, UM UGM CBT, IUP UGM, UM UNDIP, IUP UNDIP, & Ujian Mandiri PTN"
+              alt=""
               className="icon-untungnya-sc-lps"
+              loading="lazy"
             />
-            Siswa lebih fokus dalam belajar, terhindar dari gangguan yang
-            mendistrak
+            Siswa lebih fokus dalam belajar dan terhindar dari distraksi
           </li>
+
           <li className="list-benefit-sc-lps">
             <img
               src={iconBenefitSc}
-              alt="Bimbel UTBK SNBT, SIMAK UI, SIMAK KKI UI, UM UGM CBT, IUP UGM, UM UNDIP, IUP UNDIP, & Ujian Mandiri PTN"
+              alt=""
               className="icon-untungnya-sc-lps"
+              loading="lazy"
             />
-            Program belajar sangat terencana dan terukur hasilnya
+            Program belajar terencana dengan target nilai yang terukur
           </li>
+
           <li className="list-benefit-sc-lps">
             <img
               src={iconBenefitSc}
-              alt="Bimbel UTBK SNBT, SIMAK UI, SIMAK KKI UI, UM UGM CBT, IUP UGM, UM UNDIP, IUP UNDIP, & Ujian Mandiri PTN"
+              alt=""
               className="icon-untungnya-sc-lps"
+              loading="lazy"
             />
-            Metode belajar yang personal, sistematis, dan terstruktur
+            Metode belajar personal, sistematis, dan terstruktur
           </li>
+
           <li className="list-benefit-sc-lps">
             <img
               src={iconBenefitSc}
-              alt="Bimbel UTBK SNBT, SIMAK UI, SIMAK KKI UI, UM UGM CBT, IUP UGM, UM UNDIP, IUP UNDIP, & Ujian Mandiri PTN"
+              alt=""
               className="icon-untungnya-sc-lps"
+              loading="lazy"
             />
-            Proses belajar yang efektif, efisien, dan tertarget
+            Proses belajar efektif dan efisien untuk meningkatkan peluang lolos
+            PTN
           </li>
+
           <li className="list-benefit-sc-lps">
             <img
               src={iconBenefitSc}
-              alt="Bimbel UTBK SNBT, SIMAK UI, SIMAK KKI UI, UM UGM CBT, IUP UGM, UM UNDIP, IUP UNDIP, & Ujian Mandiri PTN"
+              alt=""
               className="icon-untungnya-sc-lps"
+              loading="lazy"
             />
-            Penanganan holistik mencakup pemahaman, keterampilan, motivasi, dan
-            spiritualitas.
+            Pendekatan holistik mencakup pemahaman materi, strategi ujian,
+            motivasi, dan mentalitas
           </li>
         </ul>
+
         <img
           src="/images/model-benefit-supercamp.webp"
-          alt="Bimbingan Masuk Kedokteran"
+          alt="Siswa program Supercamp mengikuti bimbingan belajar intensif untuk persiapan UTBK SNBT dan masuk Kedokteran"
           className="img-benefit-supercamp-lps"
+          loading="lazy"
+          decoding="async"
         />
       </div>
-    </React.Fragment>
+    </section>
   );
 };
 

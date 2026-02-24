@@ -75,7 +75,7 @@ const HalamanKabIupUgm = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampui.com/les-privat-iup-ugm/${kabupaten.slug}`}
+          href={`https://supercampmatrix.com/les-privat-iup-ugm/${kabupaten.slug}`}
         />
 
         {/* Open Graph (Optimal untuk WhatsApp Preview) */}
@@ -90,11 +90,11 @@ const HalamanKabIupUgm = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampui.com/les-privat-iup-ugm/${kabupaten.slug}`}
+          content={`https://supercampmatrix.com/les-privat-iup-ugm/${kabupaten.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal tingkat Kabupaten */}
@@ -103,8 +103,8 @@ const HalamanKabIupUgm = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat IUP UGM Edumatrix ${kabupaten.kota_kabupaten}`,
-            image: "https://supercampui.com/images/banner.webp",
-            url: `https://supercampui.com/les-privat-iup-ugm/${kabupaten.slug}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/les-privat-iup-ugm/${kabupaten.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kabupaten.kota_kabupaten,

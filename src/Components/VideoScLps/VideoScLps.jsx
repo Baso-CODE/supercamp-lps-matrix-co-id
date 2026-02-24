@@ -1,24 +1,23 @@
 import "./VideoScLps.css";
 
 const VideoScLps = () => {
-  // Data Video untuk Schema
   const videoData = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    name: "Sekilas Tentang Supercamp Bimbel LPS",
+    name: "Supercamp UTBK SNBT 2026 – Program Karantina Intensif Masuk Kedokteran & PTN Favorit",
     description:
-      "Program Karantina Supercamp Bimbel LPS. Persiapan intensif masuk Kedokteran dan PTN Favorit (UI, UGM, ITB, Unair). Fasilitas lengkap dengan Master Teacher terbaik.",
+      "Video profil Program Supercamp Bimbel LPS untuk persiapan UTBK SNBT 2026 dan seleksi masuk Fakultas Kedokteran serta PTN favorit seperti UI, UGM, ITB, dan Unair. Program karantina intensif dengan master teacher berpengalaman.",
     thumbnailUrl: ["https://img.youtube.com/vi/E5FVSivR8-o/maxresdefault.jpg"],
-    uploadDate: "2024-01-01T08:00:00+07:00", // Sesuaikan jika tahu tanggal pastinya
-    duration: "PT3M01S", // Contoh durasi 2 menit 30 detik, sesuaikan dengan aslinya
+    uploadDate: "2024-01-01T08:00:00+07:00",
+    duration: "PT3M01S",
     contentUrl: "https://www.youtube.com/watch?v=E5FVSivR8-o",
-    embedUrl: "https://www.youtube.com/embed/E5FVSivR8-o",
+    embedUrl: "https://www.youtube-nocookie.com/embed/E5FVSivR8-o",
     publisher: {
       "@type": "Organization",
       name: "Bimbel LPS",
       logo: {
         "@type": "ImageObject",
-        url: "https://supercampui.com/images/LOGO2.webp",
+        url: "https://supercampmatrix.com/images/LOGO2.webp",
       },
     },
   };
@@ -27,14 +26,21 @@ const VideoScLps = () => {
     <section className="parent-box-video-sc-lps">
       <script type="application/ld+json">{JSON.stringify(videoData)}</script>
 
-      <h2 className="title-video-sc-lps">Sekilas Tentang Supercamp</h2>
+      <h2 className="title-video-sc-lps">
+        Video Profil Supercamp UTBK SNBT 2026
+      </h2>
+
+      <p className="desk-video-sc-lps">
+        Tonton sekilas program karantina belajar Supercamp untuk persiapan UTBK
+        SNBT dan masuk Fakultas Kedokteran di PTN favorit.
+      </p>
 
       <div className="video-wrapper">
         <iframe
-          src="https://www.youtube.com/embed/E5FVSivR8-o?si=AkfXV50KwvNToIxS"
-          title="Sekilas Tentang Supercamp Edumatrix"
+          src="https://www.youtube-nocookie.com/embed/E5FVSivR8-o"
+          title="Video Supercamp UTBK SNBT 2026 Bimbel LPS"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           loading="lazy"></iframe>

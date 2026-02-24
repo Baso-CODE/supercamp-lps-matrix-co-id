@@ -2,39 +2,37 @@ import "./KerjasamaHotel.css";
 
 const KerjasamaHotel = () => {
   return (
-    <div className="partnership-section-lps">
+    <section className="partnership-section-lps">
       <div className="partnership-card">
-        <h2 className="partnership-title">Bekerjasama Dengan</h2>
+        <h2 className="partnership-title">
+          Kerjasama Venue Supercamp dengan Hotel & Apartemen Terpercaya
+        </h2>
 
         <div className="partnership-logos">
-          {/* Logo 1 */}
+          {/* Hotel UGM */}
           <div className="logo-wrapper">
             <img
               src={"/images/kerjasama/Hotel_UGM.webp"}
-              alt="Hotel MM UGM Jogja"
+              alt="Kerjasama Supercamp dengan Hotel MM UGM Yogyakarta sebagai lokasi program karantina belajar"
               className="partner-logo"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
-          {/* Logo 2 */}
+          {/* Dave Apartment */}
           <div className="logo-wrapper">
             <img
               src={"/images/kerjasama/dave_logo.png"}
-              alt="Dave Apartment Depok"
+              alt="Kerjasama Supercamp dengan Dave Apartment Depok untuk program bimbel karantina UTBK SNBT"
               className="partner-logo"
-            />
-          </div>
-
-          <div className="logo-wrapper">
-            <img
-              src={"/images/kerjasama/goenakan-indonesia.png"}
-              alt="Dave Apartment Depok"
-              className="partner-logo"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

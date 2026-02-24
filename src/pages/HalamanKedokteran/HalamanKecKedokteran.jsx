@@ -72,7 +72,7 @@ const HalamanKecKedokteran = () => {
 
         <link
           rel="canonical"
-          href={`https://supercampui.com/bimbel-les-privat-masuk-kedokteran/${kecamatan.slug}`}
+          href={`https://supercampmatrix.com/bimbel-les-privat-masuk-kedokteran/${kecamatan.slug}`}
         />
 
         {/* Open Graph (WhatsApp & Social Media) */}
@@ -87,11 +87,11 @@ const HalamanKecKedokteran = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampui.com/bimbel-les-privat-masuk-kedokteran/${kecamatan.slug}`}
+          content={`https://supercampmatrix.com/bimbel-les-privat-masuk-kedokteran/${kecamatan.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat kuat untuk SEO Lokal tingkat Kecamatan */}
@@ -100,8 +100,8 @@ const HalamanKecKedokteran = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: `Bimbel & Les Privat Kedokteran Edumatrix ${kecamatan.kecamatan}`,
-            image: "https://supercampui.com/images/banner.webp",
-            url: `https://supercampui.com/bimbel-les-privat-masuk-kedokteran/${kecamatan.slug}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-les-privat-masuk-kedokteran/${kecamatan.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kecamatan.kecamatan,

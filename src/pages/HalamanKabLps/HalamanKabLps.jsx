@@ -78,7 +78,7 @@ const HalamanKabLps = () => {
         {/* 3. Canonical Link - Menghindari Duplikasi Konten */}
         <link
           rel="canonical"
-          href={`https://supercampui.com/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
+          href={`https://supercampmatrix.com/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
         />
 
         {/* 4. Open Graph (Untuk WhatsApp & Social Media) */}
@@ -93,7 +93,7 @@ const HalamanKabLps = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampui.com/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
+          content={`https://supercampmatrix.com/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
         />
         <meta
           property="og:image"

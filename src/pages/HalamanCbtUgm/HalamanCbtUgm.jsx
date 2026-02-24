@@ -43,7 +43,10 @@ const HalamanCbtUgm = () => {
           content="bimbel cbt ugm, les privat cbt ugm, persiapan utul ugm, bimbel utul ugm terbaik, drilling soal cbt ugm, tutor privat ugm, karantina ptn ugm, Bimbel LPS"
         />
 
-        <link rel="canonical" href="https://supercampui.com/bimbel-cbt-ugm" />
+        <link
+          rel="canonical"
+          href="https://supercampmatrix.com/bimbel-cbt-ugm"
+        />
 
         {/* Open Graph (WhatsApp & Social Media) */}
         <meta property="og:type" content="website" />
@@ -57,11 +60,11 @@ const HalamanCbtUgm = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampui.com/bimbel-cbt-ugm"
+          content="https://supercampmatrix.com/bimbel-cbt-ugm"
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Untuk Rich Snippets agar Google menampilkan FAQ */}

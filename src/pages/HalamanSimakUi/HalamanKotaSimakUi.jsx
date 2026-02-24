@@ -74,7 +74,7 @@ const HalamanKotaSimakUi = () => {
         {/* Canonical Link */}
         <link
           rel="canonical"
-          href={`https://supercampui.com/bimbel-simak-ui/${kota.slug}`}
+          href={`https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`}
         />
 
         {/* Open Graph (WhatsApp & Social Media Preview) */}
@@ -89,11 +89,11 @@ const HalamanKotaSimakUi = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampui.com/bimbel-simak-ui/${kota.slug}`}
+          content={`https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`}
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Sangat penting untuk otoritas SEO Lokal Kota */}
@@ -102,8 +102,8 @@ const HalamanKotaSimakUi = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: `Bimbel & Les Privat SIMAK UI Edumatrix ${kota.kota}`,
-            image: "https://supercampui.com/images/banner.webp",
-            url: `https://supercampui.com/bimbel-simak-ui/${kota.slug}`,
+            image: "https://supercampmatrix.com/images/banner.webp",
+            url: `https://supercampmatrix.com/bimbel-simak-ui/${kota.slug}`,
             address: {
               "@type": "PostalAddress",
               addressLocality: kota.kota,

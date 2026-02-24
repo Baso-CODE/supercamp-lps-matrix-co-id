@@ -1,22 +1,83 @@
+/* ============================= */
+/* IMAGE TESTIMONI */
+/* ============================= */
+
 .img-testimoni-lps2 {
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.box-testimoni-lps-2 {
-    padding-left: 13%;
-    padding-right: 13%;
-    padding-top: 2%;
-    padding-bottom: 5%;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  cursor: pointer;
+
+  /* Improve perceived performance */
+  object-fit: cover;
+
+  /* Smooth interaction */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
+/* Subtle hover effect (desktop only) */
+@media (hover: hover) {
+  .img-testimoni-lps2:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
+
+.box-testimoni-lps-2 {
+  padding: 3% 13% 5%;
+}
+
+/* Improve layout stability */
+.mySwiper {
+  overflow: hidden;
+}
+
+/* ============================= */
+/* HEADING & DESCRIPTION */
+/* ============================= */
+
+.title-testimoni-lps2 {
+  text-align: center;
+  font-size: 32px;
+  color: #004f77;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.desc-testimoni-lps2 {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ============================= */
 /* RESPONSIVE */
-@media only screen and (min-width: 320px) and (max-width: 896px) {
-    .box-testimoni-lps-2 {
-        padding-left: 3%;
-        padding-right: 3%;
-    }
-    .img-testimoni-lps2 {
-        border-radius: 5px;
-    }
+/* ============================= */
+
+@media only screen and (max-width: 896px) {
+  .box-testimoni-lps-2 {
+    padding: 8% 4%;
+  }
+
+  .img-testimoni-lps2 {
+    border-radius: 8px;
+  }
+
+  .title-testimoni-lps2 {
+    font-size: 22px;
+  }
+
+  .desc-testimoni-lps2 {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
 }

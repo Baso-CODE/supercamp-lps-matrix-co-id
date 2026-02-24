@@ -1,31 +1,34 @@
-import React from "react";
 import "./WaktuPelaksanaanSc.css";
 
 const WaktuPelaksanaanSc = () => {
   return (
-    <React.Fragment>
-      <div className="superparent-waktu-pelaksanaan-sc">
-        <div className="text-waktu-pelaksanaa">
-          <span className="text-pelaksanaan-with-bg">
-            Pelaksanaan UTBK 23 April 2026
-          </span>
-          <h1 className="title-pelaksanaan-sc">
-            Tersisa 15 Kursi Lagi, <br /> untuk Program Supercamp{" "}
-            <br className="break-title-pelaksanaan-sc" /> Booking Sekarang Juga!
-          </h1>
-          <p className="desk-pelaksanaan-sc">
-            Waktu terbatas! 15 kursi terakhir untuk meraih kesuksesan! Booking
-            sekarang dan <br className="break-desk-pelaksanaan-sc" /> wujudkan
-            impian Anda! Jangan lewatkan kesempatan emas ini!
-          </p>
-        </div>
-        <img
-          src="/images/icon-waktu-pelaksanaan.webp"
-          alt="Supercamp SNBT"
-          className="img-waktu-pelaksanaan"
-        />
+    <section className="superparent-waktu-pelaksanaan-sc">
+      <div className="text-waktu-pelaksanaa">
+        <span className="text-pelaksanaan-with-bg">
+          Jadwal Pelaksanaan UTBK SNBT 23 April 2026
+        </span>
+
+        <h2 className="title-pelaksanaan-sc">
+          Tersisa 15 Kursi Program Supercamp <br />
+          Persiapan UTBK SNBT & Masuk Kedokteran
+        </h2>
+
+        <p className="desk-pelaksanaan-sc">
+          Program bimbel intensif Supercamp dirancang untuk membantu siswa
+          meraih skor terbaik pada UTBK SNBT 2026 dan meningkatkan peluang lolos
+          ke Fakultas Kedokteran serta PTN favorit. Kursi terbatas, segera
+          amankan tempat Anda.
+        </p>
       </div>
-    </React.Fragment>
+
+      <img
+        src="/images/icon-waktu-pelaksanaan.webp"
+        alt="Ilustrasi persiapan UTBK SNBT 2026 bersama program bimbel intensif Supercamp"
+        className="img-waktu-pelaksanaan"
+        loading="lazy"
+        decoding="async"
+      />
+    </section>
   );
 };
 

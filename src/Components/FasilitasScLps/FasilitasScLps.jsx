@@ -14,33 +14,40 @@ const FasilitasScLps = () => {
           <h1 className="title-fasilitas-sc-lps">
             Fasilitas Super dari Supercamp
           </h1>
+
           <div className="child-box-fasilitas-sc-lps">
             <img
               src={fasilitasCamp}
-              alt="Bimbel SNBT Masuk UI UGM ITB Undip Unpad"
+              alt="Fasilitas lengkap Supercamp SNBT berupa ruang belajar nyaman, asrama, dan program bimbel intensif UTBK"
               className="img-fasilitas-sc-lps"
+              loading="lazy"
             />
           </div>
+
           <div className="parent-img-dave">
             <img
               src={dave_1}
-              alt="Bimbel Supercamp SNBT"
+              alt="Suasana ruang belajar peserta Supercamp SNBT dengan sistem karantina intensif"
               className="img-dave"
+              loading="lazy"
             />
             <img
               src={dave_2}
-              alt="Bimbel Supercamp SNBT"
+              alt="Kegiatan belajar bersama mentor pada program bimbel karantina SNBT"
               className="img-dave"
+              loading="lazy"
             />
             <img
               src={dave_3}
-              alt="Bimbel Supercamp SNBT"
+              alt="Fasilitas penginapan peserta Supercamp untuk persiapan UTBK dan SNBT"
               className="img-dave"
+              loading="lazy"
             />
             <img
               src={dave_4}
-              alt="Bimbel Supercamp SNBT"
+              alt="Lingkungan venue Supercamp SNBT yang nyaman dan kondusif untuk belajar"
               className="img-dave"
+              loading="lazy"
             />
           </div>
         </div>

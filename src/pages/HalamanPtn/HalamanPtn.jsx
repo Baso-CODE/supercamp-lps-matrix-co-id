@@ -44,7 +44,10 @@ const HalamanPtn = () => {
           content="bimbel masuk ptn, les privat utbk snbt, bimbel kedokteran terbaik, persiapan simak ui, cbt ugm 2026, karantina ptn, Bimbel LPS, guru privat ptn"
         />
 
-        <link rel="canonical" href="https://supercampui.com/bimbel-masuk-ptn" />
+        <link
+          rel="canonical"
+          href="https://supercampmatrix.com/bimbel-masuk-ptn"
+        />
 
         {/* Open Graph (Optimal untuk Share ke Orang Tua Siswa via WA) */}
         <meta property="og:type" content="website" />
@@ -58,11 +61,11 @@ const HalamanPtn = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampui.com/bimbel-masuk-ptn"
+          content="https://supercampmatrix.com/bimbel-masuk-ptn"
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD - Membuat Google memberikan 'Bintang' atau 'FAQ' di hasil pencarian */}

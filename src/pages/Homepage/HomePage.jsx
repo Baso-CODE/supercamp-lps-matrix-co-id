@@ -41,10 +41,10 @@ const HomePage = () => {
           name="keywords"
           content="Bimbel Supercamp, Les Privat UTBK SNBT, Simak UI, CBT UGM, Karantina Kedokteran, Bimbel LPS, Guru ke Rumah"
         />
-        <link rel="canonical" href="https://supercampui.com/" />
+        <link rel="canonical" href="https://supercampmatrix.com/" />
         {/* Open Graph / Facebook / WhatsApp */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://supercampui.com/" />
+        <meta property="og:url" content="https://supercampmatrix.com/" />
         <meta
           property="og:title"
           content="Bimbel Supercamp UTBK SNBT 2026 & Karantina Kedokteran"
@@ -55,7 +55,7 @@ const HomePage = () => {
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/og-image.jpg"
+          content="https://supercampmatrix.com/og-image.jpg"
         />{" "}
         {/* Ganti dengan URL gambar promo Anda */}
         {/* Twitter */}
@@ -71,7 +71,7 @@ const HomePage = () => {
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
             name: "Bimbel LPS - Supercamp Matrix",
-            url: "https://supercampui.com/",
+            url: "https://supercampmatrix.com/",
             logo: "https://apps.lesprivatmasukptn.com/images/LOGO2.webp",
             description:
               "Bimbel persiapan masuk PTN dan Kedokteran terbaik di Indonesia.",

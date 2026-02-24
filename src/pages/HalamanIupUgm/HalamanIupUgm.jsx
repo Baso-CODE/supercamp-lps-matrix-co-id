@@ -43,7 +43,10 @@ const HalamanIupUgm = () => {
           content="bimbel iup ugm, les privat iup ugm, persiapan gmst ugm, pelatihan acept ugm, bimbel iup kedokteran, tutor privat iup ugm, intake iup ugm, Bimbel LPS"
         />
 
-        <link rel="canonical" href="https://supercampui.com/bimbel-iup-ugm" />
+        <link
+          rel="canonical"
+          href="https://supercampmatrix.com/bimbel-iup-ugm"
+        />
 
         {/* Open Graph (WhatsApp Preview Premium) */}
         <meta property="og:type" content="website" />
@@ -57,11 +60,11 @@ const HalamanIupUgm = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampui.com/bimbel-iup-ugm"
+          content="https://supercampmatrix.com/bimbel-iup-ugm"
         />
         <meta
           property="og:image"
-          content="https://supercampui.com/images/banner.webp"
+          content="https://supercampmatrix.com/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Menampilkan program sebagai layanan profesional untuk Rich Snippets */}

@@ -39,14 +39,10 @@ const paketData = [
 ];
 
 const PaketSupercampLps = () => {
-  // const bgImage = "/images/supercamp/bg_PL_supercamp.webp";
   return (
-    <section
-      className="super-parent-paket-belajar-supercamp-lps"
-      // style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <section className="super-parent-paket-belajar-supercamp-lps">
       <h2 className="title-paket-belajar-supercamp-lps">
-        PAKET BELAJAR SUPERCAMP
+        Paket Program Supercamp untuk Persiapan UTBK SNBT & Masuk Kedokteran
       </h2>
 
       <div className="box-paket-belajar-supercamp-lps">
@@ -54,14 +50,16 @@ const PaketSupercampLps = () => {
           <a
             key={item.id}
             className="img-paket-supercamp-lps"
-            href={`https://api.whatsapp.com/send?phone=${item.phone}&text=Halo%20Kak%20${item.admin}%20https://supercampmatrix.com%20,%20Saya%20ingin%20daftar%20bimbel%20Supercamp%20UTBK%20SNBT%20Paket%20${item.name}`}
+            href={`https://api.whatsapp.com/send?phone=${item.phone}&text=Halo%20Kak%20${item.admin}%20https://supercampmatrix.com%20,%20Saya%20ingin%20daftar%20Program%20Supercamp%20UTBK%20SNBT%20Paket%20${item.name}`}
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            aria-label={`Daftar Paket Supercamp ${item.name} untuk persiapan UTBK SNBT dan masuk PTN favorit`}>
             <img
               className="img-paket-supercamp-lps-images"
               src={item.img}
-              alt={`Paket ${item.name}`}
+              alt={`Paket Supercamp ${item.name} untuk bimbel intensif UTBK SNBT dan persiapan masuk Kedokteran`}
               loading="lazy"
+              decoding="async"
             />
           </a>
         ))}
