@@ -7,16 +7,14 @@
   max-width: 900px;
   margin: 0 auto 50px auto;
   text-align: center;
-
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #000000;
-
-  /* Improve readability on background image */
   opacity: 0.95;
 }
 .parent-all-testimoni-lps {
   margin-top: 100px;
+  padding: 0px 12%;
 }
 .box-testimoni-sc-lps {
   display: flex;
@@ -33,11 +31,17 @@
   }
   .img-testimoni-lps {
     width: 100%;
+    height: auto;
+    display: block;
   }
   .title-testimoni-lps {
     font-size: 20px;
   }
   .parent-all-testimoni-lps {
     margin-top: 30px;
+    padding: 0px 3%;
+  }
+  .desk-testimoni-lps {
+    font-size: 14px;
   }
 }

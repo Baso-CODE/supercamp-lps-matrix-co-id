@@ -8,7 +8,17 @@
   color: #004f77;
   font-weight: 800;
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.desk-video-sc-lps {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000000;
+  opacity: 0.95;
 }
 
 /* Container untuk menjaga rasio 16:9 */
@@ -36,12 +46,15 @@
 @media only screen and (max-width: 896px) {
   .parent-box-video-sc-lps {
     margin-top: 50px;
-    padding: 0 5%;
+    padding: 0 3%;
   }
 
   .title-video-sc-lps {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .desk-video-sc-lps {
+    font-size: 14px;
   }
 
   .video-wrapper {

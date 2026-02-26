@@ -12,8 +12,8 @@
   text-align: center;
   font-weight: 900;
   color: #ffffff;
-  font-size: 40px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Lebih ringan daripada filter drop-shadow */
+  font-size: 28px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   margin-bottom: 40px;
 }
 
@@ -64,12 +64,12 @@
   }
 
   .title-paket-belajar-supercamp-lps {
-    font-size: 26px;
+    font-size: 20px;
     margin-bottom: 25px;
   }
 
   .img-paket-supercamp-lps {
-    width: 90%; /* 1 kolom penuh di mobile */
+    width: 100%; /* 1 kolom penuh di mobile */
     max-width: 350px;
   }
 }

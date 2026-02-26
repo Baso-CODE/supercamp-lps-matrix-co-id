@@ -62,26 +62,24 @@
 /* --------------------------- */
 
 .box-img-kegiatan-sc-lps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px; /* Sedikit dilonggarkan */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .img-kegiatan-sc-lps {
-  width: 23%; /* Disesuaikan agar pas 4 berjajar rapi dengan gap */
-  border-radius: 10px; /* Radius lebih halus */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: transform 0.3s ease;
   object-fit: cover;
-  aspect-ratio: 4/3; /* Agar semua foto ukurannya seragam (opsional) */
+  aspect-ratio: 4/3;
 }
 
 .img-kegiatan-sc-lps:hover {
-  transform: scale(1.03); /* Efek zoom sedikit saat kursor mengarah */
+  transform: scale(1.03);
 }
-
 /* RESPONSIVE */
 @media only screen and (min-width: 320px) and (max-width: 896px) {
   .parent-all-kegiatan-sc-lps {
@@ -89,15 +87,17 @@
     padding-left: 3%;
     padding-right: 3%;
   }
+
   .title-kegiatan-sc-lps {
-    font-size: 24px;
+    font-size: 20px;
   }
+
   .tab-btn-sc {
     padding: 8px 20px;
     font-size: 14px;
   }
-  .img-kegiatan-sc-lps {
-    width: 47%; /* Tampil 2 kolom di HP agar tidak terlalu kecil */
-    margin-bottom: 5px;
+
+  .box-img-kegiatan-sc-lps {
+    grid-template-columns: 1fr;
   }
 }

@@ -48,15 +48,12 @@
 
 /* Modal yang akan muncul di atas tombol */
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   bottom: 70px; /* Jarak modal di atas tombol */
   right: 0;
   z-index: 1000; /* Agar modal muncul di atas tombol */
   width: 350px;
-  background-color: rgba(0, 0, 0, 0.5);
+
   border-radius: 5px;
   opacity: 0; /* Mulai dengan opacity 0 */
   transform: translateY(20px); /* Mulai lebih rendah */
@@ -94,21 +91,19 @@
 
 /* Konten modal */
 .modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Tombol untuk menutup modal */
 .close {
-  color: #aaaaaa;
-  font-size: 25px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -119,14 +114,15 @@
 
 .text-pilih-cs {
   color: white;
-  font-size: 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* Daftar customer service */
 .service-list {
   list-style: none;
-  text-decoration: none;
-  padding: 0;
+  padding: 15px;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -135,12 +131,16 @@ a {
 .service-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 10px 0;
-  padding: 6px;
-  background-color: #e6e6e693;
-  border-radius: 3px;
-  border-left: 2px solid #00b33c;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  border-left: 4px solid #00b33c;
+  transition: 0.2s ease;
+}
+.service-item:hover {
+  background-color: #e8f7ef;
 }
 
 /* Tautan untuk customer service */
@@ -177,17 +177,31 @@ a {
 }
 
 .img-float-wa {
-  width: 17%;
+  width: 28px;
+  height: 28px;
 }
 
 .parent-title-modal {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #00b33c;
 }
 
 /* RESPONSIVE */
 @media only screen and (min-width: 320px) and (max-width: 896px) {
   .modal {
     width: 350px;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

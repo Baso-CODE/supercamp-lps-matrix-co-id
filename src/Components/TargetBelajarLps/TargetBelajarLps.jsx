@@ -17,7 +17,7 @@ const TargetBelajarLps = () => {
     <section className="parent-img-target-belajar-lps">
       <div className="child-box-target-belajar-sc-lps">
         <div className="parent-taget-pembelajaran-sc-lps">
-          <h2 className="title-lokasi-karantina-sc-lps">
+          <h2 className="title-target-belajar-sc-lps">
             Target Pembelajaran Program Supercamp UTBK SNBT
           </h2>
 
@@ -27,10 +27,13 @@ const TargetBelajarLps = () => {
                 <img
                   src={iconLokasi}
                   alt=""
+                  aria-hidden="true"
                   className="icon-target-sc-lps"
                   loading="lazy"
+                  decoding="async"
                 />
-                {item}
+
+                <span className="text-target-item">{item}</span>
               </li>
             ))}
           </ul>

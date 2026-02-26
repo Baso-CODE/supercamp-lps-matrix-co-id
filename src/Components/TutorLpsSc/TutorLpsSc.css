@@ -12,7 +12,7 @@
   color: #ffffff;
   font-size: 36px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .slider-top-lps {
@@ -28,9 +28,6 @@
 .slider {
   width: 100%;
 }
-/* ============================= */
-/* DESKRIPSI TUTOR */
-/* ============================= */
 
 .desk-tutor-lps {
   max-width: 900px;
@@ -40,29 +37,14 @@
   font-size: 18px;
   line-height: 1.2;
   color: #f5f5f5;
-  margin-top: 20px;
 
-  /* Improve readability on background image */
   opacity: 0.95;
 }
 
-/* Optional: beri sedikit shadow agar lebih kontras di bg terang */
 .parent-all-tutor-lps .desk-tutor-lps {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media only screen and (max-width: 768px) {
-  .desk-tutor-lps {
-    font-size: 15px;
-    padding: 0 20px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-}
 .cta-lps {
   width: 100%;
   object-fit: cover;
@@ -72,7 +54,7 @@
 @media only screen and (max-width: 768px) {
   .parent-all-tutor-lps {
     margin-top: 60px;
-    padding: 50px 0;
+    /* padding: 50px 0; */
   }
   .slider-top-lps {
     margin: 0 auto;
@@ -80,8 +62,14 @@
   }
 
   .text-all-tutor-lps {
-    font-size: 22px;
-    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .desk-tutor-lps {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    line-height: 1.5;
   }
 
   .cta-lps {

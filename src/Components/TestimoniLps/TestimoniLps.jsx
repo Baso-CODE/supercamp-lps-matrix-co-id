@@ -20,8 +20,8 @@ const TestimoniLps = () => {
           className="img-testimoni-lps"
           loading="lazy"
           decoding="async"
-          width="600"
-          height="950"
+          width="800"
+          height="1050"
         />
 
         <img
@@ -30,8 +30,8 @@ const TestimoniLps = () => {
           className="img-testimoni-lps"
           loading="lazy"
           decoding="async"
-          width="600"
-          height="750"
+          width="800"
+          height="950"
         />
       </div>
     </section>

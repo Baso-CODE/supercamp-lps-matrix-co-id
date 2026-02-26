@@ -14,7 +14,7 @@
 
 .supercamp-fasilitas-title {
   color: #004f77;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -74,7 +74,7 @@
 
 .fasilitas-kategori {
   color: #004f77;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
 }
@@ -115,6 +115,7 @@
 
 .item-text {
   flex: 1;
+  font-size: 14px;
 }
 
 /* --- RESPONSIVE --- */
@@ -125,7 +126,7 @@
     grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
   }
   .supercamp-fasilitas-title {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 
@@ -141,11 +142,11 @@
   }
 
   .supercamp-fasilitas-title {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .supercamp-fasilitas-subtitle {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .fasilitas-group-card {

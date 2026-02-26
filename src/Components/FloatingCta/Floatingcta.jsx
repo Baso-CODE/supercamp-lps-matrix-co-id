@@ -22,26 +22,36 @@ const Floatingcta = () => {
 
   return (
     <div className="whatsapp-container">
-      {/* Modal untuk memilih customer service */}
       {isModalOpen && (
-        <div className={`modal ${isClosing ? "fade-down" : ""}`}>
+        <div
+          className={`modal ${isClosing ? "fade-down" : ""}`}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title">
           <div className="modal-content">
             <div className="parent-title-modal">
-              <h3 className="text-pilih-cs">Pilih Customer Service</h3>
-              <FontAwesomeIcon
+              <h3 id="modal-title" className="text-pilih-cs">
+                Pilih Customer Service
+              </h3>
+
+              <button
+                type="button"
                 className="close"
                 onClick={closeModal}
-                icon={faClose}
-              />
+                aria-label="Tutup pilihan customer service">
+                <FontAwesomeIcon icon={faClose} aria-hidden="true" />
+              </button>
             </div>
 
             <ul className="service-list">
-              {/* Fina */}
-              <a href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com	,%20Saya%20ingin%20daftar%20bimbel%20Supercamp%20UTBK%20SNBT">
-                <li className="service-item">
+              <li className="service-item">
+                <a
+                  href="https://wa.me/6281311778441?text=Halo%20Kak%20Fina,%20Saya%20ingin%20daftar%20Supercamp%20UTBK%20SNBT"
+                  aria-label="Chat WhatsApp Kak Fina, customer service Supercamp Matrix">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/598px-WhatsApp_icon.png?20200503174721"
-                    alt="Bimbel Masuk PTN"
+                    alt=""
+                    aria-hidden="true"
                     className="img-float-wa"
                   />
                   <p className="service-link">
@@ -49,15 +59,17 @@ const Floatingcta = () => {
                     <br />
                     <span className="text-cs-edm">(CS Supercamp Matrix)</span>
                   </p>
-                </li>
-              </a>
+                </a>
+              </li>
 
-              {/* Nia */}
-              <a href="https://api.whatsapp.com/send?phone=6282258689993&text=Halo%20Kak%20Nia%20https://supercampmatrix.com	,%20Saya%20ingin%20daftar%20bimbel%20Supercamp%20UTBK%20SNBT">
-                <li className="service-item">
+              <li className="service-item">
+                <a
+                  href="https://wa.me/6282258689993?text=Halo%20Kak%20Nia,%20Saya%20ingin%20daftar%20Supercamp%20UTBK%20SNBT"
+                  aria-label="Chat WhatsApp Kak Nia, customer service Supercamp Matrix">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/598px-WhatsApp_icon.png?20200503174721"
-                    alt="Bimbel Masuk PTN"
+                    alt=""
+                    aria-hidden="true"
                     className="img-float-wa"
                   />
                   <p className="service-link">
@@ -65,15 +77,17 @@ const Floatingcta = () => {
                     <br />
                     <span className="text-cs-edm">(CS Supercamp Matrix)</span>
                   </p>
-                </li>
-              </a>
+                </a>
+              </li>
 
-              {/* Lia */}
-              <a href="https://api.whatsapp.com/send?phone=6282134093567&text=Halo%20Kak%20Lia%20https://supercampmatrix.com	,%20Saya%20ingin%20daftar%20bimbel%20Supercamp%20UTBK%20SNBT">
-                <li className="service-item">
+              <li className="service-item">
+                <a
+                  href="https://wa.me/6282134093567?text=Halo%20Kak%20Lia,%20Saya%20ingin%20daftar%20Supercamp%20UTBK%20SNBT"
+                  aria-label="Chat WhatsApp Kak Lia, customer service Supercamp Matrix">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/598px-WhatsApp_icon.png?20200503174721"
-                    alt="Bimbel Masuk PTN"
+                    alt=""
+                    aria-hidden="true"
                     className="img-float-wa"
                   />
                   <p className="service-link">
@@ -81,22 +95,30 @@ const Floatingcta = () => {
                     <br />
                     <span className="text-cs-edm">(CS Supercamp Matrix)</span>
                   </p>
-                </li>
-              </a>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       )}
 
-      {/* Floating WhatsApp Button */}
       <div className="main-parent-float-wa">
-        <label className="label-cta" htmlFor="">
-          Konsultasi Sekarang!
-        </label>
+        <label className="label-cta">Konsultasi Sekarang!</label>
+
         <div className="whatsapp-float">
-          <button className="whatsapp-btn" onClick={openModal}>
-            <FontAwesomeIcon className="icon-wa" icon={faWhatsapp} />
-            <span className="whatsapp-badge">1</span>{" "}
+          <button
+            type="button"
+            className="whatsapp-btn"
+            onClick={openModal}
+            aria-label="Buka pilihan customer service WhatsApp">
+            <FontAwesomeIcon
+              className="icon-wa"
+              icon={faWhatsapp}
+              aria-hidden="true"
+            />
+            <span className="whatsapp-badge" aria-label="Satu notifikasi">
+              1
+            </span>
           </button>
         </div>
       </div>

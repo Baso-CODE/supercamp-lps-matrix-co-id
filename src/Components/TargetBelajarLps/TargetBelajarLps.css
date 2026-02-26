@@ -16,19 +16,27 @@
 }
 .parent-text-target-belajar-sc-lps {
   display: flex;
-  align-items: self-start;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 15px;
   color: #004f77;
-  line-height: 25px;
+  line-height: 1.6;
   margin-top: 10px;
+}
+.text-target-item {
+  flex: 1;
 }
 .parent-taget-pembelajaran-sc-lps {
   margin-top: 20px;
-  line-height: 50px;
+  color: #004f77;
   width: 100%;
 }
+.title-target-belajar-sc-lps {
+  font-weight: 800;
+  font-size: 30px;
+}
+
 .child-box-target-belajar-sc-lps {
   display: flex;
   justify-content: center;
@@ -41,7 +49,10 @@
   border-radius: 20px;
 }
 .icon-target-sc-lps {
-  width: 3.4%;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 
 /* RESPONSIVE */
@@ -52,23 +63,26 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .title-target-belajar-sc-lps {
+    font-size: 20px;
+  }
   .img-target-belajar {
     width: 100%;
-    /* display: none; */
   }
   .parent-text-target-belajar-sc-lps {
-    font-size: 11px;
-    line-height: 20px;
-    align-items: start;
-    font-weight: 600;
-    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .icon-target-sc-lps {
+    width: 20px;
+    height: 20px;
   }
   .parent-taget-pembelajaran-sc-lps {
-    padding-left: 3%;
-    padding-right: 3%;
     margin-top: 10px;
     display: block;
   }
+
   .child-box-target-belajar-sc-lps {
     display: grid;
     padding-left: 3%;

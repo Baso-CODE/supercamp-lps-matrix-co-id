@@ -46,16 +46,25 @@ const JumbotronLps = () => {
           </div>
 
           <div className="parent-btn-konsul-proposal">
-            <a className="btn-action btn-konsul" href="tel:082258689993">
-              <span className="material-symbols-outlined">call</span>
+            <a
+              className="btn-action btn-konsul"
+              href="tel:+6282258689993"
+              aria-label="Telepon customer service Supercamp untuk konsultasi gratis">
+              <span className="material-symbols-outlined" aria-hidden="true">
+                call
+              </span>
               Konsultasi Gratis
             </a>
+
             <a
               className="btn-action btn-proposal"
-              href="https://api.whatsapp.com/send?phone=6281311778441"
+              href="https://wa.me/6281311778441?text=Halo%20CS%20Supercamp,%20Saya%20ingin%20request%20proposal%20program%20belajar%20Supercamp."
               target="_blank"
-              rel="noopener noreferrer">
-              <span className="material-symbols-outlined">picture_as_pdf</span>
+              rel="noopener noreferrer"
+              aria-label="Chat WhatsApp customer service Supercamp untuk request proposal (membuka tab baru)">
+              <span className="material-symbols-outlined" aria-hidden="true">
+                picture_as_pdf
+              </span>
               Request Proposal
             </a>
           </div>

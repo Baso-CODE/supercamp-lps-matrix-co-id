@@ -119,47 +119,43 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="bawah-content-column">
+          <div
+            className="bawah-content-column"
+            aria-labelledby="cta-konsultasi-title">
             <div className="bawah-call-to-action">
-              <h2 className="bawah-call-to-action-title"> Konsultasi Gratis</h2>
+              <h2
+                id="cta-konsultasi-title"
+                className="bawah-call-to-action-title">
+                Konsultasi Gratis
+              </h2>
+
               <p className="bawah-call-to-action-description">
-                {" "}
                 Punya Pertanyaan?
               </p>
+
               <a
                 className="bawah-call-to-action-button button"
-                href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com	,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20UTBK%20SNBT"
-                target="_self">
-                {" "}
+                href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20UTBK%20SNBT"
+                target="_self"
+                aria-label="Hubungi admin Supercamp melalui WhatsApp untuk konsultasi program UTBK SNBT">
                 <strong>Hubungi Kami</strong>
               </a>
             </div>
-            <a href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com	,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20Kedokteran%20UTBK%20SNBT">
+
+            <a
+              href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20Kedokteran%20UTBK%20SNBT"
+              aria-label="Chat WhatsApp admin Supercamp untuk konsultasi program Kedokteran UTBK SNBT">
               <img
                 className="cta-wa-footer"
                 src={imgCtaFooter}
-                alt="Bimbel Masuk UGM"
+                alt="Chat WhatsApp Supercamp untuk konsultasi program belajar"
+                loading="lazy"
+                decoding="async"
               />
             </a>
-            {/* <div className="bawah-call-to-action">
-              <h2 className="bawah-call-to-action-title"> Kontak Umum</h2>
-              <p className="bawah-call-to-action-link-wrapper">
-                {" "}
-                <a
-                  className="bawah-call-to-action-link"
-                  href="tel:085600422188"
-                  target="_self"
-                >
-                  {" "}
-                  +62 856-0042-2188
-                </a>
-              </p>
-            </div> */}
           </div>
         </div>
-        {/* <div className="parent-line">
-          <hr className="garis-end-2" />
-        </div> */}
+
         <div className="bawah-copyright">
           <div className="bawah-copyright-wrapper">
             <p className="bawah-copyright-text">
