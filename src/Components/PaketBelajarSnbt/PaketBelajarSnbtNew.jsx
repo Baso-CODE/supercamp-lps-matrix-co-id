@@ -42,7 +42,7 @@ const PaketBelajarSnbtNew = () => {
                 Progress Report
               </li>
             </ul>
-            <a href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com	,%20Saya%20ingin%20daftar%20Paket%20SILVER%20bimbel%20UTBK%20SNBT.">
+            <a href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.co.id	,%20Saya%20ingin%20daftar%20Paket%20SILVER%20bimbel%20UTBK%20SNBT.">
               <button className="btn-parent-paket-snbt-new-2">
                 Pilih Paket
               </button>
@@ -81,7 +81,7 @@ const PaketBelajarSnbtNew = () => {
                   </li>
                 </ul>
               </ul>
-              <a href="https://api.whatsapp.com/send?phone=6282258689993&text=Halo%20Kak%20Nia%20https://supercampmatrix.com	,%20Saya%20ingin%20daftar%20Paket%20GOLD%20bimbel%20UTBK%20SNBT.">
+              <a href="https://api.whatsapp.com/send?phone=6282258689993&text=Halo%20Kak%20Nia%20https://supercampmatrix.co.id	,%20Saya%20ingin%20daftar%20Paket%20GOLD%20bimbel%20UTBK%20SNBT.">
                 <button className="btn-parent-paket-snbt-new">
                   Pilih Paket
                 </button>
@@ -119,7 +119,7 @@ const PaketBelajarSnbtNew = () => {
                 </li>
               </ul>
             </ul>
-            <a href="https://api.whatsapp.com/send?phone=6282134093567&text=Halo%20Kak%20Lia%20https://supercampmatrix.com	,%20Saya%20ingin%20daftar%20Paket%20PLATINUM%20bimbel%20UTBK%20SNBT.">
+            <a href="https://api.whatsapp.com/send?phone=6282134093567&text=Halo%20Kak%20Lia%20https://supercampmatrix.co.id	,%20Saya%20ingin%20daftar%20Paket%20PLATINUM%20bimbel%20UTBK%20SNBT.">
               <button className="btn-parent-paket-snbt-new-2">
                 Pilih Paket
               </button>

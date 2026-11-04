@@ -45,7 +45,7 @@ const HalamanCbtUgm = () => {
 
         <link
           rel="canonical"
-          href="https://supercampmatrix.com/bimbel-cbt-ugm"
+          href="https://supercampmatrix.co.id/bimbel-cbt-ugm"
         />
 
         {/* Open Graph (WhatsApp & Social Media) */}
@@ -60,11 +60,11 @@ const HalamanCbtUgm = () => {
         />
         <meta
           property="og:url"
-          content="https://supercampmatrix.com/bimbel-cbt-ugm"
+          content="https://supercampmatrix.co.id/bimbel-cbt-ugm"
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Schema Markup JSON-LD: Untuk Rich Snippets agar Google menampilkan FAQ */}
@@ -78,7 +78,7 @@ const HalamanCbtUgm = () => {
               provider: {
                 "@type": "EducationalOrganization",
                 name: "Bimbel LPS",
-                url: "https://supercampmatrix.com",
+                url: "https://supercampmatrix.co.id",
               },
               description:
                 "Program bimbingan belajar khusus untuk persiapan ujian mandiri CBT UGM (UTUL UGM).",

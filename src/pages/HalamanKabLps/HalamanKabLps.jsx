@@ -78,7 +78,7 @@ const HalamanKabLps = () => {
         {/* 3. Canonical Link - Menghindari Duplikasi Konten */}
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
+          href={`https://supercampmatrix.co.id/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
         />
 
         {/* 4. Open Graph (Untuk WhatsApp & Social Media) */}
@@ -93,7 +93,7 @@ const HalamanKabLps = () => {
         />
         <meta
           property="og:url"
-          content={`https://supercampmatrix.com/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
+          content={`https://supercampmatrix.co.id/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
         />
         <meta
           property="og:image"
@@ -110,7 +110,7 @@ const HalamanKabLps = () => {
               provider: {
                 "@type": "EducationalOrganization",
                 name: "Bimbel LPS",
-                url: "https://supercampmatrix.com",
+                url: "https://supercampmatrix.co.id",
               },
               areaServed: {
                 "@type": "City",

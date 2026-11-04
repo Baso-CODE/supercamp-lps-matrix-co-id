@@ -15,7 +15,7 @@ const PaketBelajarSnbt = () => {
               <h4 className="text-subtitle-prog-unggulan">
                 Layanan yang didapatkan
               </h4>
-              <a href="https://api.whatsapp.com/send?phone=6285774023474&text=Halo%20Kak%20Silvi%20https://supercampmatrix.com	,%20saya%20ingin%20daftar%20Supercamp%20SNBT,%20Program%20Sukses%20Masuk%20FK%20dan%20PTN%202026.%20Mohon%20info%20selengkapnya%20...">
+              <a href="https://api.whatsapp.com/send?phone=6285774023474&text=Halo%20Kak%20Silvi%20https://supercampmatrix.co.id	,%20saya%20ingin%20daftar%20Supercamp%20SNBT,%20Program%20Sukses%20Masuk%20FK%20dan%20PTN%202026.%20Mohon%20info%20selengkapnya%20...">
                 <button className="btn-paket-snbt">PILIH PROGRAM</button>
               </a>
             </div>
@@ -107,7 +107,7 @@ const PaketBelajarSnbt = () => {
               <h4 className="text-subtitle-prog-unggulan">
                 Layanan yang didapatkan
               </h4>
-              <a href="https://api.whatsapp.com/send?phone=6285774023474&text=Halo%20Kak%20Silvi%20https://supercampmatrix.com	,%20saya%20ingin%20daftar%20Les%20Privat,%20Program%20Sukses%20Masuk%20FK%20dan%20PTN%202026.%20Mohon%20info%20selengkapnya%20...">
+              <a href="https://api.whatsapp.com/send?phone=6285774023474&text=Halo%20Kak%20Silvi%20https://supercampmatrix.co.id	,%20saya%20ingin%20daftar%20Les%20Privat,%20Program%20Sukses%20Masuk%20FK%20dan%20PTN%202026.%20Mohon%20info%20selengkapnya%20...">
                 <button className="btn-paket-snbt">PILIH PROGRAM</button>
               </a>
             </div>

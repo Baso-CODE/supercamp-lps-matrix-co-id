@@ -17,7 +17,7 @@ const VideoScLps = () => {
       name: "Bimbel LPS",
       logo: {
         "@type": "ImageObject",
-        url: "https://supercampmatrix.com/images/LOGO2.webp",
+        url: "https://supercampmatrix.co.id/images/LOGO2.webp",
       },
     },
   };

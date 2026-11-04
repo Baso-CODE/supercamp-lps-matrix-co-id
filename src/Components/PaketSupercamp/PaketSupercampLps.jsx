@@ -50,7 +50,7 @@ const PaketSupercampLps = () => {
           <a
             key={item.id}
             className="img-paket-supercamp-lps"
-            href={`https://api.whatsapp.com/send?phone=${item.phone}&text=Halo%20Kak%20${item.admin}%20https://supercampmatrix.com%20,%20Saya%20ingin%20daftar%20Program%20Supercamp%20UTBK%20SNBT%20Paket%20${item.name}`}
+            href={`https://api.whatsapp.com/send?phone=${item.phone}&text=Halo%20Kak%20${item.admin}%20https://supercampmatrix.co.id%20,%20Saya%20ingin%20daftar%20Program%20Supercamp%20UTBK%20SNBT%20Paket%20${item.name}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Daftar Paket Supercamp ${item.name} untuk persiapan UTBK SNBT dan masuk PTN favorit`}>

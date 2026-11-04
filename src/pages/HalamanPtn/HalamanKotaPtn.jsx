@@ -66,7 +66,7 @@ const HalamanKotaPtn = () => {
         />
         <link
           rel="canonical"
-          href={`https://supercampmatrix.com/bimbel-masuk-ptn/${kota.slug}`}
+          href={`https://supercampmatrix.co.id/bimbel-masuk-ptn/${kota.slug}`}
         />
 
         {/* Open Graph */}
@@ -76,7 +76,7 @@ const HalamanKotaPtn = () => {
         />
         <meta
           property="og:image"
-          content="https://supercampmatrix.com/images/banner.webp"
+          content="https://supercampmatrix.co.id/images/banner.webp"
         />
 
         {/* Script JSON-LD juga harus dibungkus aman */}

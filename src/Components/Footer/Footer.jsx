@@ -135,7 +135,7 @@ const Footer = () => {
 
               <a
                 className="bawah-call-to-action-button button"
-                href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20UTBK%20SNBT"
+                href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.co.id,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20UTBK%20SNBT"
                 target="_self"
                 aria-label="Hubungi admin Supercamp melalui WhatsApp untuk konsultasi program UTBK SNBT">
                 <strong>Hubungi Kami</strong>
@@ -143,7 +143,7 @@ const Footer = () => {
             </div>
 
             <a
-              href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.com,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20Kedokteran%20UTBK%20SNBT"
+              href="https://api.whatsapp.com/send?phone=6281311778441&text=Halo%20Kak%20Fina%20https://supercampmatrix.co.id,%20Saya%20ingin%20tanya%20program%20belajar%20Supercamp%20Kedokteran%20UTBK%20SNBT"
               aria-label="Chat WhatsApp admin Supercamp untuk konsultasi program Kedokteran UTBK SNBT">
               <img
                 className="cta-wa-footer"

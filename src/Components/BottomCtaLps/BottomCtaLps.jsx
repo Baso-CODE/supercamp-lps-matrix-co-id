@@ -6,13 +6,13 @@ const BottomCtaLps = () => {
       name: "Kak Fina",
       phone: "6281311778441",
       display: "0813-1177-8441",
-      text: "Hallo, Ms. Fina https://supercampmatrix.com , Saya ingin tanya mengenai privat Persiapan Masuk PTN.",
+      text: "Hallo, Ms. Fina https://supercampmatrix.co.id , Saya ingin tanya mengenai privat Persiapan Masuk PTN.",
     },
     {
       name: "Kak Nia",
       phone: "6282258689993",
       display: "0822-5868-9993",
-      text: "Hallo, Ms. Nia https://supercampmatrix.com , Saya ingin tanya mengenai privat Persiapan Masuk PTN.",
+      text: "Hallo, Ms. Nia https://supercampmatrix.co.id , Saya ingin tanya mengenai privat Persiapan Masuk PTN.",
     },
   ];
 
