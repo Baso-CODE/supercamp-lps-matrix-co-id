@@ -28,8 +28,8 @@ const Footer = () => {
                 <li className="menu-item menu-item-type-post_type menu-item-object-product">
                   <a className="link-footer" href=""></a>
                   <p className="p-address">
-                    Pesona Khayangan Blok CP No. 4, Depok, Jawa Barat
-                    (Lingkungan Pendidikan UI)
+                    Jl. Akses UI No 165, Tugu, Kec. Cimanggis, Kota Depok, Jawa
+                    Barat (Lingkungan Pendidikan UI)
                   </p>
                 </li>
               </ul>

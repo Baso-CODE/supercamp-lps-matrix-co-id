@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 
 import Swal from "sweetalert2";
 
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import "./Registrasi.css";
 
 export const Registrasi = () => {
