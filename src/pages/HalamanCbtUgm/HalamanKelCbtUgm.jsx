@@ -1,7 +1,5 @@
-import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
 import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
 import BenefitScLps from "../../Components/BenefitScLPS/BenefitScLPS";
@@ -24,107 +22,183 @@ import TutorLpsSc from "../../Components/TutorLpsSc/TutorLpsSc";
 import VenueScLps from "../../Components/VenueScLps/VenueScLps";
 import VideoScLps from "../../Components/VideoScLps/VideoScLps";
 import WaktuPelaksanaanSc from "../../Components/WaktuPelaksanaanSc/WaktuPelaksanaanSc";
+import { DOMAIN } from "../../utils/domain";
+import formatNamaWilayah from "../../utils/formatNamaWilayah";
 
 const HalamanKelCbtUgm = () => {
+  // =========================================
+  // AMBIL SLUG KELURAHAN
+  // =========================================
   const { kelSlug } = useParams();
-  const [kelurahan, setKelurahan] = useState([]);
 
-  function useQuery() {
-    const { search } = useLocation();
-    return useMemo(() => new URLSearchParams(search), [search]);
-  }
+  // =========================================
+  // FORMAT NAMA KELURAHAN
+  // =========================================
+  const namaKelurahan = formatNamaWilayah(kelSlug);
 
-  const query = useQuery();
+  // =========================================
+  // NORMALISASI SLUG
+  // =========================================
+  const slugKelurahan = String(kelSlug || "")
+    .trim()
+    .toLowerCase();
 
-  useEffect(() => {
-    const axiosJWT = axios.create();
-    const getKelurahan = async () => {
-      const response = await axiosJWT.get(
-        `https://apilps.edusmart-indonesia.com/kelurahankec/${kelSlug}`,
-        {
-          headers: {
-            Authorization: `Bearer`,
-          },
-        },
-      );
-      setKelurahan(response.data);
-    };
-    getKelurahan(kelSlug);
-  }, [kelSlug, query]);
+  // =========================================
+  // CANONICAL URL
+  // =========================================
+  const canonicalUrl = `${DOMAIN}/guru-les-privat-cbt-ugm/${encodeURIComponent(
+    slugKelurahan,
+  )}`;
+
+  // =========================================
+  // IMAGE URL
+  // =========================================
+  const imageUrl = `${DOMAIN}/images/banner.webp`;
+
+  // =========================================
+  // SEO TITLE - KHUSUS .CO.ID
+  // =========================================
+  const pageTitle = `Guru Privat CBT UGM ${namaKelurahan} | Persiapan UM UGM`;
+
+  // =========================================
+  // META DESCRIPTION
+  // =========================================
+  const pageDescription = `Guru les privat CBT UGM di ${namaKelurahan}. Belajar lebih terarah melalui pendampingan personal, latihan soal UM UGM CBT, dan evaluasi kemampuan akademik.`;
+
+  // =========================================
+  // STRUCTURED DATA
+  // =========================================
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    inLanguage: "id-ID",
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: imageUrl,
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Supercamp Matrix Indonesia",
+      url: `${DOMAIN}/`,
+    },
+    about: {
+      "@type": "Thing",
+      name: "Guru Les Privat Persiapan UM UGM CBT",
+      description:
+        "Pendampingan belajar individual untuk mempersiapkan ujian mandiri Universitas Gadjah Mada melalui latihan soal, penguatan konsep, dan evaluasi kemampuan akademik.",
+    },
+  };
 
   return (
     <>
+      {/* ===================================== */}
+      {/* SEO METADATA */}
+      {/* ===================================== */}
       <Helmet>
-        {/* Fix Title: Menggunakan satu string utuh di dalam kurung kurawal agar aman dari error */}
-        <title>{`Bimbel & Les Privat CBT UGM ${kelurahan.kelurahan} 2026 - Lolos UTUL UGM #1`}</title>
+        <title>{pageTitle}</title>
 
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={pageDescription} />
 
-        {/* Meta Description: Hybrid Keyword + Target CBT UGM + Lokasi Kelurahan Spesifik */}
-        <meta
-          name="description"
-          content={`Bimbel & Les Privat CBT UGM terbaik di ${kelurahan.kelurahan}. Persiapan intensif UTUL UGM 2026 Saintek & Soshum. Guru privat datang ke rumah di wilayah ${kelurahan.kelurahan}. Master Teacher Expert & Modul Akurat. Daftar Sekarang!`}
-        />
-        <meta
-          name="keywords"
-          content={`bimbel cbt ugm ${kelurahan.kelurahan}, les privat cbt ugm ${kelurahan.kelurahan}, persiapan utul ugm ${kelurahan.kelurahan}, guru privat ugm ke rumah, bimbingan belajar ugm, Bimbel LPS`}
-        />
+        <link rel="canonical" href={canonicalUrl} />
 
-        <link
-          rel="canonical"
-          href={`https://supercampmatrix.co.id/guru-les-privat-cbt-ugm/${kelurahan.slug}`}
-        />
+        <meta name="robots" content="index, follow" />
 
-        {/* Open Graph (WhatsApp Preview) */}
+        {/* ===================================== */}
+        {/* OPEN GRAPH */}
+        {/* ===================================== */}
         <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Supercamp Matrix Indonesia" />
+
+        <meta property="og:title" content={pageTitle} />
+
+        <meta property="og:description" content={pageDescription} />
+
+        <meta property="og:url" content={canonicalUrl} />
+
+        <meta property="og:image" content={imageUrl} />
+
         <meta
-          property="og:title"
-          content={`Bimbel & Les Privat CBT UGM di ${kelurahan.kelurahan} - Bimbel LPS`}
-        />
-        <meta
-          property="og:description"
-          content={`Raih kursi Gadjah Mada melalui program spesialis Bimbel & Les Privat CBT UGM di kelurahan ${kelurahan.kelurahan}.`}
-        />
-        <meta
-          property="og:url"
-          content={`https://supercampmatrix.co.id/guru-les-privat-cbt-ugm/${kelurahan.slug}`}
-        />
-        <meta
-          property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          property="og:image:alt"
+          content={`Program guru les privat UM UGM CBT di ${namaKelurahan}`}
         />
 
-        {/* Schema Markup JSON-LD: Spek Tinggi untuk mendominasi Google Maps & Search Lokal */}
+        <meta property="og:locale" content="id_ID" />
+
+        {/* ===================================== */}
+        {/* TWITTER CARD */}
+        {/* ===================================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content={pageTitle} />
+
+        <meta name="twitter:description" content={pageDescription} />
+
+        <meta name="twitter:image" content={imageUrl} />
+
+        {/* ===================================== */}
+        {/* JSON-LD STRUCTURED DATA */}
+        {/* ===================================== */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            name: `Bimbel & Les Privat CBT UGM Edumatrix ${kelurahan.kelurahan}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/guru-les-privat-cbt-ugm/${kelurahan.slug}`,
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: kelurahan.kelurahan,
-              addressCountry: "ID",
-            },
-            description: `Lembaga Bimbel dan Les Privat spesialis persiapan ujian mandiri CBT UGM (UTUL UGM) untuk wilayah kelurahan ${kelurahan.kelurahan}.`,
-          })}
+          {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+
+      {/* ===================================== */}
+      {/* JUMBOTRON */}
+      {/* ===================================== */}
       <JumbotronLps />
+
+      {/* ===================================== */}
+      {/* SEO CONTENT */}
+      {/* ===================================== */}
       <div className="parent-text-seo-lps">
         <h1 className="text-seo-lps">
-          Bimbel & Les Privat CBT UGM {kelurahan.kelurahan} Terbaik - Bimbel
-          Privat Intensif Masuk UGM
+          Guru Les Privat CBT UGM di{" "}
+          <span className="highlight-city">{namaKelurahan}</span> – Pendampingan
+          Personal Persiapan UM UGM CBT
         </h1>
+
         <p className="desk-seo-lps">
-          Bimbel & Les Privat CBT UGM {kelurahan.kelurahan} Terbaik. Les Privat
-          UTUL UGM Saintek Soshum IPC, Master Teacher Berpengalaman, Drilling
-          Soal UTUL, Privat Offline Online, Jadwal Fleksibel, Konsultasi
-          Progress Belajar
+          Persiapan mengikuti Ujian Mandiri Universitas Gadjah Mada memerlukan
+          pemahaman materi yang kuat dan strategi belajar yang sesuai dengan
+          kemampuan masing-masing peserta. Bagi siswa di {namaKelurahan},
+          program <strong>Guru Les Privat CBT UGM</strong> dari Supercamp Matrix
+          Indonesia membantu calon mahasiswa mempersiapkan seleksi melalui
+          pembelajaran individual yang lebih terarah.
+          <br />
+          <br />
+          Dalam pembelajaran privat, siswa dapat memusatkan perhatian pada
+          materi yang belum dikuasai, memperdalam pemahaman konsep, serta
+          melatih kemampuan menyelesaikan soal secara sistematis. Pendampingan
+          dapat mencakup penguatan kemampuan dasar, latihan tes potensi, dan
+          pembahasan materi akademik yang relevan dengan program studi tujuan
+          serta ketentuan ujian yang berlaku.
+          <br />
+          <br />
+          Selain memperkuat penguasaan materi, latihan secara berkala juga
+          membantu siswa mengenali pola kesalahan dan memperbaiki strategi
+          pengerjaan soal. Melalui pembahasan bersama tutor, simulasi CBT, serta
+          evaluasi hasil latihan, peserta di {namaKelurahan}
+          dapat menentukan prioritas belajar dan mengalokasikan waktu persiapan
+          dengan lebih efektif.
+          <br />
+          <br />
+          Untuk calon mahasiswa yang menargetkan Universitas Gadjah Mada,
+          persiapan juga perlu mempertimbangkan persyaratan seleksi dan program
+          studi yang dipilih. Melalui pendampingan privat, latihan terstruktur,
+          serta pemantauan perkembangan kemampuan, siswa dapat membangun
+          kesiapan akademik dan kepercayaan diri menghadapi UM UGM CBT.
         </p>
       </div>
+
+      {/* ===================================== */}
+      {/* KOMPONEN HALAMAN */}
+      {/* ===================================== */}
       <LulusanLps />
       <AlumniKedokteranLps />
       <AlumniPtnLps />
@@ -144,7 +218,6 @@ const HalamanKelCbtUgm = () => {
       <TestimoniLps />
       <TestimoniLps2 />
       <ListAlumni />
-
       <FaqScLps />
       <BottomCtaLps />
     </>

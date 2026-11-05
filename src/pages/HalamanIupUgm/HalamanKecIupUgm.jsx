@@ -1,7 +1,5 @@
-import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
 import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
 import BenefitScLps from "../../Components/BenefitScLPS/BenefitScLPS";
@@ -25,107 +23,192 @@ import TutorLpsSc from "../../Components/TutorLpsSc/TutorLpsSc";
 import VenueScLps from "../../Components/VenueScLps/VenueScLps";
 import VideoScLps from "../../Components/VideoScLps/VideoScLps";
 import WaktuPelaksanaanSc from "../../Components/WaktuPelaksanaanSc/WaktuPelaksanaanSc";
+import { DOMAIN } from "../../utils/domain";
+import formatNamaWilayah from "../../utils/formatNamaWilayah";
 
 const HalamanKecIupUgm = () => {
-  const { id, kecSlug } = useParams();
-  const [kecamatan, setKecamatan] = useState([]);
+  // =========================================
+  // AMBIL PARAMETER KECAMATAN
+  // =========================================
+  const { kecSlug } = useParams();
 
-  function useQuery() {
-    const { search } = useLocation();
-    return useMemo(() => new URLSearchParams(search), [search]);
-  }
+  // =========================================
+  // NORMALISASI SLUG
+  // =========================================
+  const slugKecamatan = String(kecSlug || "")
+    .trim()
+    .toLowerCase();
 
-  const query = useQuery();
-  const axiosJWT = axios.create();
+  // =========================================
+  // FORMAT NAMA KECAMATAN
+  // =========================================
+  const namaKecamatan = formatNamaWilayah(slugKecamatan);
 
-  useEffect(() => {
-    const getKecamatan = async () => {
-      const response = await axiosJWT.get(
-        `https://apilps.edusmart-indonesia.com/kecamatankab/${kecSlug}`,
-        {
-          headers: {
-            Authorization: `Bearer`,
-          },
-        },
-      );
-      setKecamatan(response.data);
-    };
-    getKecamatan(id);
-  }, [id, query, axiosJWT, kecSlug]);
+  // =========================================
+  // CANONICAL URL
+  // =========================================
+  const canonicalUrl = `${DOMAIN}/bimbel-les-privat-iup-ugm/${encodeURIComponent(
+    slugKecamatan,
+  )}`;
+
+  // =========================================
+  // IMAGE URL
+  // =========================================
+  const imageUrl = `${DOMAIN}/images/banner.webp`;
+
+  // =========================================
+  // SEO TITLE KHUSUS DOMAIN .CO.ID
+  // =========================================
+  const pageTitle = `Bimbingan IUP UGM ${namaKecamatan} | Privat Seleksi Internasional`;
+
+  // =========================================
+  // META DESCRIPTION
+  // =========================================
+  const pageDescription = `Bimbingan IUP UGM di ${namaKecamatan} dengan les privat intensif. Latihan bahasa Inggris, penguatan akademik, dan persiapan wawancara seleksi internasional.`;
+
+  // =========================================
+  // STRUCTURED DATA
+  // =========================================
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    inLanguage: "id-ID",
+
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: imageUrl,
+    },
+
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Supercamp Matrix Indonesia",
+      url: `${DOMAIN}/`,
+    },
+
+    about: {
+      "@type": "Thing",
+      name: "Bimbingan Seleksi International Undergraduate Program UGM",
+      description:
+        "Program pendampingan belajar untuk persiapan seleksi IUP Universitas Gadjah Mada melalui pengembangan kemampuan akademik, bahasa Inggris, dan keterampilan komunikasi sesuai persyaratan program studi.",
+    },
+  };
+
   return (
     <>
+      {/* ===================================== */}
+      {/* SEO METADATA */}
+      {/* ===================================== */}
       <Helmet>
-        {/* Perbaikan Title: Menggunakan satu string utuh agar aman dari error Helmet */}
-        <title>{`Bimbel & Les Privat IUP UGM ${kecamatan.kecamatan} 2026 - Lolos Intake #1`}</title>
+        <title>{pageTitle}</title>
 
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={pageDescription} />
 
-        {/* Meta Description: Hybrid Keyword + Target Teknis (GMST/AcEPT) + Lokasi Kecamatan */}
-        <meta
-          name="description"
-          content={`Bimbel & Les Privat IUP UGM terbaik di ${kecamatan.kecamatan}. Persiapan intensif GMST, AcEPT, & Interview spesialis lulus FK & Non-FK. Master Teacher datang ke rumah wilayah ${kecamatan.kecamatan}. Program Intake 1, 2, & 3. Daftar Sekarang!`}
-        />
-        <meta
-          name="keywords"
-          content={`bimbel iup ugm ${kecamatan.kecamatan}, les privat iup ugm ${kecamatan.kecamatan}, persiapan gmst ${kecamatan.kecamatan}, pelatihan acept ugm, bimbel iup kedokteran, guru privat iup ugm, Bimbel LPS`}
-        />
+        <link rel="canonical" href={canonicalUrl} />
 
-        {/* Canonical Link */}
-        <link
-          rel="canonical"
-          href={`https://supercampmatrix.co.id/bimbel-les-privat-iup-ugm/${kecamatan.slug}`}
-        />
+        <meta name="robots" content="index, follow" />
 
-        {/* Open Graph (WhatsApp Preview Premium) */}
+        {/* ===================================== */}
+        {/* OPEN GRAPH */}
+        {/* ===================================== */}
         <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Supercamp Matrix Indonesia" />
+
+        <meta property="og:title" content={pageTitle} />
+
+        <meta property="og:description" content={pageDescription} />
+
+        <meta property="og:url" content={canonicalUrl} />
+
+        <meta property="og:image" content={imageUrl} />
+
         <meta
-          property="og:title"
-          content={`Bimbel & Les Privat IUP UGM di ${kecamatan.kecamatan} - Bimbel LPS`}
-        />
-        <meta
-          property="og:description"
-          content={`Raih kursi International Undergraduate Program (IUP) UGM melalui bimbingan spesialis di ${kecamatan.kecamatan}.`}
-        />
-        <meta
-          property="og:url"
-          content={`https://supercampmatrix.co.id/bimbel-les-privat-iup-ugm/${kecamatan.slug}`}
-        />
-        <meta
-          property="og:image"
-          content="https://supercampmatrix.co.id/images/banner.webp"
+          property="og:image:alt"
+          content={`Program bimbingan seleksi IUP UGM untuk siswa di ${namaKecamatan}`}
         />
 
-        {/* Schema Markup JSON-LD: Spek Tinggi untuk dominasi Google Maps & Search Lokal */}
+        <meta property="og:locale" content="id_ID" />
+
+        {/* ===================================== */}
+        {/* TWITTER CARD */}
+        {/* ===================================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content={pageTitle} />
+
+        <meta name="twitter:description" content={pageDescription} />
+
+        <meta name="twitter:image" content={imageUrl} />
+
+        {/* ===================================== */}
+        {/* JSON-LD STRUCTURED DATA */}
+        {/* ===================================== */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: `Bimbel & Les Privat IUP UGM Edumatrix ${kecamatan.kecamatan}`,
-            image: "https://supercampmatrix.co.id/images/banner.webp",
-            url: `https://supercampmatrix.co.id/bimbel-les-privat-iup-ugm/${kecamatan.slug}`,
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: kecamatan.kecamatan,
-              addressCountry: "ID",
-            },
-            description: `Lembaga Bimbel dan Les Privat spesialis persiapan International Undergraduate Program (IUP) UGM untuk wilayah ${kecamatan.kecamatan}.`,
-          })}
+          {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+
+      {/* ===================================== */}
+      {/* JUMBOTRON */}
+      {/* ===================================== */}
       <JumbotronLps />
+
+      {/* ===================================== */}
+      {/* SEO CONTENT */}
+      {/* ===================================== */}
       <div className="parent-text-seo-lps">
         <h1 className="text-seo-lps">
-          Bimbel & Les Privat IUP UGM di {kecamatan.kecamatan} Terbaik -
-          Intensif Privat IUP UGM FK dan Non FK
+          Bimbingan IUP UGM di{" "}
+          <span className="highlight-city">{namaKecamatan}</span> – Les Privat
+          Persiapan Seleksi Program Internasional
         </h1>
+
         <p className="desk-seo-lps">
-          Bimbel & Les Privat IUP UGM Terbaik. Fokus Les Intensif IUP UGM
-          Kedokteran dan Non FK, Belajar All Subtest, Master Teacher
-          Berpengalaman, Jadwal Fleksibel, CS Responsif, Konsultasi Progress
-          Belajar
+          Mengikuti seleksi International Undergraduate Program (IUP)
+          Universitas Gadjah Mada membutuhkan persiapan yang mempertimbangkan
+          kemampuan akademik dan keterampilan komunikasi calon mahasiswa. Bagi
+          siswa di {namaKecamatan}, program <strong>Bimbingan IUP UGM</strong>{" "}
+          dari Supercamp Matrix Indonesia membantu peserta membangun kesiapan
+          menghadapi proses penerimaan melalui pembelajaran privat yang terarah
+          dan disesuaikan dengan kebutuhan masing-masing siswa.
+          <br />
+          <br />
+          Salah satu aspek yang perlu diperhatikan dalam persiapan program
+          internasional adalah kemampuan memahami dan menggunakan bahasa Inggris
+          dalam konteks akademik. Melalui latihan membaca, pengembangan
+          kosakata, serta pembahasan materi akademik, siswa dapat meningkatkan
+          kemampuan mengolah informasi dan menyampaikan gagasan secara lebih
+          sistematis. Materi latihan disesuaikan dengan kebutuhan seleksi dan
+          program studi yang menjadi tujuan peserta.
+          <br />
+          <br />
+          Selain kemampuan akademik, kesiapan berkomunikasi juga dapat menjadi
+          bagian penting dalam proses seleksi. Apabila program studi yang
+          dipilih mensyaratkan wawancara, peserta dapat berlatih menjelaskan
+          motivasi memilih jurusan, menguraikan pengalaman belajar, dan
+          menyampaikan alasan memilih International Undergraduate Program UGM.
+          Latihan ini membantu siswa di {namaKecamatan}
+          mengembangkan kepercayaan diri sekaligus kemampuan menyampaikan
+          jawaban secara jelas dan terstruktur.
+          <br />
+          <br />
+          Setiap program studi IUP UGM dapat menerapkan persyaratan penerimaan
+          yang berbeda. Oleh karena itu, persiapan perlu mempertimbangkan
+          ketentuan resmi, kemampuan awal siswa, serta waktu belajar yang
+          tersedia. Melalui pendampingan privat, evaluasi hasil latihan, dan
+          penyusunan target belajar secara bertahap, calon mahasiswa dapat
+          membangun strategi persiapan yang lebih efektif untuk mengikuti
+          seleksi IUP Universitas Gadjah Mada.
         </p>
       </div>
+
+      {/* ===================================== */}
+      {/* KOMPONEN HALAMAN */}
+      {/* ===================================== */}
       <LulusanLps />
       <AlumniKedokteranLps />
       <AlumniPtnLps />
