@@ -1,8 +1,6 @@
-import axios from "axios";
-import React, { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AlumniKedokteranLps from "../../Components/AlumniKedokteranLps/AlumniKedokteranLps";
 import AlumniPtnLps from "../../Components/AlumniPTNLPS/AlumniPTNLPS";
 import BenefitScLps from "../../Components/BenefitScLPS/BenefitScLPS";
@@ -26,148 +24,195 @@ import TutorLpsSc from "../../Components/TutorLpsSc/TutorLpsSc";
 import VenueScLps from "../../Components/VenueScLps/VenueScLps";
 import VideoScLps from "../../Components/VideoScLps/VideoScLps";
 import WaktuPelaksanaanSc from "../../Components/WaktuPelaksanaanSc/WaktuPelaksanaanSc";
+import { DOMAIN } from "../../utils/domain";
+import formatNamaWilayah from "../../utils/formatNamaWilayah";
 
 const HalamanKabLps = () => {
+  // =========================================
+  // PARAMETER KABUPATEN
+  // =========================================
   const { id } = useParams();
-  const [kabupaten, setKabupaten] = useState([]);
 
-  function useQuery() {
-    const { search } = useLocation();
-    return useMemo(() => new URLSearchParams(search), [search]);
-  }
+  // =========================================
+  // NORMALISASI SLUG
+  // =========================================
+  const slugKabupaten = String(id || "")
+    .trim()
+    .toLowerCase();
 
-  const query = useQuery();
+  // =========================================
+  // FORMAT NAMA KABUPATEN
+  // =========================================
+  const namaKabupaten = formatNamaWilayah(slugKabupaten);
 
-  useEffect(() => {
-    const axiosJWT = axios.create();
-    const getKabupaten = async () => {
-      const response = await axiosJWT.get(
-        `https://apilps.edusmart-indonesia.com/ibukotakabupaten/${id}`,
-        {
-          headers: {
-            Authorization: `Bearer`,
-          },
-        },
-      );
-      setKabupaten(response.data);
-    };
-    getKabupaten(id);
-  }, [id, query]);
+  // =========================================
+  // CANONICAL URL
+  // =========================================
+  const canonicalUrl = `${DOMAIN}/les-privat-supercamp-utbk-snbt/${encodeURIComponent(
+    slugKabupaten,
+  )}`;
+
+  // =========================================
+  // IMAGE URL
+  // =========================================
+  const imageUrl = `${DOMAIN}/images/banner.webp`;
+
+  // =========================================
+  // SEO TITLE
+  // =========================================
+  const pageTitle = `Les Privat UTBK SNBT ${namaKabupaten} | Persiapan Masuk PTN`;
+
+  // =========================================
+  // META DESCRIPTION
+  // =========================================
+  const pageDescription = `Les privat UTBK SNBT di ${namaKabupaten} untuk persiapan masuk PTN dan Kedokteran. Latihan soal, tryout, strategi SNBT, dan pendampingan belajar intensif.`;
+
+  // =========================================
+  // JSON-LD STRUCTURED DATA
+  // =========================================
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    name: pageTitle,
+    description: pageDescription,
+    url: canonicalUrl,
+    inLanguage: "id-ID",
+
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: imageUrl,
+    },
+
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Supercamp Matrix Indonesia",
+      url: `${DOMAIN}/`,
+    },
+
+    about: {
+      "@type": "Thing",
+      name: "Les Privat Persiapan UTBK SNBT dan Masuk PTN",
+      description:
+        "Program bimbingan belajar dan les privat untuk persiapan UTBK SNBT melalui penguatan kemampuan penalaran, latihan soal, tryout, serta strategi memilih program studi dan perguruan tinggi negeri.",
+    },
+  };
 
   return (
-    <React.Fragment>
+    <>
+      {/* ===================================== */}
+      {/* SEO METADATA */}
+      {/* ===================================== */}
       <Helmet>
-        {/* 1. Basic SEO - Judul mengandung Brand & Lokasi di awal (Primary Keyword) */}
-        <title>
-          Les Privat UTBK SNBT {kabupaten.kota_kabupaten} 2026 - Bimbel
-          Kedokteran #1
-        </title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
 
-        {/* 2. Meta Description - Mengandung Call to Action (CTA) untuk meningkatkan CTR */}
-        <meta
-          name="description"
-          content={`Les Privat UTBK SNBT di ${kabupaten.kota_kabupaten} terbaik. Persiapan intensif masuk Kedokteran, UI, UGM, ITB, & UNDIP. Guru ke rumah atau Online. Garansi Master Teacher berpengalaman. Daftar sekarang!`}
-        />
-        <meta
-          name="keywords"
-          content={`les privat utbk snbt ${kabupaten.kota_kabupaten}, bimbel ptn ${kabupaten.kota_kabupaten}, bimbel kedokteran ${kabupaten.kota_kabupaten}, simak ui ${kabupaten.kota_kabupaten}, cbt ugm ${kabupaten.kota_kabupaten}, guru privat datang ke rumah ${kabupaten.kota_kabupaten}`}
-        />
+        <meta name="description" content={pageDescription} />
 
-        {/* 3. Canonical Link - Menghindari Duplikasi Konten */}
-        <link
-          rel="canonical"
-          href={`https://supercampmatrix.co.id/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
-        />
+        <link rel="canonical" href={canonicalUrl} />
 
-        {/* 4. Open Graph (Untuk WhatsApp & Social Media) */}
+        <meta name="robots" content="index, follow" />
+
+        {/* ===================================== */}
+        {/* OPEN GRAPH */}
+        {/* ===================================== */}
         <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Supercamp Matrix Indonesia" />
+
+        <meta property="og:title" content={pageTitle} />
+
+        <meta property="og:description" content={pageDescription} />
+
+        <meta property="og:url" content={canonicalUrl} />
+
+        <meta property="og:image" content={imageUrl} />
+
         <meta
-          property="og:title"
-          content={`Bimbel Les Privat UTBK SNBT di ${kabupaten.kota_kabupaten} - Lolos PTN Favorit`}
-        />
-        <meta
-          property="og:description"
-          content={`Dapatkan pendampingan belajar intensif di ${kabupaten.kota_kabupaten}. Program khusus Kedokteran & PTN Unggulan.`}
-        />
-        <meta
-          property="og:url"
-          content={`https://supercampmatrix.co.id/les-privat-supercamp-utbk-snbt/${kabupaten.slug}`}
-        />
-        <meta
-          property="og:image"
-          content="https://supercampmatrix/images/banner.webp"
+          property="og:image:alt"
+          content={`Program les privat UTBK SNBT untuk siswa di ${namaKabupaten}`}
         />
 
-        {/* 5. Schema Markup (JSON-LD) - Kunci Halaman 1 */}
+        <meta property="og:locale" content="id_ID" />
+
+        {/* ===================================== */}
+        {/* TWITTER CARD */}
+        {/* ===================================== */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content={pageTitle} />
+
+        <meta name="twitter:description" content={pageDescription} />
+
+        <meta name="twitter:image" content={imageUrl} />
+
+        {/* ===================================== */}
+        {/* JSON-LD */}
+        {/* ===================================== */}
         <script type="application/ld+json">
-          {JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              serviceType: "Les Privat UTBK SNBT",
-              provider: {
-                "@type": "EducationalOrganization",
-                name: "Bimbel LPS",
-                url: "https://supercampmatrix.co.id",
-              },
-              areaServed: {
-                "@type": "City",
-                name: kabupaten.kota_kabupaten,
-              },
-              description: `Bimbingan belajar les privat persiapan UTBK SNBT, SIMAK UI, dan CBT UGM di ${kabupaten.kota_kabupaten}.`,
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: `Apakah ada layanan guru datang ke rumah di ${kabupaten.kota_kabupaten}?`,
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: `Ya, Edumatrix menyediakan layanan guru les privat datang ke rumah untuk wilayah ${kabupaten.kota_kabupaten} dan sekitarnya.`,
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Program apa saja yang tersedia?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Kami fokus pada persiapan masuk Fakultas Kedokteran dan PTN favorit melalui jalur UTBK SNBT, SIMAK UI, dan CBT UGM.",
-                  },
-                },
-              ],
-            },
-          ])}
+          {JSON.stringify(structuredData)}
         </script>
       </Helmet>
+
+      {/* ===================================== */}
+      {/* JUMBOTRON */}
+      {/* ===================================== */}
       <JumbotronLps />
+
+      {/* ===================================== */}
+      {/* SEO CONTENT */}
+      {/* ===================================== */}
       <div className="parent-text-seo-lps">
         <h1 className="text-seo-lps">
-          Les Privat UTBK SNBT di {kabupaten.kota_kabupaten} - Bimbingan Masuk
-          PTN dan Kedokteran
+          Les Privat UTBK SNBT di{" "}
+          <span className="highlight-city">{namaKabupaten}</span> – Bimbingan
+          Intensif Masuk PTN dan Kedokteran
         </h1>
+
         <p className="desk-seo-lps">
-          Bimbel LPS adalah solusi terbaik untuk Anda yang membutuhkan layanan
-          intensif privat persiapan UTBK SNBT dan Bimbel Karantina Masuk PTN &
-          Kedokteran. Kami hadir untuk mendampingi Anda Sukses Masuk PTN Impian.
-          Dengan pendampingan yang intensif dari master teacher berkompeten dan
-          berpengalaman, setiap tahunnya ratusan siswa berhasil lolos masuk
-          jurusan yang dicita-citakan.
+          Persiapan menghadapi Ujian Tulis Berbasis Komputer Seleksi Nasional
+          Berdasarkan Tes (UTBK SNBT) membutuhkan strategi belajar yang sesuai
+          dengan kemampuan dan target perguruan tinggi. Bagi siswa di{" "}
+          {namaKabupaten}, program <strong>Les Privat UTBK SNBT</strong> dari
+          Supercamp Matrix Indonesia membantu calon mahasiswa mempersiapkan diri
+          melalui pendampingan akademik, latihan soal, dan evaluasi perkembangan
+          belajar.
           <br />
           <br />
-          Bagi kami setiap siswa memiliki potensi belajarnya masing - masing
-          yang dapat dikembangkan untuk kemudian bisa sukses meraih target
-          jurusan dan PTN yang diinginkan. Kami percaya bahwa setiap siswa akan
-          bisa membangkitkan potensi dan bakatnya dengan terus berlatih dan
-          mendapat pendampingan belajar yang tepat serta maksimal. Bimbel LPS
-          dengan layanan program yang sudah proven dan beragam pilihan paket
-          belajar yang bisa dipilih siap menjadi pilihan terbaik Anda. Bersama
-          Bimbel LPS - Sukses Raih PTN Impian.
+          Dalam menghadapi UTBK SNBT, siswa perlu memperkuat kemampuan
+          penalaran, memahami informasi secara kritis, serta melatih ketepatan
+          dalam menyelesaikan soal. Program bimbingan difokuskan pada
+          pengembangan kemampuan yang relevan dengan materi ujian, pembahasan
+          soal secara terstruktur, dan latihan berkala untuk membantu peserta
+          mengenali bagian yang masih membutuhkan peningkatan.
+          <br />
+          <br />
+          Selain penguasaan materi, pemilihan program studi dan perguruan tinggi
+          negeri juga menjadi bagian penting dalam persiapan seleksi. Calon
+          mahasiswa di {namaKabupaten} yang menargetkan UI, UGM, ITB, UNDIP,
+          maupun Fakultas Kedokteran perlu mempertimbangkan minat, kemampuan
+          akademik, daya tampung, serta ketentuan penerimaan yang berlaku pada
+          masing-masing program studi dan perguruan tinggi.
+          <br />
+          <br />
+          Melalui simulasi ujian dan evaluasi hasil latihan, siswa dapat
+          mengukur perkembangan kemampuan, memperbaiki strategi pengerjaan soal,
+          serta mengelola waktu ujian secara lebih efektif. Pendampingan belajar
+          yang terarah juga membantu peserta menyusun prioritas persiapan
+          berdasarkan hasil evaluasi dan target akademik.
+          <br />
+          <br />
+          Program <strong>Bimbel & Les Privat Supercamp UTBK SNBT</strong>{" "}
+          menjadi salah satu pilihan persiapan bagi calon mahasiswa yang
+          membutuhkan pembelajaran intensif untuk menghadapi seleksi perguruan
+          tinggi negeri. Dengan latihan konsisten dan strategi belajar yang
+          disesuaikan, siswa dapat membangun kesiapan akademik menuju PTN serta
+          program studi yang diinginkan.
         </p>
       </div>
+
+      {/* ===================================== */}
+      {/* KOMPONEN HALAMAN */}
+      {/* ===================================== */}
       <LulusanLps />
       <AlumniKedokteranLps />
       <AlumniPtnLps />
@@ -190,7 +235,7 @@ const HalamanKabLps = () => {
       <ListKecLps />
       <FaqScLps />
       <BottomCtaLps />
-    </React.Fragment>
+    </>
   );
 };
 
