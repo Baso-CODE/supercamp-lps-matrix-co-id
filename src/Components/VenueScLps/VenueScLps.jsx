@@ -110,7 +110,7 @@ const VenueScLps = () => {
             aria-hidden="true"
             className="icon-lokasi-sc-lps"
           />
-          Gelombang 1: April 2027
+          Gelombang 1: Maret 2027
         </span>
 
         <span className="parent-text-icon-lokasi-sc-lps">
@@ -120,7 +120,7 @@ const VenueScLps = () => {
             aria-hidden="true"
             className="icon-lokasi-sc-lps"
           />
-          Gelombang 2: Mei 2027
+          Gelombang 2: April 2027
         </span>
       </div>
     </section>
