@@ -29,7 +29,7 @@ const HomePage = () => {
       <Helmet>
         {/* Basic SEO */}
         <title>
-          Bimbel Supercamp UTBK SNBT 2026 & Les Privat PTN - Bimbel LPS
+          Bimbel Supercamp UTBK SNBT 2027 & Les Privat PTN - Bimbel LPS
         </title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,7 +47,7 @@ const HomePage = () => {
         <meta property="og:url" content="https://supercampmatrix.co.id/" />
         <meta
           property="og:title"
-          content="Bimbel Supercamp UTBK SNBT 2026 & Karantina Kedokteran"
+          content="Bimbel Supercamp UTBK SNBT 2027 & Karantina Kedokteran"
         />
         <meta
           property="og:description"
@@ -60,7 +60,7 @@ const HomePage = () => {
         {/* Ganti dengan URL gambar promo Anda */}
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bimbel Supercamp UTBK SNBT 2026" />
+        <meta name="twitter:title" content="Bimbel Supercamp UTBK SNBT 2027" />
         <meta
           name="twitter:description"
           content="Persiapan intensif masuk Kedokteran dan PTN Favorit bersama Bimbel LPS."
