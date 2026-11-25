@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./Floatingcta.css";
 
-const WEBSITE_URL = "https://supercampmatrix.com/";
+const WEBSITE_URL = "https://supercampmatrix.co.id/";
 const STORAGE_KEY = "supercamp_cs_rotation";
 
 const customerServices = [

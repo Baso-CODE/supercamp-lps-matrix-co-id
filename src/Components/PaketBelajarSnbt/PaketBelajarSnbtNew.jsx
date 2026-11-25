@@ -81,7 +81,7 @@ const packageData = [
 ];
 
 const createWhatsappLink = (pkg) => {
-  const message = `Halo ${pkg.whatsappName}, saya ingin konsultasi dan daftar ${pkg.title} melalui https://supercampmatrix.com/`;
+  const message = `Halo ${pkg.whatsappName}, saya ingin konsultasi dan daftar ${pkg.title} melalui https://supercampmatrix.co.id/`;
   return `https://wa.me/${pkg.whatsappNumber}?text=${encodeURIComponent(
     message,
   )}`;
